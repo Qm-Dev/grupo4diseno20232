@@ -21,6 +21,8 @@ const Meme = () => {
         display: 'flex',
         maxHeight: '100%',
         maxWidth: '100%',
+        border: 'solid',
+        borderColor: 'white',
     };
     
 
