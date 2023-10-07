@@ -12,7 +12,9 @@ const Meme = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        margin: 'auto',
+        marginTop: 'auto',
+        marginBottom: '20px',
+
     };
 
     const imgStyle = {

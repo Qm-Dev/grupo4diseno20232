@@ -15,8 +15,8 @@ const ImageContainer = () => {
     const imageContainerDivStyle = {
         textAlign: 'center',
         padding: '20px',
-        flexBasis: '75%',
-        maxWidth: '50%',
+        flexBasis: 'content',
+        maxWidth: '70%',
     };
 
     const imageStyle = {
@@ -24,7 +24,7 @@ const ImageContainer = () => {
         margin: 'auto',
         border: 'solid',
         borderColor: 'white',
-        borderRadius: '100px',
+        borderRadius: '50%',
         height: '300px',
         width: '200px',
         maxHeight: '200px'

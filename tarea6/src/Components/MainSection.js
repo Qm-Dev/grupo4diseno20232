@@ -18,6 +18,7 @@ const MainSection = () => {
     const paragraphStyle = {
         textAlign: 'justify',
         width: '50%',
+        minWidth: '80%',
         margin: '16px',
     };
 

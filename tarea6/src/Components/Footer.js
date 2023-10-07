@@ -7,6 +7,7 @@ const Footer = () => {
     backgroundColor: '#282c34',
     color: "white",
     width: "100%",
+    borderTop: "1px solid white",
   };
 
   const linkStyle = {

@@ -13,11 +13,13 @@ const Navbar = () => {
 
   const NavbarText = {
     color: "white",
-    fontFamily: 'Inter'
+    fontFamily: 'Inter',
+    fontSize: '20px',
+    fontWeight: 'bold',
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light" style={NavbarStyle}>
+    <nav className="navbar navbar-expand navbar-light" style={NavbarStyle}>
       <div className="container-fluid">
         <button
           className="navbar-toggler"
