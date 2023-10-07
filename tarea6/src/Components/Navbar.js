@@ -19,45 +19,26 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand navbar-light" style={NavbarStyle}>
-      <div className="container-fluid">
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarCenteredExample"
-          aria-controls="navbarCenteredExample"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i className="fas fa-bars"></i>
-        </button>
-
-        <div
-          className="collapse navbar-collapse justify-content-center"
-          id="navbarCenteredExample"
-        >
-          <ul className="navbar-nav mb-1">
-            <li className="nav-item">
-              <a
-                className="nav-link active"
-                aria-current="page"
-                style={NavbarText}
-                href="#"
-              >
-                Inicio
-              </a>
-            </li>
-
-            {users.map((user, index) => (
+  <nav className="navbar navbar-expand-lg navbar-dark" style={NavbarStyle}>
+  <div className="container-fluid">
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav mb-1 mt-1 mx-auto">
+        <li className="nav-item ml-10" style={NavbarText}>
+          <a className="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        {users.map((user, index) => (
               <li className="nav-item ml-10" key={index}>
                 <NavbarNewUser user={user} />
               </li>
             ))}
-          </ul>
-        </div>
-      </div>
-    </nav>
+      </ul>
+    </div>
+  </div>
+</nav>
+
   );
 };
 
