@@ -1,5 +1,5 @@
 import React from "react";
-import meme from '../images/meme.png';
+import meme from '../images/meme.gif';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -7,7 +7,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 const Meme = () => {
 
     const divStyle = {
-        width: '80%',
+        width: '100%',
         height: '400px',
         display: 'flex',
         alignItems: 'center',
