@@ -26,11 +26,11 @@ const Navbar = () => {
     </button>
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav mb-1 mt-1 mx-auto">
-        <li className="nav-item ml-10" style={NavbarText}>
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+        <li className="nav-item mr-10 ml-10" style={NavbarText}>
+          <a className="nav-link active" aria-current="page" href="#">Inicio</a>
         </li>
         {users.map((user, index) => (
-              <li className="nav-item ml-10" key={index}>
+              <li className="nav-item mr-10 ml-10" key={index}>
                 <NavbarNewUser user={user} />
               </li>
             ))}
