@@ -37,32 +37,48 @@ function Footer() {
         transition: 'color 0.4s'
     }
 
+    const linkStyleFAQ = {
+        transition: 'color 0.4s'
+    }
+
     // Si se detecta hover por parte del usuario
     // En Acerca de
     if (isAboutHovered) {
         linkStyleAbout.color = 'gray';
         linkStyleContact.color = 'white';
+        linkStyleFAQ.color = 'white';
     }
 
     // En Contacto
     else if (isContactHovered) {
-        linkStyleContact.color = 'gray';
         linkStyleAbout.color = 'white';
+        linkStyleContact.color = 'gray';
+        linkStyleFAQ.color = 'white';
+    }
+
+    // En FAQ
+    else if (isFAQHovered) {
+        linkStyleAbout.color = 'white';
+        linkStyleContact.color = 'white';
+        linkStyleFAQ.color = 'gray';
     }
 
     // No se realiza hover
     else {
         linkStyleAbout.color = 'white';
         linkStyleContact.color = 'white';
+        linkStyleFAQ.color = 'white';
     }
 
     // Función
     return(
         <div className='Footer' style={footerStyle}>
             <img src="https://www.uai.cl/assets/uploads/2021/12/facultad-de-ingenieria-y-ciencias.png" style={imgStyle}></img>
-            <p>Grupo 4 © 2023 • <a href="/about_us" style={linkStyleAbout}
+            <p>Grupo 4 © 2023 • <a href="/about" style={linkStyleAbout}
             onMouseOver={() => setIsAboutHovered(true)}
-            onMouseLeave={() => setIsAboutHovered(false)}>Acerca de</a> • <a href="/contact" style={linkStyleContact}
+            onMouseLeave={() => setIsAboutHovered(false)}>Acerca de</a> • <a href="/faq" style={linkStyleFAQ}
+            onMouseOver={() => setIsFAQHovered(true)}
+            onMouseLeave={() => setIsFAQHovered(false)}>FAQ</a> • <a href="/contact" style={linkStyleContact}
             onMouseOver={() => setIsContactHovered(true)}
             onMouseLeave={() => setIsContactHovered(false)}>Contacto</a></p>
         </div>
