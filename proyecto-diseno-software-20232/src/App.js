@@ -1,14 +1,14 @@
 // React, logos y CSS
-import { BrowserRouter , Route, Routes } from 'react-router-dom';
+import { BrowserRouter , Route, Routes, useLocation} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
 // Componentes
-import Header from './Components/Header';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 
 // Páginas
+import Login from './Pages/Login'
 import Profile from './Pages/Profile';
 import Feed from './Pages/Feed';
 import MyNetwork from './Pages/MyNetwork';
@@ -25,11 +25,12 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // Sitio Web
 function App() {
+
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Navbar />} />
+        <Route path="/login" element={<Login />} />
         <Route index element={<Feed />} />
         <Route path="/feed" element={<Feed />} />
         <Route path="/mynetwork" element={<MyNetwork />} />
