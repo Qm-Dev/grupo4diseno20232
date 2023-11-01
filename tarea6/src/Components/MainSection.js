@@ -31,7 +31,7 @@ const MainSection = () => {
     return (
         <main>
             <section className="section" style={mainStyle}>
-                <h2 style={headingStyle}>GRUPO ANUEL <br/>(EQUIPO NÚMERO 4)</h2>
+                <h2 style={headingStyle}>GRUPO ANUEL (EQUIPO NÚMERO 4)</h2>
                 <p style={paragraphStyle}>
                     Nuestro equipo se encuentra conformado por tres estudiantes de la
                     carrera Ingeniería Civil, compartiendo secciones desde el primer
