@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 
 // Componentes
+import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import NavbarVisible from './Components/NavbarVisible';
 import NavbarNotVisible from './Components/NavbarNotVisible';
