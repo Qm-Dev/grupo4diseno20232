@@ -4,8 +4,9 @@ import logo from './logo.svg';
 import './App.css';
 
 // Componentes
-import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import NavbarVisible from './Components/NavbarVisible';
+import NavbarNotVisible from './Components/NavbarNotVisible';
 
 // Páginas
 import Login from './Pages/Login'
@@ -28,19 +29,24 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route index element={<Feed />} />
-        <Route path="/feed" element={<Feed />} />
-        <Route path="/mynetwork" element={<MyNetwork />} />
-        <Route path="/notifications" element={<Notifications />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/configuration" element={<ProfileConfiguration />} />
-        <Route path="/logout" element={<Logout />} />
-        <Route path="/about" element={<About />}/>
-        <Route path="/faq" element={<FrequentlyAskedQuestions />}/>
-        <Route path="/contact" element={<Contact />}/>
+        {/* Páginas donde la Navbar no será visible al usuario */}
+        <Route element={<NavbarNotVisible />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
+        </Route>
+        {/* Páginas donde la Navbar será visible al usuario */}
+        <Route element={<NavbarVisible />}>
+          <Route path="/" element={<Feed />} />
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/mynetwork" element={<MyNetwork />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/configuration" element={<ProfileConfiguration />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<FrequentlyAskedQuestions />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/notifications" element={<Notifications />} />
+        </Route>
       </Routes>
       <Footer />
     </BrowserRouter>
