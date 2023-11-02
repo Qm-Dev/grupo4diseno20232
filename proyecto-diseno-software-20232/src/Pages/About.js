@@ -17,9 +17,30 @@ function About() {
         marginRight: '1.5rem'
     }
 
+    const imgAboutUsStyle = {
+        width: '100%',
+        height: '100%',
+        maxWidth: '256px',
+        border: '5px solid gray',
+        borderRadius: '8rem',
+        margin: '1rem'
+    }
+
+    const imgDivAboutUsStyle = {
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        width: '50%',
+        display: 'flex'
+    }
+
     return (
         <main>
             <h1 style={headingAboutUsStyle}>Acerca de nosotros</h1>
+            <div className='picturesTeam' style={imgDivAboutUsStyle}>
+                <img src="https://wiki.teamfortress.com/w/images/f/f0/Buffed_blu_pyro.jpg" style={imgAboutUsStyle}></img>
+                <img src="https://wiki.teamfortress.com/w/images/a/a5/Buffed_blu_engineer.jpg" style={imgAboutUsStyle}></img>
+                <img src="https://wiki.teamfortress.com/w/images/5/5e/Buffed_blu_heavy.jpg" style={imgAboutUsStyle}></img>
+            </div>
             <h2 style={paragraphAboutUsStyle}>Subtítulo 1</h2>
             <p style={paragraphAboutUsStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Sed suscipit tempor metus eget sodales. Nunc ut sem augue. Suspendisse luctus aliquet auctor.
