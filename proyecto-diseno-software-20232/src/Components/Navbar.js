@@ -9,6 +9,11 @@ function Navbar() {
         fontFamily: 'Arvo'
     }
 
+    const navbarItemStyle = {
+        marginLeft: '1rem',
+        marginRight: '1rem'
+    }
+
     return (
     <nav class="navbar navbar-expand-lg bg-info-subtle" style={navbarStyle}>
     <div class="container-fluid">
@@ -17,7 +22,7 @@ function Navbar() {
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-item" style={navbarItemStyle}>
             <a class="nav-link" aria-current="page" href="/feed"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
@@ -25,7 +30,7 @@ function Navbar() {
   <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
 </svg> Inicio</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style={navbarItemStyle}>
             <a class="nav-link" href="/mynetwork"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-topology-star-ring-3" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M10 19a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
@@ -49,14 +54,14 @@ function Navbar() {
   <path d="M5 14l2 3" />
 </svg> Mi red</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style={navbarItemStyle}>
             <a class="nav-link" href="/notifications"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
   <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
 </svg> Notificaciones</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" style={navbarItemStyle}>
             <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -73,7 +78,7 @@ function Navbar() {
             </ul>
             </li>
         </ul>
-        <form class="d-flex" role="search">
+        <form class="d-flex" role="search" style={navbarItemStyle}>
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"></input>
             <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
