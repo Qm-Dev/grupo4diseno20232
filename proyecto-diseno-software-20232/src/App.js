@@ -1,5 +1,5 @@
 // React, logos y CSS
-import { BrowserRouter , Route, Routes, useLocation} from 'react-router-dom';
+import { BrowserRouter , Route, Routes } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 

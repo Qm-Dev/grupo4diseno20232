@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function About() {
 
+    // Estilo de los headings de esta página
     const headingAboutUsStyle = {
         textAlign: 'center',
         padding: '1rem'
     }
 
+    // Estilo de los párrafos
     const paragraphAboutUsStyle = {
         textAlign: 'justify',
         paddingTop: '0.75rem',
@@ -17,20 +19,24 @@ function About() {
         marginRight: '1.5rem'
     }
 
+    // Estilo de las imágenes
     const imgAboutUsStyle = {
         width: '100%',
         height: '100%',
+        /* Idealmente todas las imágenes a utilizar sean del mismo tamaño */
         maxWidth: '256px',
-        border: '5px solid gray',
+        border: '5px solid black',
         borderRadius: '8rem',
-        margin: '1rem'
+        margin: '1rem',
     }
 
+    // Estilo del div contenedor de imágenes
     const imgDivAboutUsStyle = {
         marginLeft: 'auto',
         marginRight: 'auto',
         width: '50%',
-        display: 'flex'
+        display: 'flex',
+        justifyContent: 'center'
     }
 
     return (
@@ -40,6 +46,7 @@ function About() {
                 <img src="https://wiki.teamfortress.com/w/images/f/f0/Buffed_blu_pyro.jpg" style={imgAboutUsStyle}></img>
                 <img src="https://wiki.teamfortress.com/w/images/a/a5/Buffed_blu_engineer.jpg" style={imgAboutUsStyle}></img>
                 <img src="https://wiki.teamfortress.com/w/images/5/5e/Buffed_blu_heavy.jpg" style={imgAboutUsStyle}></img>
+                <img src="https://wiki.teamfortress.com/w/images/0/0a/Buffed_blu_demoman.jpg" style={imgAboutUsStyle}></img>
             </div>
             <h2 style={paragraphAboutUsStyle}>Subtítulo 1</h2>
             <p style={paragraphAboutUsStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.

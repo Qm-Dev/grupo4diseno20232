@@ -37,6 +37,7 @@ function Footer() {
         transition: 'color 0.4s'
     }
 
+    // Estilo del link: FAQ
     const linkStyleFAQ = {
         transition: 'color 0.4s'
     }

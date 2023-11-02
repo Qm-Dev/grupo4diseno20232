@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Profile() {
 
+    //  Estilo general del perfil
     const profileGeneralStyle = {
         fontFamily: 'Spline Sans',
         textAlign: 'center',
@@ -11,6 +12,7 @@ function Profile() {
         marginBottom: '1rem',
     }
 
+    // Estilo de la foto de perfil
     const profilePictureStyle = {
         width: '100%',
         height: '100%',
@@ -20,6 +22,7 @@ function Profile() {
         marginTop: '1rem',
     }
 
+    // Estilo de la presentación de perfil
     const presentationProfileStyle = {
         border: '3px solid black',
         height: '100%',
@@ -29,6 +32,7 @@ function Profile() {
         borderRadius: '70px'
     }
 
+    // Estilo de la experiencia compartida por el usuario en su perfil
     const experienceProfileStyle = {
         border: '3px solid black',
         height: '100%',
@@ -39,10 +43,12 @@ function Profile() {
         borderRadius: '70px'
     }
 
+    // Estilo de headings de esta página
     const headingStyle = {
         padding: '0.5rem'
     }
 
+    // Estilo de los párrafos de esta página
     const paragraphStyle = {
         margin: '2rem'
     }
