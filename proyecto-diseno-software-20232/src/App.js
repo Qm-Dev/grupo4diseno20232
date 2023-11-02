@@ -30,6 +30,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+          <Navbar />
         {/* Páginas donde la Navbar no será visible al usuario */}
         <Route element={<NavbarNotVisible />}>
           <Route path="/login" element={<Login />} />
