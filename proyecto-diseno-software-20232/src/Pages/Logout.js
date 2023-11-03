@@ -14,7 +14,7 @@ function Logout() {
 
     return (
         <div className='logoutPage' style={logoutPageStyle}>
-            <h1 style={headingStyle}>Sesión cerrada.</h1>
+            <h1 style={headingStyle}>Has cerrado sesión.</h1>
         </div>
     );
 }

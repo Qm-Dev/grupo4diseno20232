@@ -9,7 +9,8 @@ import NavbarVisible from './Components/NavbarVisible';
 import NavbarNotVisible from './Components/NavbarNotVisible';
 
 // Páginas
-import Login from './Pages/Login'
+import Register from './Pages/Register';
+import Login from './Pages/Login';
 import Profile from './Pages/Profile';
 import Feed from './Pages/Feed';
 import MyNetwork from './Pages/MyNetwork';
@@ -30,14 +31,17 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Páginas donde la Navbar no será visible al usuario */}
+
+        {/* Páginas donde la Navbar no estará visible */}
         <Route element={<NavbarNotVisible />}>
+          <Route path="/" element={<Register />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
         </Route>
-        {/* Páginas donde la Navbar será visible al usuario */}
+
+        {/* Páginas donde la Navbar estará visible */}
         <Route element={<NavbarVisible />}>
-          <Route path="/" element={<Feed />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/mynetwork" element={<MyNetwork />} />
           <Route path="/profile" element={<Profile />} />
@@ -47,6 +51,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/notifications" element={<Notifications />} />
         </Route>
+
       </Routes>
       <Footer />
     </BrowserRouter>

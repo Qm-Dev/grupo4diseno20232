@@ -74,7 +74,7 @@ function Profile() {
         border: '5px solid black',
         borderRadius: '50px',
         marginBottom: '1rem',
-        padding: '0.5rem'
+        padding: '0.5rem',
     }
 
     return (
@@ -116,7 +116,7 @@ function Profile() {
                     </p>
                     <a href="#" class='btn btn-dark' style={editButtonStyle}>Editar experiencia</a>
                 </div>
-                <div className='certifications' style={experienceProfileStyle}>
+                <div className='certifications row-md-3' style={experienceProfileStyle}>
                     <h2 style={headingStyle}>Certificaciones</h2>
                     <ul>
                         <li style={paragraphStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum mauris, congue ac libero sit amet, vehicula

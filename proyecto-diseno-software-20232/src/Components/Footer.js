@@ -14,10 +14,10 @@ function Footer() {
         backgroundColor: '#202020',
         color: 'white',
         textAlign: 'center',
-        paddingTop: '3%',
-        paddingBottom: '1%',
+        paddingTop: '2.5rem',
+        paddingBottom: '1.25rem',
         fontFamily: 'Yantramanav',
-        fontSize: '15px'
+        fontSize: '15px',
     }
 
     // Estilo de imagen
