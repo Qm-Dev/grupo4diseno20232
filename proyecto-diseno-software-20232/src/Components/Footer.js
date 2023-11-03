@@ -23,7 +23,9 @@ function Footer() {
     // Estilo de imagen
     const imgStyle = {
         filter: 'grayscale(100%)',
-        width: '25em',
+        width: '100%',
+        height: '100%',
+        maxWidth: '350px',
         marginBottom: '1em'
     }
 

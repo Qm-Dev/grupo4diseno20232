@@ -4,10 +4,17 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Logout() {
 
+    const logoutPageStyle = {
+        padding: '20%',
+    }
+
+    const headingStyle = {
+        textAlign: 'center',
+    }
+
     return (
-        <div className='feed'>
-            <h1>Hello World, Logout</h1>
-            <p>lorem ipsum</p>
+        <div className='logoutPage' style={logoutPageStyle}>
+            <h1 style={headingStyle}>Sesión cerrada.</h1>
         </div>
     );
 }
