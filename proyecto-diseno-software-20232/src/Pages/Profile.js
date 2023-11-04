@@ -74,7 +74,7 @@ function Profile() {
         border: '5px solid black',
         borderRadius: '50px',
         marginBottom: '1rem',
-        padding: '0.5rem',
+        padding: '1.5rem',
     }
 
     return (

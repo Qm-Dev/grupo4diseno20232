@@ -34,7 +34,6 @@ function App() {
 
         {/* Páginas donde la Navbar no estará visible */}
         <Route element={<NavbarNotVisible />}>
-          <Route path="/" element={<Register />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
@@ -42,6 +41,7 @@ function App() {
 
         {/* Páginas donde la Navbar estará visible */}
         <Route element={<NavbarVisible />}>
+          <Route path="/" element={<Feed />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/mynetwork" element={<MyNetwork />} />
           <Route path="/profile" element={<Profile />} />
