@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import pfp_example from './img/pfp_example.jpg';
+import placeholderimg from './img/placeholderimg.jpg';
 
 function Profile() {
 
@@ -19,7 +20,7 @@ function Profile() {
             <div className='profile'>
                 <div className='container text-center'>
                     <div id='presentationSection' className='border border-5 rounded-5 border-dark mt-3 mb-3 p-3'>
-                        <img className='p-2' src={pfp_example} style={imgStyle}></img>
+                        <img className='p-2' src={placeholderimg} style={imgStyle}></img>
                         <h1>Dell Conagher</h1>
                         <h4>Ocupación / Oficio / Especialización</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum mauris, congue ac libero sit amet, vehicula
