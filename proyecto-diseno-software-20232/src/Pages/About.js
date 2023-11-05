@@ -21,32 +21,23 @@ function About() {
 
     // Estilo de las imágenes
     const imgAboutUsStyle = {
-        width: '100%',
+        width: '224px',
         height: '100%',
-        /* Idealmente todas las imágenes a utilizar sean del mismo tamaño */
-        maxWidth: '256px',
         border: '5px solid black',
-        borderRadius: '8rem',
-        margin: '1rem',
-    }
-
-    // Estilo del div contenedor de imágenes
-    const imgDivAboutUsStyle = {
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        width: '50%',
-        display: 'flex',
-        justifyContent: 'center'
+        borderRadius: '100%',
+        backgroundColor: 'black'
     }
 
     return (
         <main>
             <h1 style={headingAboutUsStyle}>Acerca de nosotros</h1>
-            <div className='picturesTeam' style={imgDivAboutUsStyle}>
-                <img src="https://wiki.teamfortress.com/w/images/f/f0/Buffed_blu_pyro.jpg" style={imgAboutUsStyle}></img>
-                <img src="https://wiki.teamfortress.com/w/images/a/a5/Buffed_blu_engineer.jpg" style={imgAboutUsStyle}></img>
-                <img src="https://wiki.teamfortress.com/w/images/5/5e/Buffed_blu_heavy.jpg" style={imgAboutUsStyle}></img>
-                <img src="https://wiki.teamfortress.com/w/images/0/0a/Buffed_blu_demoman.jpg" style={imgAboutUsStyle}></img>
+            <div className='container'>
+                <div className='row p-1'>
+                    <img className='col-sm-3 mx-auto p-1 m-1' src="https://wiki.teamfortress.com/w/images/f/f0/Buffed_blu_pyro.jpg" style={imgAboutUsStyle} alt="Integrante 1"></img>
+                    <img className='col-sm-3 mx-auto p-1 m-1' src="https://wiki.teamfortress.com/w/images/a/a5/Buffed_blu_engineer.jpg" style={imgAboutUsStyle} alt="Integrante 2"></img>
+                    <img className='col-sm-3 mx-auto p-1 m-1' src="https://wiki.teamfortress.com/w/images/5/5e/Buffed_blu_heavy.jpg" style={imgAboutUsStyle} alt="Integrante 3"></img>
+                    <img className='col-sm-3 mx-auto p-1 m-1' src="https://wiki.teamfortress.com/w/images/0/0a/Buffed_blu_demoman.jpg" style={imgAboutUsStyle} alt="Integrante 4"></img>
+                </div>
             </div>
             <h2 style={paragraphAboutUsStyle}>Subtítulo 1</h2>
             <p style={paragraphAboutUsStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
