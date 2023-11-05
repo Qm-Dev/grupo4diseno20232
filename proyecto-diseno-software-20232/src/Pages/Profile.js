@@ -9,7 +9,9 @@ function Profile() {
         borderRadius: '100%',
         backgroundColor: 'black',
         width: '200px',
-        height: '100%'
+        height: '100%',
+        position: 'sticky',
+        transform: 'rotate(360deg)'
     }
 
     return (
