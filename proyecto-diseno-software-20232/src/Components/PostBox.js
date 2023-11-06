@@ -16,7 +16,7 @@ function PostBox() {
             <div className='row'>
                 <div className='col p-1'>
                     <div className='row'>
-                        <img className="rounded-circle w-25" src={pfp_example}></img>
+                        <img className="rounded-circle w-25 h-100" src={pfp_example}></img>
                         <textarea className='col-md-1 w-75 rounded-4 border-3 border-dark' style={textareaStyle} minLength={16} placeholder='¿Qué estás pensando?'></textarea>
                         <div className="m-3">
                             <input className="form-control" type="file" id="formFile"></input>

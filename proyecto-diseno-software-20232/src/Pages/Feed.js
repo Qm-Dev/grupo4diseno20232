@@ -29,8 +29,6 @@ function Feed() {
               <SocialPost />
               <SocialPost />
               <SocialPost />
-              <SocialPost />
-              <SocialPost />
             </div>
           </div>
         </div>
