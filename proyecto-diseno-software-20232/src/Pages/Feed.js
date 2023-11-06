@@ -11,7 +11,7 @@ function Feed() {
 
     return (
       <main className='bg-secondary-subtle'>
-        <div className='container text-center p-3'>
+        <div className='container p-3'>
           <div className='row'>
             <div className='col-md-5 p-3 rounded-5'>
               <h1>Previsualización de perfil</h1>

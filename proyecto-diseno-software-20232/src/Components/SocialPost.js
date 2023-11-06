@@ -6,7 +6,7 @@ function SocialPost() {
 
     return (
         <div className='container'>
-            <div className='row justify-content-md-center'>
+            <div className='row'>
                 <div className='border border-5 border-dark p-4 col-md-12 rounded-4 mb-4'>
                     <h4>Nombre de usuario</h4>
                     <p>Texto del post</p>
