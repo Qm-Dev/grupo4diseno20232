@@ -10,21 +10,26 @@ function Feed() {
     // Estilos aquí
 
     return (
-      <main>
-        <div className='container text-center'>
+      <main className='bg-secondary-subtle'>
+        <div className='container text-center p-3'>
           <div className='row'>
-            <div className='col-md-5 p-3 rounded-5 bg-info'>
+            <div className='col-md-5 p-3 rounded-5'>
               <h1>Previsualización de perfil</h1>
               <ProfilePreview />
             </div>
-            <div className='col-md-7 p-3 rounded-5 bg-warning'>
+            <div className='col-md-7 p-3 rounded-5'>
               <h1>Creación de la publicación</h1>
               <PostBox />
             </div>
           </div>
           <div className='row'>
-            <div className='col-md-12 p-3 rounded-5 bg-success'>
+            <div className='col-md-5'></div>
+            <div className='col-md-7 p-3 rounded-5'>
               <h1>Feed / Otros posts</h1>
+              <SocialPost />
+              <SocialPost />
+              <SocialPost />
+              <SocialPost />
               <SocialPost />
             </div>
           </div>

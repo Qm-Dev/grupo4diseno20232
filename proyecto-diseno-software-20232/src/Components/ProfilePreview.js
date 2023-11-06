@@ -11,10 +11,11 @@ function ProfilePreview() {
     }
 
     return (
-        <div className="card" style={style}>
-            <img className="card-img-top" src={pfp_example} alt="Card image cap"></img>
+        <div className="card border border-dark" style={style}>
+            <img className="card-img-top border border-dark" src={pfp_example} alt="Card image cap"></img>
             <div className="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h4>Nombre</h4>
+                <h6>Profesión</h6>
             </div>
         </div>
     );
