@@ -7,6 +7,7 @@ function SocialPost(props) {
 
     const { nombrePersona } = props;
     const { apellidoPersona } = props;
+    const { fotoPerfilPersona } = props;
 
     const textPostStyle = {
         textAlign: 'justify'
@@ -16,7 +17,7 @@ function SocialPost(props) {
         <div className='container'>
             <div className='row'>
                 <div className='border border-5 border-dark p-4 col-md-12 rounded-4 mb-4'>
-                    <img className="rounded-circle mx-auto d-block w-25 m-2" src={pfp_example}></img>
+                    <img className="rounded-circle mx-auto d-block w-25 m-2" src={fotoPerfilPersona}></img>
                     <div>
                         <h4>{nombrePersona} {apellidoPersona}</h4>
                         <p id='publicationText' style={textPostStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit

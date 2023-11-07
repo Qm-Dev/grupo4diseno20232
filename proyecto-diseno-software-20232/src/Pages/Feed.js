@@ -8,14 +8,17 @@ import axios from 'axios';
 
 function Feed() {
 
-  // Utilización API randomuser.me para obtención de nombres y apellidos
+  // Utilización de la API randomuser.me
+  const apiNamesUrl = 'https://randomuser.me/api/?results=3&nat=us';
+  const apiPfpUrl = 'https://picsum.photos/224/224';
+
+  // Obtención de nombres y apellidos
   const [nombreUsuarios, setNombreUsuarios] = useState([]);
-  const apiUrl = 'https://randomuser.me/api/?results=3';
 
   useEffect( () => {
 
-      axios.get(apiUrl).then((response) => {  
-        setNombreUsuarios(response.data.results);
+      axios.get(apiNamesUrl).then((response) => {  
+        setNombreUsuarios(response.data.results)
       }).catch((error) => {
           console.error('Error');
       });
@@ -39,7 +42,7 @@ function Feed() {
               {/* Crear las publicaciones del feed */}
               {nombreUsuarios.length > 0 ? (
                               nombreUsuarios.map((usuario, index) => (
-                                <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} />
+                                <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} />
                               ))
               ) : (
                 <p>Cargando publicaciones...</p>
