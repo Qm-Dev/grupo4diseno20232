@@ -8,16 +8,18 @@ import axios from 'axios';
 
 function Feed() {
 
-  const [nombreUsuario, setNombreUsuario] = useState(null);
+  // Utilización API randomuser.me para obtención de nombres y apellidos
+  const [nombreUsuarios, setNombreUsuarios] = useState([]);
   const apiUrl = 'https://randomuser.me/api/?results=3';
 
   useEffect( () => {
 
-      axios.get(apiUrl).then((response) => {
-          setNombreUsuario(response.data.results[0]);
+      axios.get(apiUrl).then((response) => {  
+        setNombreUsuarios(response.data.results);
       }).catch((error) => {
           console.error('Error');
       });
+
   },[]);
 
     return (
@@ -34,7 +36,14 @@ function Feed() {
           <div className='row'>
             <div className='col-md-5'></div>
             <div className='col-md-7 p-3 rounded-5'>
-              <SocialPost nombrePersona={'Mr. Beast'} />
+              {/* Crear las publicaciones del feed */}
+              {nombreUsuarios.length > 0 ? (
+                              nombreUsuarios.map((usuario, index) => (
+                                <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} />
+                              ))
+              ) : (
+                <p>Cargando publicaciones...</p>
+              )}
             </div>
           </div>
         </div>

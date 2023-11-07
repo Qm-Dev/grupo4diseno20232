@@ -6,6 +6,7 @@ import pfp_example from '../Pages/img/pfp_example.jpg';
 function SocialPost(props) {
 
     const { nombrePersona } = props;
+    const { apellidoPersona } = props;
 
     const textPostStyle = {
         textAlign: 'justify'
@@ -17,7 +18,7 @@ function SocialPost(props) {
                 <div className='border border-5 border-dark p-4 col-md-12 rounded-4 mb-4'>
                     <img className="rounded-circle mx-auto d-block w-25 m-2" src={pfp_example}></img>
                     <div>
-                        <h4>{nombrePersona}</h4>
+                        <h4>{nombrePersona} {apellidoPersona}</h4>
                         <p id='publicationText' style={textPostStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit
                              ultricies neque id facilisis. Pellentesque habitant morbi tristique
                              senectus et netus et malesuada fames ac turpis egestas. Donec augue ligula, 
