@@ -11,6 +11,11 @@ function PostBox() {
         height: '150px'
     }
 
+    const publishButtonStyle = {
+        display: 'block',
+        margin: '0 auto'
+    };
+
     return (
         <div className='container'>
             <div className='row'>
@@ -22,7 +27,7 @@ function PostBox() {
                             <input className="form-control" type="file" id="formFile"></input>
                         </div>
                         <div>
-                            <button className='btn btn-primary'>Publicar</button>
+                            <button style={publishButtonStyle} className='btn btn-primary'>Publicar</button>
                         </div>
                     </div>
                 </div>

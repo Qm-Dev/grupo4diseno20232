@@ -9,8 +9,20 @@ function Profile() {
         borderRadius: '100%',
         backgroundColor: 'black',
         width: '200px',
-        height: '100%'
-    }
+        height: 'auto', 
+        display: 'block', 
+        margin: '0 auto', 
+    };
+
+    const paragraphStyle = {
+        textAlign: 'justify',
+        padding: '0.75rem 1.5rem', 
+    };
+
+    const certificationStyle = {
+        textAlign: 'justify',
+        padding: '0.75rem 1.5rem'
+    };
 
     return (
         <main>
@@ -20,7 +32,7 @@ function Profile() {
                         <img className='p-2' src={pfp_example} style={imgStyle}></img>
                         <h1>Dell Conagher</h1>
                         <h4>Ocupación / Oficio / Especialización</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum mauris, congue ac libero sit amet, vehicula
+                        <p style={paragraphStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum mauris, congue ac libero sit amet, vehicula
                         vestibulum tellus. Sed sagittis, sapien ac lacinia vehicula, magna massa scelerisque justo, id lacinia erat turpis
                         sit amet ante. Duis sit amet dignissim tortor. Sed tincidunt ipsum in dolor dapibus, id varius turpis congue.
                         Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras non pretium orci.
@@ -30,31 +42,37 @@ function Profile() {
                     <div id='experienceSection' className='border border-5 rounded-5 border-dark mb-3'>
                         <h2 className='p-2'>Experiencia</h2>
                         <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="https://wiki.teamfortress.com/w/images/thumb/3/3e/Community_Engineer_Strategy_Header.png/400px-Community_Engineer_Strategy_Header.png" class="d-block w-auto mx-auto" alt="Experiencia1"></img>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>First slide label</h5>
-                                    <p>Some representative placeholder content for the first slide.</p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="https://wiki.teamfortress.com/w/images/thumb/3/3e/Community_Engineer_Strategy_Header.png/400px-Community_Engineer_Strategy_Header.png" class="d-block w-auto mx-auto" alt="Experiencia1" />
+                                    <div class="carousel-caption text-center">
+                                        <h5>First slide label</h5>
+                                        <p>Some representative placeholder content for the first slide.</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
-                                <img src="https://wiki.teamfortress.com/w/images/thumb/a/a6/Engiwithdispenser.png/300px-Engiwithdispenser.png" class="d-block w- mx-auto" alt="Experiencia2"></img>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Second slide label</h5>
-                                    <p>Some representative placeholder content for the second slide.</p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="https://wiki.teamfortress.com/w/images/thumb/a/a6/Engiwithdispenser.png/300px-Engiwithdispenser.png" class="d-block w- mx-auto" alt="Experiencia2" />
+                                    <div class="carousel-caption text-center">
+                                        <h5>Second slide label</h5>
+                                        <p>Some representative placeholder content for the second slide.</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="https://wiki.teamfortress.com/w/images/thumb/0/01/Engybuild.png/400px-Engybuild.png" class="d-block w-20 mx-auto" alt="Experiencia3"></img>
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Third slide label</h5>
-                                    <p>Some representative placeholder content for the third slide.</p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <img src="https://wiki.teamfortress.com/w/images/thumb/0/01/Engybuild.png/400px-Engybuild.png" class="d-block w-20 mx-auto" alt="Experiencia3" />
+                                    <div class="carousel-caption text-center">
+                                        <h5>Third slide label</h5>
+                                        <p>Some representative placeholder content for the third slide.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -72,23 +90,19 @@ function Profile() {
                     <div id='certificationsSection' className='border border-5 rounded-5 border-dark mb-3'>
                         <h2 className='p-2'>Certificaciones</h2>
                         <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum mauris, congue ac libero sit amet, vehicula
+                            <li style={certificationStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum mauris, congue ac libero sit amet, vehicula
                             vestibulum tellus. Sed sagittis, sapien ac lacinia vehicula, magna massa scelerisque justo, id lacinia erat turpis
-                            sit amet ante. Duis sit amet dignissim tortor. Sed tincidunt ipsum in dolor dapibus, id varius turpis congue.
-                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras non pretium orci.
-                            Vestibulum finibus turpis in lectus tincidunt pulvinar.
+                            sit amet ante. Duis sit amet dignissim tortor.
                             </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum mauris, congue ac libero sit amet, vehicula
+                            <br></br>
+                            <li style={certificationStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum mauris, congue ac libero sit amet, vehicula
                             vestibulum tellus. Sed sagittis, sapien ac lacinia vehicula, magna massa scelerisque justo, id lacinia erat turpis
-                            sit amet ante. Duis sit amet dignissim tortor. Sed tincidunt ipsum in dolor dapibus, id varius turpis congue.
-                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras non pretium orci.
-                            Vestibulum finibus turpis in lectus tincidunt pulvinar.
+                            sit amet ante. Duis sit amet dignissim tortor.
                             </li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum mauris, congue ac libero sit amet, vehicula
+                            <br></br>
+                            <li style={certificationStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum mauris, congue ac libero sit amet, vehicula
                             vestibulum tellus. Sed sagittis, sapien ac lacinia vehicula, magna massa scelerisque justo, id lacinia erat turpis
-                            sit amet ante. Duis sit amet dignissim tortor. Sed tincidunt ipsum in dolor dapibus, id varius turpis congue.
-                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras non pretium orci.
-                            Vestibulum finibus turpis in lectus tincidunt pulvinar.
+                            sit amet ante. Duis sit amet dignissim tortor.
                             </li>
                         </ul>
                         <a href="#" className='btn btn-dark mb-2'>Editar certificaciones</a>

@@ -9,8 +9,11 @@ import axios from 'axios';
 function Feed() {
 
   // Utilización de la API randomuser.me
-  const apiNamesUrl = 'https://randomuser.me/api/?results=3&nat=us';
+
+  const post_amount = 3;
+  const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
   const apiPfpUrl = 'https://picsum.photos/224/224';
+
 
   // Obtención de nombres y apellidos
   const [nombreUsuarios, setNombreUsuarios] = useState([]);

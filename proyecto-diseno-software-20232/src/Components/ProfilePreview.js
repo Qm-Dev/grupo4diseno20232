@@ -14,7 +14,7 @@ function ProfilePreview() {
         <div className="card border border-dark" style={style}>
             <img className="card-img-top border border-dark" src={pfp_example} alt="Card image cap"></img>
             <div className="card-body">
-                <h4 className='text-center'>Nombre</h4>
+                <h4 className='text-center'>Nombre</h4> 
                 <h6 className='text-center'>Profesión</h6>
             </div>
         </div>

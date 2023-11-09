@@ -26,7 +26,8 @@ function Footer() {
         width: '100%',
         height: '100%',
         maxWidth: '350px',
-        marginBottom: '1em'
+        marginBottom: '1em',
+        cursor: 'pointer'
     }
 
     // Estilo del link: Acerca de
@@ -43,6 +44,12 @@ function Footer() {
     const linkStyleFAQ = {
         transition: 'color 0.4s'
     }
+
+    // Redirigir al usuario a la pagina uai
+    const redirectToUAI = () => {
+        window.location.href = 'https://www.uai.cl';
+    };
+    
 
     // Si se detecta hover por parte del usuario
     // En Acerca de
@@ -76,14 +83,15 @@ function Footer() {
     // Función
     return(
         <div className='Footer' style={footerStyle}>
-            <img src="https://www.uai.cl/assets/uploads/2021/12/facultad-de-ingenieria-y-ciencias.png" style={imgStyle}></img>
-            <p>Grupo 4 © 2023 • <a href="/about" style={linkStyleAbout}
+            <img src="https://www.uai.cl/assets/uploads/2021/12/facultad-de-ingenieria-y-ciencias.png" style={imgStyle} onClick={redirectToUAI}></img>
+            <p>Grupo 4 © 2023 <br></br>• <a href="/about" style={linkStyleAbout}
             onMouseOver={() => setIsAboutHovered(true)}
             onMouseLeave={() => setIsAboutHovered(false)}>Acerca de</a> • <a href="/faq" style={linkStyleFAQ}
             onMouseOver={() => setIsFAQHovered(true)}
             onMouseLeave={() => setIsFAQHovered(false)}>FAQ</a> • <a href="/contact" style={linkStyleContact}
             onMouseOver={() => setIsContactHovered(true)}
-            onMouseLeave={() => setIsContactHovered(false)}>Contacto</a></p>
+            onMouseLeave={() => setIsContactHovered(false)}>Contacto</a>
+            </p>
         </div>
     );
 }

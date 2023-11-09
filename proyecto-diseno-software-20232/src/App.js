@@ -1,7 +1,11 @@
 // React, logos y CSS
-import { BrowserRouter , Route, Routes } from 'react-router-dom';
+import { BrowserRouter , Route, Routes, Navigate } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // Componentes
 import Footer from './Components/Footer';
@@ -20,10 +24,7 @@ import About from './Pages/About';
 import FrequentlyAskedQuestions from './Pages/FrequentlyAskedQuestions';
 import Contact from './Pages/Contact';
 import Notifications from './Pages/Notifications';
-
-// Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Error from './Pages/Error';
 
 // Sitio Web
 function App() {
@@ -35,8 +36,8 @@ function App() {
         {/* Páginas donde la Navbar no estará visible */}
         <Route element={<NavbarNotVisible />}>
           <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path="/error" element={<Error />} />
         </Route>
 
         {/* Páginas donde la Navbar estará visible */}
@@ -50,8 +51,11 @@ function App() {
           <Route path="/faq" element={<FrequentlyAskedQuestions />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="/login" element={<Login />} />
         </Route>
 
+      {/* Redirigir todas las URL desconocidas a la página de error */}
+      <Route element={<Navigate to="/error" />} />
       </Routes>
       <Footer />
     </BrowserRouter>
