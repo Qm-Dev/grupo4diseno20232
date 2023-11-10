@@ -39,7 +39,7 @@ function About() {
                     <img className='col-sm-3 mx-auto p-1 m-1' src="https://wiki.teamfortress.com/w/images/0/0a/Buffed_blu_demoman.jpg" style={imgAboutUsStyle} alt="Integrante 4"></img>
                 </div>
             </div>
-            <h2 style={paragraphAboutUsStyle}>Subtítulo 1</h2>
+            <h2 style={paragraphAboutUsStyle}>Quienes somos</h2>
             <p style={paragraphAboutUsStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Sed suscipit tempor metus eget sodales. Nunc ut sem augue. Suspendisse luctus aliquet auctor.
             Vestibulum non felis non tellus mattis pretium. Cras hendrerit dignissim justo, a pulvinar magna
@@ -49,7 +49,7 @@ function About() {
             libero ut auctor ornare, lectus libero mollis risus, a condimentum ex leo nec ex. Duis pharetra,
             ante quis tincidunt iaculis, sapien enim iaculis turpis, in sollicitudin nunc tortor ut ipsum.
             Vestibulum gravida odio neque. Etiam sit amet urna urna.</p>
-            <h2 style={paragraphAboutUsStyle}>Subtítulo 2</h2>
+            <h2 style={paragraphAboutUsStyle}>Historia</h2>
             <p style={paragraphAboutUsStyle}>Nunc in purus sit amet eros pulvinar pharetra. Duis bibendum
             eleifend odio vitae pulvinar. Vestibulum luctus leo sapien. Morbi eget ultrices quam. Sed leo massa,
             condimentum ut consequat sit amet, ultricies ut sem. Phasellus convallis molestie hendrerit. Duis
@@ -63,7 +63,7 @@ function About() {
             viverra ornare justo suscipit id. Sed vehicula felis aliquet sem pretium gravida. Vivamus faucibus diam
             ac turpis dictum posuere. Nulla sed mi sollicitudin, ullamcorper lectus id, dictum massa. Nam venenatis
             velit eget nisi viverra, eu condimentum quam scelerisque.</p>
-            <h2 style={paragraphAboutUsStyle}>Subtítulo 3</h2>
+            <h2 style={paragraphAboutUsStyle}>Objetivo y finalidad del proyecto</h2>
             <p style={paragraphAboutUsStyle}>Sed fringilla dolor eros, sed congue libero faucibus a. Nullam viverra
             velit ac pellentesque hendrerit. Aenean sed mi quis mi rutrum dapibus quis ac lacus. Sed velit lectus,
             bibendum a elit vel, commodo facilisis nibh. Integer nec est nunc. Nam vel sollicitudin lectus. Mauris

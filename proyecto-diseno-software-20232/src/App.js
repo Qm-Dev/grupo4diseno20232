@@ -17,7 +17,7 @@ import Register from './Pages/Register';
 import Login from './Pages/Login';
 import Profile from './Pages/Profile';
 import Feed from './Pages/Feed';
-import MyNetwork from './Pages/MyNetwork';
+import Jobs from './Pages/Jobs';
 import ProfileConfiguration from './Pages/ProfileConfiguration';
 import Logout from './Pages/Logout';
 import About from './Pages/About';
@@ -44,7 +44,7 @@ function App() {
         <Route element={<NavbarVisible />}>
           <Route path="/" element={<Feed />} />
           <Route path="/feed" element={<Feed />} />
-          <Route path="/mynetwork" element={<MyNetwork />} />
+          <Route path="/jobs" element={<Jobs />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/configuration" element={<ProfileConfiguration />} />
           <Route path="/about" element={<About />} />
@@ -55,7 +55,7 @@ function App() {
         </Route>
 
       {/* Redirigir todas las URL desconocidas a la página de error */}
-      <Route element={<Navigate to="/error" />} />
+      <Route path="*" element={<Navigate to="/error" />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -31,7 +31,7 @@ function Navbar() {
 </svg> Inicio</a>
             </li>
             <li class="nav-item" style={navbarItemStyle}>
-            <a class="nav-link" href="/mynetwork"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-topology-star-ring-3" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <a class="nav-link" href="/jobs"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-topology-star-ring-3" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M10 19a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
   <path d="M18 5a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z" />
@@ -52,7 +52,7 @@ function Navbar() {
   <path d="M19 10l-2 -3" />
   <path d="M7 7l-2 3" />
   <path d="M5 14l2 3" />
-</svg> Mi red</a>
+</svg> Empleos</a>
             </li>
             <li class="nav-item" style={navbarItemStyle}>
             <a class="nav-link" href="/notifications"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">

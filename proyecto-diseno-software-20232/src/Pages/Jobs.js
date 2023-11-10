@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-function MyNetwork() {
+function Jobs() {
 
     return (
-        <h1>Hello World, My Network</h1>
+        <h1>Hello World, Jobs</h1>
     );
 }
 
-export default MyNetwork;
+export default Jobs;
+
+
+

@@ -24,6 +24,11 @@ function Profile() {
         padding: '0.75rem 1.5rem'
     };
 
+    const carouselIndicatorsStyle = {
+        // alejar los indicadores del carousel del contenido
+        bottom: '-1.5rem',
+    };
+
     return (
         <main>
             <div className='profile'>
@@ -42,7 +47,7 @@ function Profile() {
                     <div id='experienceSection' className='border border-5 rounded-5 border-dark mb-3'>
                         <h2 className='p-2'>Experiencia</h2>
                         <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                            <div class="carousel-indicators">
+                            <div style={carouselIndicatorsStyle} class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -50,8 +55,8 @@ function Profile() {
                             <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
                                 <div class="d-flex flex-column align-items-center">
-                                    <img src="https://wiki.teamfortress.com/w/images/thumb/3/3e/Community_Engineer_Strategy_Header.png/400px-Community_Engineer_Strategy_Header.png" class="d-block w-auto mx-auto" alt="Experiencia1" />
-                                    <div class="carousel-caption text-center">
+                                        <img src="https://wiki.teamfortress.com/w/images/thumb/3/3e/Community_Engineer_Strategy_Header.png/400px-Community_Engineer_Strategy_Header.png" class="d-block w-auto mx-auto" alt="Experiencia1" />
+                                    <div class="text-center">
                                         <h5>First slide label</h5>
                                         <p>Some representative placeholder content for the first slide.</p>
                                     </div>
@@ -60,7 +65,7 @@ function Profile() {
                             <div class="carousel-item" data-bs-interval="2000">
                                 <div class="d-flex flex-column align-items-center">
                                     <img src="https://wiki.teamfortress.com/w/images/thumb/a/a6/Engiwithdispenser.png/300px-Engiwithdispenser.png" class="d-block w- mx-auto" alt="Experiencia2" />
-                                    <div class="carousel-caption text-center">
+                                    <div class="text-center">
                                         <h5>Second slide label</h5>
                                         <p>Some representative placeholder content for the second slide.</p>
                                     </div>
@@ -69,7 +74,7 @@ function Profile() {
                             <div class="carousel-item">
                                 <div class="d-flex flex-column align-items-center">
                                     <img src="https://wiki.teamfortress.com/w/images/thumb/0/01/Engybuild.png/400px-Engybuild.png" class="d-block w-20 mx-auto" alt="Experiencia3" />
-                                    <div class="carousel-caption text-center">
+                                    <div class="text-center">
                                         <h5>Third slide label</h5>
                                         <p>Some representative placeholder content for the third slide.</p>
                                     </div>

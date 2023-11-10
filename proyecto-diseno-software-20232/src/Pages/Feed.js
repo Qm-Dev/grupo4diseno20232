@@ -45,7 +45,7 @@ function Feed() {
               {/* Crear las publicaciones del feed */}
               {nombreUsuarios.length > 0 ? (
                               nombreUsuarios.map((usuario, index) => (
-                                <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} />
+                                <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date}/>
                               ))
               ) : (
                 <p>Cargando publicaciones...</p>
