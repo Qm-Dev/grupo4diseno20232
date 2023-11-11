@@ -8,9 +8,10 @@ function Notifications() {
 
   // Utilización de la API randomuser.me
 
-  const post_amount = 10;
+  const post_amount = Math.floor(Math.random() * 11);
   const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
   const apiPfpUrl = 'https://picsum.photos/224/224';
+  const apiDatesUrl = `https://api.lrs.org/random-date-generator?num_dates=${post_amount}`;
 
 
   // Obtención de nombres y apellidos
@@ -25,6 +26,21 @@ function Notifications() {
       });
 
   },[]);
+  // Obtención de fechas
+  const [fechas, setFechas] = useState([]);
+
+  useEffect( () => {
+
+      axios.get(apiDatesUrl).then((response) => {  
+        setFechas(response.data.data)
+      }).catch((error) => {
+          console.error('Error');
+      });
+
+  },[]);
+
+  const fechasArray = Object.keys(fechas)
+  const listaInvertida = [...fechasArray].reverse();
 
     return (
       <main className='bg-secondary-subtle'>
@@ -35,7 +51,7 @@ function Notifications() {
               {/* Crear las publicaciones del feed */}
               {nombreUsuarios.length > 0 ? (
                               nombreUsuarios.map((usuario, index) => (
-                                <Notification key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} />
+                                <Notification key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fechaNoti={listaInvertida[index]}/>
                               ))
               ) : (
                 <p>Cargando notificaciones...</p>

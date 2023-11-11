@@ -8,6 +8,7 @@ function Notification(props) {
     const { nombrePersona } = props;
     const { apellidoPersona } = props;
     const { fotoPerfilPersona } = props;
+    const { fechaNoti } = props;
 
     const textPostStyle = {
         textAlign: 'justify'
@@ -30,11 +31,7 @@ function Notification(props) {
                     <div>
                         <h4>{nombrePersona} {apellidoPersona}</h4>
                         <p id='publicationText' style={textPostStyle}>{nombrePersona} {notificacionAleatoria}</p>
-                        <div className='text-center'>
-                            <button className='btn btn-secondary m-1'>Interactuar</button>
-                            <button className='btn btn-secondary m-1'>Comentar</button>
-                            <button className='btn btn-secondary m-1'>Enviar</button>
-                        </div>
+                        <p>{fechaNoti}</p>
                     </div>
                 </div>
             </div>
