@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import pfp_example from '../Pages/img/pfp_example.jpg';
 
 
 // componente fecha
@@ -9,8 +8,8 @@ function formatDate(isoDate) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const formattedDate = new Date(isoDate).toLocaleDateString(undefined, options);
     return formattedDate;
-  }
-  
+}
+
 
 function SocialPost(props) {
 
@@ -20,11 +19,6 @@ function SocialPost(props) {
     const { fecha } = props;
     const formattedDate = formatDate(fecha);
     
-
-    const textPostStyle = {
-        textAlign: 'justify'
-    }
-
     return (
         <div class="container mt-4">
             <div class="card">

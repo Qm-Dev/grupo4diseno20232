@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import pfp_example from '../Pages/img/pfp_example.jpg';
 
 function Notification(props) {
 
@@ -9,10 +8,6 @@ function Notification(props) {
     const { apellidoPersona } = props;
     const { fotoPerfilPersona } = props;
     const { fechaNoti } = props;
-
-    const textPostStyle = {
-        textAlign: 'justify'
-    }
 
     const tipos_notificaciones = ["quiere ser tu amigo! Acepta o rechaza la solicitud de amistad.",
         "te acaba de enviar un mensaje privado, respondelo o ignoralo.",

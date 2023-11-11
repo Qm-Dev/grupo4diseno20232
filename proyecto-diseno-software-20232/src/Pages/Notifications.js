@@ -10,7 +10,6 @@ function Notifications() {
 
   const post_amount = Math.floor(Math.random() * 11);
   const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
-  const apiPfpUrl = 'https://picsum.photos/224/224';
   const apiDatesUrl = `https://api.lrs.org/random-date-generator?num_dates=${post_amount}`;
 
 
