@@ -26,29 +26,26 @@ function SocialPost(props) {
     }
 
     return (
-        <div className='container'>
-            <div className='row'>
-                <div className='border border-5 border-dark p-4 col-md-12 rounded-4 mb-4'>
-                    <img className="rounded-circle mx-auto d-block w-25 m-2" src={fotoPerfilPersona}></img>
-                    <div>
-                        <h4>{nombrePersona} {apellidoPersona}</h4>
-                        <p>{formattedDate}</p>
-                        <p id='publicationText' style={textPostStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit
-                             ultricies neque id facilisis. Pellentesque habitant morbi tristique
-                             senectus et netus et malesuada fames ac turpis egestas. Donec augue ligula, 
-                             pulvinar non cursus ut, efficitur eu nisi. Integer feugiat mi sed ante 
-                             semper, eu imperdiet eros varius. Vivamus fermentum fermentum congue. 
-                             Nullam scelerisque rhoncus magna. Phasellus scelerisque sodales massa 
-                             vitae gravida. Nunc tristique rutrum nisi vitae bibendum.</p>
-                        <div className='text-center'>
-                            <button className='btn btn-secondary m-1'>Interactuar</button>
-                            <button className='btn btn-secondary m-1'>Comentar</button>
-                            <button className='btn btn-secondary m-1'>Enviar</button>
+        <div class="container mt-4">
+            <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex">
+                        <img src={fotoPerfilPersona} class="me-3 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img>
+                            <div class="media-body">
+                                <h5 class="mt-0">{nombrePersona} {apellidoPersona}</h5>
+                                <small class="text-muted">Fecha de Nacimiento: {formattedDate}</small>
+                            </div>
                         </div>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero nec felis convallis, nec eleifend est hendrerit.</p>
+                                    <div class="d-flex btn-group justify-content-cente">
+                                        <button type="button" class="btn btn-outline-primary">Recomendar</button>
+                                        <button type="button" class="btn btn-outline-primary">Comentar</button>
+                                        <button type="button" class="btn btn-outline-primary">Compartir</button>
+                                        <button type="button" class="btn btn-outline-primary">Enviar</button>
+                                    </div>
                     </div>
                 </div>
             </div>
-        </div>
     );
 }
 

@@ -10,7 +10,7 @@ function Feed() {
 
   // Utilización de la API randomuser.me
 
-  const post_amount = 3;
+  const post_amount = Math.floor(Math.random() * 11);
   const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
   const apiPfpUrl = 'https://picsum.photos/224/224';
 
@@ -45,7 +45,7 @@ function Feed() {
               {/* Crear las publicaciones del feed */}
               {nombreUsuarios.length > 0 ? (
                               nombreUsuarios.map((usuario, index) => (
-                                <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date}/>
+                                <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.thumbnail} fecha={usuario.dob.date}/>
                               ))
               ) : (
                 <p>Cargando publicaciones...</p>

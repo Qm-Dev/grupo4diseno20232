@@ -24,18 +24,18 @@ function Notification(props) {
     const notificacionAleatoria = tipos_notificaciones[indiceAleatorio];
 
     return (
-        <div className='container'>
-            <div className='row'>
-                <div className='border border-5 border-dark p-4 col-md-12 rounded-4 mb-4'>
-                    <img className="rounded-circle mx-auto d-block w-25 m-2" src={fotoPerfilPersona}></img>
-                    <div>
-                        <h4>{nombrePersona} {apellidoPersona}</h4>
-                        <p id='publicationText' style={textPostStyle}>{nombrePersona} {notificacionAleatoria}</p>
-                        <p>{fechaNoti}</p>
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex">
+                    <img src={fotoPerfilPersona} class="me-3 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img>
+                        <div class="media-body">
+                            <h5 class="mt-0">{nombrePersona} {apellidoPersona}</h5>
+                            <p>{nombrePersona} {notificacionAleatoria}</p>
+                            <small class="text-muted">Fecha de notificación: {fechaNoti}</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div>  
     );
 }
 
