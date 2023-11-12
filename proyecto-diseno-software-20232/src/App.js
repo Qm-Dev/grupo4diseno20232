@@ -1,6 +1,5 @@
 // React, logos y CSS
 import { BrowserRouter , Route, Routes, Navigate } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 
 // Bootstrap
@@ -54,8 +53,8 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Route>
 
-      {/* Redirigir todas las URL desconocidas a la página de error */}
-      <Route path="*" element={<Navigate to="/error" />} />
+        {/* Redirigir todas las URL desconocidas a la página de error */}
+        <Route path="*" element={<Navigate to="/error" />} />
       </Routes>
       <Footer />
     </BrowserRouter>

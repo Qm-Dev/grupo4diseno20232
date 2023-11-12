@@ -39,7 +39,7 @@ function About() {
                     <img className='col-sm-3 mx-auto p-1 m-1' src="https://wiki.teamfortress.com/w/images/0/0a/Buffed_blu_demoman.jpg" style={imgAboutUsStyle} alt="Integrante 4"></img>
                 </div>
             </div>
-            <h2 style={paragraphAboutUsStyle}>Quienes somos</h2>
+            <h2 style={paragraphAboutUsStyle}>¿Quiénes somos?</h2>
             <p style={paragraphAboutUsStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Sed suscipit tempor metus eget sodales. Nunc ut sem augue. Suspendisse luctus aliquet auctor.
             Vestibulum non felis non tellus mattis pretium. Cras hendrerit dignissim justo, a pulvinar magna

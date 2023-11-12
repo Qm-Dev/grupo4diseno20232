@@ -16,27 +16,22 @@ function Error() {
     const imgError = {
         display: 'block',
         margin: '0 auto',
-        paddingTop: '1.5rem',
+        paddingTop: '1rem',
         paddingBottom: '1rem',
+        width: '500px',
+        height: 'auto'
     }
-
-    // Estilo del boton
-    const backButtonStyle = {
-        marginTop: '2rem',
-        marginBottom: '1rem',
-        display: 'block',
-        margin: '1rem auto',
-        cursor: 'pointer',
-        maxWidth: '10%',
-        maxHeight: '10%',
-    };
     
     
     return (
         <main>
             <img style={imgError} src= 'https://i.kym-cdn.com/photos/images/original/000/918/810/a22.jpg'></img>
-            <h2 style={textError}>¡Lo sentimos! Esta pagina no existe</h2>
-            <Link to="/feed" style={backButtonStyle} className="btn btn-primary" >Volver al Inicio</Link>
+            <h2 className="text-center">¡Lo sentimos! Esta página no existe.</h2>
+            <div class="container">
+                <div class="text-center">
+                    <Link to="/feed" className="btn btn-primary m-4">Volver atrás</Link>
+                </div>
+            </div>
         </main>
     );
 }

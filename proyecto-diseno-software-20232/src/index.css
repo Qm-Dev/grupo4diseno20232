@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Cambiar de color el componente svg cuando el usuario pase por encima de este */
+.btn.btn-outline-primary:hover svg {
+  stroke: white;
+}

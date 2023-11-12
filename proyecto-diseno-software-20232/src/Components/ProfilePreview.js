@@ -30,26 +30,26 @@ function ProfilePreview(props) {
         "Soldador",
         "Techador",
         "Jardinero/Landscaper",
-        "Trabajador de Demolición",
-        "Operador de Maquinaria Pesada",
-        "Ayudante de Construcción",
-        "Operador de Montacargas",
-        "Encargado de Limpieza y Mantenimiento",
-        "Operador de Herramientas Manuales",
-        "Instalador de Aislamiento",
-        "Asistente de Carpintería",
-        "Operador de Grúa Móvil",
-        "Operador de Excavadora",
-        "Armador de Estructuras de Acero",
-        "Instalador de Suelos",
-        "Operario de Encofrado",
+        "Trabajador de demolición",
+        "Operador de maquinaria pesada",
+        "Ayudante de construcción",
+        "Operador de montacargas",
+        "Encargado de limpieza y mantenimiento",
+        "Operador de herramientas manuales",
+        "Instalador de aislamiento",
+        "Asistente de carpintería",
+        "Operador de grúa móvil",
+        "Operador de excavadora",
+        "Armador de estructuras de acero",
+        "Instalador de suelos",
+        "Operario de encofrado",
         "Conserje",
-        "Operador de Compactadora",
-        "Operador de Miniexcavadora",
-        "Instalador de Tuberías",
-        "Ayudante de Electricista",
-        "Auxiliar de Plomería",
-        "Auxiliar de Pintura",
+        "Operador de compactadora",
+        "Operador de miniexcavadora",
+        "Instalador de tuberías",
+        "Ayudante de electricista",
+        "Auxiliar de plomería",
+        "Auxiliar de pintura",
 ];
 
     const indiceAleatorio = Math.floor(Math.random() * profesionesConstruccion.length);
@@ -58,7 +58,7 @@ function ProfilePreview(props) {
 
     return (
         <div className="card border border-dark" style={style}>
-            <img className="card-img-top border border-dark" src={fotoPerfilPersona} alt="Card image cap"></img>
+            <a href="/profile"><img className="card-img-top border border-dark" src={fotoPerfilPersona} alt="Card image cap"></img></a>
             <div className="card-body">
                 <h4 className='text-center'>{nombrePersona} {apellidoPersona}</h4> 
                 <h6 className='text-center'>{formattedDate}</h6>

@@ -84,7 +84,7 @@ function Footer() {
     return(
         <div className='Footer' style={footerStyle}>
             <img src="https://www.uai.cl/assets/uploads/2021/12/facultad-de-ingenieria-y-ciencias.png" style={imgStyle} onClick={redirectToUAI}></img>
-            <p>Grupo 4 © 2023 <br></br>• <a href="/about" style={linkStyleAbout}
+            <p>Grupo 4 TEI301, Grupo 5 TICS316 © 2023-2 <br></br><a href="/about" style={linkStyleAbout}
             onMouseOver={() => setIsAboutHovered(true)}
             onMouseLeave={() => setIsAboutHovered(false)}>Acerca de</a> • <a href="/faq" style={linkStyleFAQ}
             onMouseOver={() => setIsFAQHovered(true)}

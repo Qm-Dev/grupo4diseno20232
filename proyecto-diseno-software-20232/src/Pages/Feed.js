@@ -12,9 +12,8 @@ function Feed() {
   const post_amount = Math.floor(Math.random() * 11);
   const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
 
-  // Obtención de nombres y apellidos
+  // Obtención de varios usuarios para la creación de posts
   const [nombreUsuarios, setNombreUsuarios] = useState([]);
-
   useEffect( () => {
 
       axios.get(apiNamesUrl).then((response) => {  
@@ -25,8 +24,8 @@ function Feed() {
 
   },[]);
 
+  // Obtención de un único usuario
   const [nombreUsuario, setNombreUsuario] = useState([]);
-
   useEffect( () => {
 
     axios.get(`https://randomuser.me/api/?results=1&nat=us`).then((response) => {  
@@ -47,7 +46,7 @@ function Feed() {
                                 <ProfilePreview key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date}/>
                               ))
               ) : (
-                <p></p>
+                <p>Cargando tu perfil...</p>
               )}
             </div>
             <div className='col-md-7 p-1 rounded-5'>
