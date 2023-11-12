@@ -20,8 +20,7 @@ function SocialPost(props) {
     const formattedDate = formatDate(fecha);
     
     return (
-        <div class="container mt-4">
-            <div class="card">
+            <div class="card mt-3">
                     <div class="card-body">
                         <div class="d-flex">
                         <a href={`/profiles/${nombrePersona.toLowerCase()}_${apellidoPersona.toLowerCase()}`}><img src={fotoPerfilPersona} class="me-3 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img></a>
@@ -56,7 +55,6 @@ function SocialPost(props) {
                             </div>
                     </div>
                 </div>
-            </div>
     );
 }
 

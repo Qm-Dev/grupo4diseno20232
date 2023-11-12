@@ -1,36 +1,32 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import pfp_example from '../Pages/img/pfp_example.jpg';
 
 function PostBox(props) {
-
-    const textareaStyle = {
-        overflow: 'hidden',
-        resize: 'none',
-        height: '150px'
-    }
-
-    const publishButtonStyle = {
-        display: 'block',
-        margin: '0 auto'
-    };
 
     const { fotoPerfilPersona } = props;
 
     return (
-        <div className='container'>
-            <div className='row'>
-                <div className='col p-1'>
-                    <div className='row'>
-                        <img className="rounded-circle w-25 h-100" src={fotoPerfilPersona}></img>
-                        <textarea className='col-md-1 w-75 rounded-4 border-3 border-dark' style={textareaStyle} minLength={16} placeholder='¿Qué estás pensando?'></textarea>
-                        <div className="m-3">
-                            <input className="form-control" type="file" id="formFile"></input>
-                        </div>
-                        <div>
-                            <button style={publishButtonStyle} className='btn btn-primary'>Publicar</button>
-                        </div>
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h4><i class="fas fa-edit"></i> Nueva Publicación</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src={fotoPerfilPersona} class="img-fluid rounded-circle img-thumbnail" alt="Imagen de perfil"></img>
+                    </div>
+                    <div class="col-md-10">
+                        <form>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="3" placeholder="Escribe tu mensaje aquí"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="archivo" class="form-label">Adjuntar archivo:</label>
+                                <input type="file" class="form-control" id="archivo"></input>
+                            </div>
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Publicar</button>
+                        </form>
                     </div>
                 </div>
             </div>
