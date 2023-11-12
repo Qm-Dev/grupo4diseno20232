@@ -54,7 +54,7 @@ function ProfilePreview(props) {
     return (
         <div class="card">
             <div class="card-header bg-primary text-white">
-                <h4><i class="fas fa-user"></i> Perfil de Usuario</h4>
+                <h4><i class="fas fa-user mt-2"></i> Perfil de Usuario</h4>
             </div>
             <div class="card-body">
                 <div class="row">
