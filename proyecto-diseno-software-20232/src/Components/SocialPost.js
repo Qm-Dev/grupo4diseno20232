@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
+import axios from 'axios';
 
 // Formateo de fecha
 function formatDate(isoDate) {
@@ -9,7 +9,6 @@ function formatDate(isoDate) {
     const formattedDate = new Date(isoDate).toLocaleDateString(undefined, options);
     return formattedDate;
 }
-
 
 function SocialPost(props) {
 
@@ -19,6 +18,21 @@ function SocialPost(props) {
     const { fecha } = props;
     const formattedDate = formatDate(fecha);
     
+    const post_amount = Math.floor(Math.random() * 200);
+
+    const [textoUsuario, setTextoUsuario] = useState([]);
+    useEffect( () => {
+        axios.get(`https://random-word-api.vercel.app/api?words=${post_amount}`).then((response) => {  
+            setTextoUsuario(response.data)
+        }).catch((error) => {
+            console.error('Error');
+    });
+
+},[]);
+
+    const oracion = textoUsuario.join(' ');
+
+
     return (
             <div class="card mt-3">
                     <div class="card-body">
@@ -29,7 +43,7 @@ function SocialPost(props) {
                                 <small class="text-muted">Fecha de nacimiento: {formattedDate}</small>
                             </div>
                         </div>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero nec felis convallis, nec eleifend est hendrerit.</p>
+                        <p class="card-text">{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{oracion.slice(1)}.</p>
                             <div class="d-flex btn-group justify-content-center">
                                 <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
