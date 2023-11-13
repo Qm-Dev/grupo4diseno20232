@@ -5,7 +5,6 @@ import Notification from '../Components/Job';
 import axios from 'axios';
 
 function Jobs(props) {
-    const { nombreEmpresa, nombreTrabajo, provinciaEmpresa, fechaPublicacion, numeroContacto, correoContacto } = props;
 
     const titleStyle = {
         textAlign: 'center',
@@ -47,18 +46,18 @@ function Jobs(props) {
                 <h1 style={titleStyle}>Ofertas Disponibles</h1>
             </div>
             <div>
-                <div className="container p-3 mb-0 mt-0">
+                <div className="container p-3">
                     <div>
                         {/* creacion de post de empleos */}
                         {trabajos.map((trabajo, index) => (
-                            <div key={index} className="media">
+                            <div key={index} className="media mt-3">
                                 <div className="media-body mb-0">
-                                    <h3 className="mt-0">{trabajo.razon_social}</h3>
-                                    <h5>{tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h5>
+                                    <h3 className="mt-0">{tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]} - {trabajo.razon_social}</h3>
                                     <p>{trabajo.actividad}</p>
-                                    <small className="text-muted">Ubicacion: {trabajo.provincia}, {trabajo.municipio}</small>
-                                    <br />
-                                    <small className="text-muted">Contacto: {trabajo.telefono}</small>
+                                    <p className="text-muted">Ubicacion: {trabajo.provincia}, {trabajo.municipio}</p>
+                                    <small className="text-muted mb-2 mt-2">Numero Contacto: {trabajo.telefono}</small>
+                                    <br></br>
+                                    <small className="text-muted mb-2 mt-2">Correo Contacto: {trabajo.email}</small>
                                 </div>
                             </div>
                         ))}
