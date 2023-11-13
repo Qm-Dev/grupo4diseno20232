@@ -21,25 +21,6 @@ function shuffle(array) {
 
 function ProfileInfo(props) {
 
-    const imgStyle = {
-        borderRadius: '100%',
-        backgroundColor: 'black',
-        width: '200px',
-        height: 'auto', 
-        display: 'block', 
-        margin: '0 auto', 
-    };
-
-    const paragraphStyle = {
-        textAlign: 'justify',
-        padding: '0.75rem 1.5rem', 
-    };
-
-    const certificationStyle = {
-        textAlign: 'justify',
-        padding: '0.75rem 1.5rem'
-    };
-
     const carouselIndicatorsStyle = {
         // alejar los indicadores del carousel del contenido
         bottom: '-1.5rem',
@@ -86,7 +67,7 @@ function ProfileInfo(props) {
         "Ayudante de electricista",
         "Auxiliar de plomería",
         "Auxiliar de pintura",
-];
+    ];
 
 const certificacionesConstruccion = [
     {
@@ -149,70 +130,70 @@ const certificacionesConstruccion = [
         nombre: "Certificación en Construcción Modular",
         descripcion: "Certificación que aborda las técnicas y consideraciones específicas para la construcción modular y prefabricada."
     }
-];
+    ];
 
 const experienciasConstruccion = [
     {
-      titulo: "Supervisión de Proyectos Residenciales",
-      descripcion: "Dirigí la supervisión de proyectos de construcción de viviendas unifamiliares, asegurando la calidad y cumplimiento de plazos."
+        titulo: "Supervisión de Proyectos Residenciales",
+        descripcion: "Dirigí la supervisión de proyectos de construcción de viviendas unifamiliares, asegurando la calidad y cumplimiento de plazos."
     },
     {
-      titulo: "Restauración de Edificaciones Históricas",
-      descripcion: "Participé en la restauración de una edificación histórica, aplicando técnicas especializadas para preservar su autenticidad."
+        titulo: "Restauración de Edificaciones Históricas",
+        descripcion: "Participé en la restauración de una edificación histórica, aplicando técnicas especializadas para preservar su autenticidad."
     },
     {
-      titulo: "Gestión de Obras Públicas",
-      descripcion: "Lideré la gestión de obras públicas, coordinando con diferentes entidades gubernamentales para garantizar la ejecución eficiente de proyectos de infraestructura."
+        titulo: "Gestión de Obras Públicas",
+        descripcion: "Lideré la gestión de obras públicas, coordinando con diferentes entidades gubernamentales para garantizar la ejecución eficiente de proyectos de infraestructura."
     },
     {
-      titulo: "Diseño y Construcción de Espacios Comerciales",
-      descripcion: "Participé en el diseño y construcción de espacios comerciales, adaptando las estructuras para satisfacer las necesidades específicas de cada negocio."
+        titulo: "Diseño y Construcción de Espacios Comerciales",
+        descripcion: "Participé en el diseño y construcción de espacios comerciales, adaptando las estructuras para satisfacer las necesidades específicas de cada negocio."
     },
     {
-      titulo: "Desarrollo de Proyectos de Energía Renovable",
-      descripcion: "Colaboré en el desarrollo de proyectos de construcción de parques eólicos y solares, incorporando tecnologías sostenibles en la infraestructura."
+        titulo: "Desarrollo de Proyectos de Energía Renovable",
+        descripcion: "Colaboré en el desarrollo de proyectos de construcción de parques eólicos y solares, incorporando tecnologías sostenibles en la infraestructura."
     },
     {
-      titulo: "Supervisión de Proyectos de Infraestructura Vial",
-      descripcion: "Supervisé la ejecución de proyectos de construcción de carreteras, garantizando la seguridad y la calidad de la infraestructura vial."
+        titulo: "Supervisión de Proyectos de Infraestructura Vial",
+        descripcion: "Supervisé la ejecución de proyectos de construcción de carreteras, garantizando la seguridad y la calidad de la infraestructura vial."
     },
     {
-      titulo: "Construcción de Viviendas Sustentables",
-      descripcion: "Participé en la construcción de viviendas sustentables, implementando tecnologías verdes para reducir el impacto ambiental."
+        titulo: "Construcción de Viviendas Sustentables",
+        descripcion: "Participé en la construcción de viviendas sustentables, implementando tecnologías verdes para reducir el impacto ambiental."
     },
     {
-      titulo: "Evaluación y Reparación de Estructuras",
-      descripcion: "Realicé la evaluación y reparación de estructuras afectadas por eventos sísmicos, aplicando soluciones para fortalecer la resistencia sísmica."
+        titulo: "Evaluación y Reparación de Estructuras",
+        descripcion: "Realicé la evaluación y reparación de estructuras afectadas por eventos sísmicos, aplicando soluciones para fortalecer la resistencia sísmica."
     },
     {
-      titulo: "Coordinación de Proyectos Multidisciplinarios",
-      descripcion: "Coordiné proyectos multidisciplinarios que involucraban arquitectos, ingenieros estructurales y eléctricos para lograr una ejecución integral."
+        titulo: "Coordinación de Proyectos Multidisciplinarios",
+        descripcion: "Coordiné proyectos multidisciplinarios que involucraban arquitectos, ingenieros estructurales y eléctricos para lograr una ejecución integral."
     },
     {
-      titulo: "Diseño y Construcción de Instalaciones Industriales",
-      descripcion: "Dirigí el diseño y construcción de instalaciones industriales, cumpliendo con estándares de seguridad y eficiencia para la operación industrial."
+        titulo: "Diseño y Construcción de Instalaciones Industriales",
+        descripcion: "Dirigí el diseño y construcción de instalaciones industriales, cumpliendo con estándares de seguridad y eficiencia para la operación industrial."
     },
     {
-      titulo: "Innovación en Tecnologías de Construcción",
-      descripcion: "Introduje nuevas tecnologías de construcción, como el uso de drones para inspecciones y la implementación de sistemas de construcción modular."
+        titulo: "Innovación en Tecnologías de Construcción",
+        descripcion: "Introduje nuevas tecnologías de construcción, como el uso de drones para inspecciones y la implementación de sistemas de construcción modular."
     },
     {
-      titulo: "Gestión de Proyectos de Remodelación",
-      descripcion: "Lideré proyectos de remodelación de espacios residenciales y comerciales, mejorando la funcionalidad y estética de las estructuras existentes."
+        titulo: "Gestión de Proyectos de Remodelación",
+        descripcion: "Lideré proyectos de remodelación de espacios residenciales y comerciales, mejorando la funcionalidad y estética de las estructuras existentes."
     },
     {
-      titulo: "Implementación de Programas de Seguridad en Obras",
-      descripcion: "Desarrollé e implementé programas de seguridad en obras, asegurando un entorno de trabajo seguro y cumplimiento de normativas."
+        titulo: "Implementación de Programas de Seguridad en Obras",
+        descripcion: "Desarrollé e implementé programas de seguridad en obras, asegurando un entorno de trabajo seguro y cumplimiento de normativas."
     },
     {
-      titulo: "Supervisión de Obras de Infraestructura Hidráulica",
-      descripcion: "Supervisé la construcción de obras hidráulicas, incluyendo presas y sistemas de irrigación, para el manejo sostenible del agua."
+        titulo: "Supervisión de Obras de Infraestructura Hidráulica",
+        descripcion: "Supervisé la construcción de obras hidráulicas, incluyendo presas y sistemas de irrigación, para el manejo sostenible del agua."
     },
     {
-      titulo: "Construcción de Proyectos de Vivienda Social",
-      descripcion: "Participé en la construcción de proyectos de vivienda social, contribuyendo a la provisión de soluciones habitacionales accesibles para la comunidad."
+        titulo: "Construcción de Proyectos de Vivienda Social",
+        descripcion: "Participé en la construcción de proyectos de vivienda social, contribuyendo a la provisión de soluciones habitacionales accesibles para la comunidad."
     }
-  ];
+    ];
 
     const indiceAleatorio = Math.floor(Math.random() * profesionesConstruccion.length);
 
@@ -233,33 +214,32 @@ const experienciasConstruccion = [
     const post_amount = Math.floor(Math.random() * 11);
     const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
     const apiDatesUrl = `https://api.lrs.org/random-date-generator?num_dates=${post_amount}`;
-  
-  
+
     // Obtención de nombres y apellidos
     const [nombreUsuarios, setNombreUsuarios] = useState([]);
-  
+
     useEffect( () => {
-  
-        axios.get(apiNamesUrl).then((response) => {  
-          setNombreUsuarios(response.data.results)
+
+        axios.get(apiNamesUrl).then((response) => {
+            setNombreUsuarios(response.data.results)
         }).catch((error) => {
             console.error('Error');
         });
-  
+
     },[]);
     // Obtención de fechas
     const [fechas, setFechas] = useState([]);
-  
+
     useEffect( () => {
-  
-        axios.get(apiDatesUrl).then((response) => {  
-          setFechas(response.data.data)
+
+        axios.get(apiDatesUrl).then((response) => {
+            setFechas(response.data.data)
         }).catch((error) => {
             console.error('Error');
         });
-  
+
     },[]);
-  
+
     const fechasArray = Object.keys(fechas)
     const listaInvertida = [...fechasArray].reverse();
 

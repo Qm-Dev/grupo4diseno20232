@@ -10,7 +10,7 @@ function Profile() {
     const [nombreUsuario, setNombreUsuario] = useState([]);
     useEffect( () => {
 
-    axios.get(`https://randomuser.me/api/?results=1&nat=us`).then((response) => {  
+    axios.get(`https://randomuser.me/api/?results=1&nat=us`).then((response) => {
         setNombreUsuario(response.data.results)
     }).catch((error) => {
         console.error('Error');
@@ -22,7 +22,7 @@ function Profile() {
 
     const [textoUsuario, setTextoUsuario] = useState([]);
     useEffect( () => {
-        axios.get(`https://random-word-api.vercel.app/api?words=${post_amount}`).then((response) => {  
+        axios.get(`https://random-word-api.vercel.app/api?words=${post_amount}`).then((response) => {
             setTextoUsuario(response.data)
         }).catch((error) => {
             console.error('Error');

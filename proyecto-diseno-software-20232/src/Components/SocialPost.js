@@ -17,7 +17,7 @@ function SocialPost(props) {
     const { fotoPerfilPersona } = props;
     const { fecha } = props;
     const formattedDate = formatDate(fecha);
-    
+
     const post_amount = Math.floor(Math.random() * 200);
 
     const [textoUsuario, setTextoUsuario] = useState([]);

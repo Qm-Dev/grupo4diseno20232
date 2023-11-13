@@ -20,7 +20,6 @@ const textStyle = {
     margin: '2rem auto',
 };
 
-
 function Contact() {
     return (
         <main>
