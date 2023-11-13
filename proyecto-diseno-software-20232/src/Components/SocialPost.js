@@ -37,7 +37,7 @@ function SocialPost(props) {
             <div class="card mt-3">
                     <div class="card-body">
                         <div class="d-flex">
-                        <a href={`/profiles/${nombrePersona.toLowerCase()}_${apellidoPersona.toLowerCase()}`}><img src={fotoPerfilPersona} class="me-3 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img></a>
+                        <a href={`/users/${nombrePersona.toLowerCase()}_${apellidoPersona.toLowerCase()}`}><img src={fotoPerfilPersona} class="me-3 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img></a>
                             <div class="media-body">
                                 <h5 class="mt-0">{nombrePersona} {apellidoPersona}</h5>
                                 <small class="text-muted">Fecha de nacimiento: {formattedDate}</small>
