@@ -51,6 +51,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/login" element={<Login />} />
+          {/* Crear páginas de perfil para otros usuarios. Por ahora solo entrega el componente Profile no acorde al usuario del Feed. */}
+          <Route path="/users/:user" element={<Profile />} />
         </Route>
 
         {/* Redirigir todas las URL desconocidas a la página de error */}
