@@ -152,6 +152,10 @@ const certificacionesConstruccion = [
 
     const certificacionesAleatorias = certificacionesMezcladas.slice(0, 3);
 
+    const link1 = `https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`;
+    const link2 = `https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`;
+    const link3 = `https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`;
+
     return (
         <main>
             <div className='profile'>
@@ -175,7 +179,7 @@ const certificacionesConstruccion = [
                             <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
                                 <div class="d-flex flex-column align-items-center">
-                                        <img src="https://wiki.teamfortress.com/w/images/thumb/3/3e/Community_Engineer_Strategy_Header.png/400px-Community_Engineer_Strategy_Header.png" class="d-block w-auto mx-auto" alt="Experiencia1" />
+                                        <img src={link1} class="d-block w-auto mx-auto" alt="Experiencia1" />
                                     <div class="text-center">
                                         <h5>First slide label</h5>
                                         <p>Some representative placeholder content for the first slide.</p>
@@ -184,7 +188,7 @@ const certificacionesConstruccion = [
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
                                 <div class="d-flex flex-column align-items-center">
-                                    <img src="https://wiki.teamfortress.com/w/images/thumb/a/a6/Engiwithdispenser.png/300px-Engiwithdispenser.png" class="d-block w- mx-auto" alt="Experiencia2" />
+                                    <img src={link2} class="d-block w- mx-auto" alt="Experiencia2" />
                                     <div class="text-center">
                                         <h5>Second slide label</h5>
                                         <p>Some representative placeholder content for the second slide.</p>
@@ -193,7 +197,7 @@ const certificacionesConstruccion = [
                             </div>
                             <div class="carousel-item">
                                 <div class="d-flex flex-column align-items-center">
-                                    <img src="https://wiki.teamfortress.com/w/images/thumb/0/01/Engybuild.png/400px-Engybuild.png" class="d-block w-20 mx-auto" alt="Experiencia3" />
+                                    <img src={link3} class="d-block w-20 mx-auto" alt="Experiencia3" />
                                     <div class="text-center">
                                         <h5>Third slide label</h5>
                                         <p>Some representative placeholder content for the third slide.</p>
