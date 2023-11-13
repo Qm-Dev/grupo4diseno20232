@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Recomendation from '../Components/Recomendation';
+import axios from 'axios';
 
 function formatDate(isoDate) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -47,6 +49,11 @@ function ProfileInfo(props) {
     const { apellidoPersona } = props;
     const { fotoPerfilPersona } = props;
     const { fecha } = props;
+    const { correo } = props;
+    const { ciudad } = props;
+    const { estado } = props;
+    const { pais } = props;
+    const { telefono } = props;
     const { texto } = props;
     const formattedDate = formatDate(fecha);
 
@@ -223,20 +230,85 @@ const experienciasConstruccion = [
     const link2 = `https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`;
     const link3 = `https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`;
 
+    const post_amount = Math.floor(Math.random() * 11);
+    const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
+    const apiDatesUrl = `https://api.lrs.org/random-date-generator?num_dates=${post_amount}`;
+  
+  
+    // Obtención de nombres y apellidos
+    const [nombreUsuarios, setNombreUsuarios] = useState([]);
+  
+    useEffect( () => {
+  
+        axios.get(apiNamesUrl).then((response) => {  
+          setNombreUsuarios(response.data.results)
+        }).catch((error) => {
+            console.error('Error');
+        });
+  
+    },[]);
+    // Obtención de fechas
+    const [fechas, setFechas] = useState([]);
+  
+    useEffect( () => {
+  
+        axios.get(apiDatesUrl).then((response) => {  
+          setFechas(response.data.data)
+        }).catch((error) => {
+            console.error('Error');
+        });
+  
+    },[]);
+  
+    const fechasArray = Object.keys(fechas)
+    const listaInvertida = [...fechasArray].reverse();
+
     return (
         <main>
             <div className='profile'>
-                <div className='container text-center'>
-                    <div class="card mb-3 mt-3">
+                <div className='container'>
+                    <div class="card mb-3 mt-3 text-center">
                         <div class="card-body">
                             <img src={fotoPerfilPersona} class="mb-2 rounded-circle img-thumbnail w-25" alt="Imagen de Usuario"></img>
                             <h1 class="text-left mt-0">{nombrePersona} {apellidoPersona}</h1>
-                            <h4 class="fw-light">{formattedDate}</h4>
-                            <h4>{profesionesAleatoria}</h4>
+                            <h4 class="fs-3">{profesionesAleatoria}</h4>
+                            <h4 class="fs-5">{correo}</h4>
+                            <h4 class="fs-5">{telefono}</h4>
+                            <h4 class="fs-5">{ciudad}, {estado}, {pais}</h4>
+                            <h4 class="fs-5 fw-light">{formattedDate}</h4>
                             <p class="text-start mt-4">{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.</p>
+                            <div class="d-flex btn-group justify-content-center">
+                                <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                </svg>Ver CV</button>
+                                <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M10 14l11 -11" />
+                                <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
+                                </svg>Enviar Mensaje</button>
+                                <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-share" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                <path d="M8.7 10.7l6.6 -3.4" />
+                                <path d="M8.7 13.3l6.6 3.4" />
+                                </svg>Compartir</button>
+                                <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-affiliate" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M5.931 6.936l1.275 4.249m5.607 5.609l4.251 1.275" />
+                                <path d="M11.683 12.317l5.759 -5.759" />
+                                <path d="M5.5 5.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+                                <path d="M18.5 5.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+                                <path d="M18.5 18.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+                                <path d="M8.5 15.5m-4.5 0a4.5 4.5 0 1 0 9 0a4.5 4.5 0 1 0 -9 0" />
+                                </svg>Conectar</button>
+                            </div>
                         </div>
                     </div>
-                    <div id='experienceSection' className='card mb-3'>
+                    <div id='experienceSection' className='card mb-3 text-center'>
                         <h2 className='p-2'>Experiencia</h2>
                         <div id="carouselExampleDark" class="carousel carousel-dark slide">
                             <div style={carouselIndicatorsStyle} class="carousel-indicators">
@@ -284,7 +356,7 @@ const experienciasConstruccion = [
                         </div>
                         <a href="#" className='btn btn-dark m-auto mt-2 mb-2'>Editar experiencia</a>
                     </div>
-                    <div id='certificationsSection' className='card mb-3'>
+                    <div id='certificationsSection' className='card mb-3 text-center'>
                         <h2 className='p-2'>Certificaciones</h2>
                         <div class="row">
                             <div class="col-sm-4">
@@ -317,6 +389,16 @@ const experienciasConstruccion = [
                             </div>
                         <a href="#" className='btn btn-dark m-auto mt-2 mb-2'>Editar certificaciones</a>
                     </div>
+                        <div class="mb-5">
+                            {/* Crear las publicaciones del feed */}
+                            {nombreUsuarios.length > 0 ? (
+                                            nombreUsuarios.map((usuario, index) => (
+                                                <Recomendation key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.medium} fechaNoti={listaInvertida[index]}/>
+                                            ))
+                            ) : (
+                                <p>Cargando notificaciones...</p>
+                            )}
+                        </div>
                 </div>
             </div>
         </main>
