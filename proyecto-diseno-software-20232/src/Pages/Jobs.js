@@ -46,14 +46,16 @@ function Jobs(props) {
             <div>
                 <h1 style={titleStyle}>Ofertas Disponibles</h1>
             </div>
-            <div className="card">
-                <div className="card-body">
-                    <div className="d-flex">
+            <div>
+                <div className="container p-3 mb-0 mt-0">
+                    <div>
+                        {/* creacion de post de empleos */}
                         {trabajos.map((trabajo, index) => (
                             <div key={index} className="media">
-                                <div className="media-body">
-                                    <h5 className="mt-0">{trabajo.razon_social} {trabajo.actividad}</h5>
-                                    <p>{trabajo.razon_social} {tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</p>
+                                <div className="media-body mb-0">
+                                    <h3 className="mt-0">{trabajo.razon_social}</h3>
+                                    <h5>{tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h5>
+                                    <p>{trabajo.actividad}</p>
                                     <small className="text-muted">Ubicacion: {trabajo.provincia}, {trabajo.municipio}</small>
                                     <br />
                                     <small className="text-muted">Contacto: {trabajo.telefono}</small>
