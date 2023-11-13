@@ -144,6 +144,69 @@ const certificacionesConstruccion = [
     }
 ];
 
+const experienciasConstruccion = [
+    {
+      titulo: "Supervisión de Proyectos Residenciales",
+      descripcion: "Dirigí la supervisión de proyectos de construcción de viviendas unifamiliares, asegurando la calidad y cumplimiento de plazos."
+    },
+    {
+      titulo: "Restauración de Edificaciones Históricas",
+      descripcion: "Participé en la restauración de una edificación histórica, aplicando técnicas especializadas para preservar su autenticidad."
+    },
+    {
+      titulo: "Gestión de Obras Públicas",
+      descripcion: "Lideré la gestión de obras públicas, coordinando con diferentes entidades gubernamentales para garantizar la ejecución eficiente de proyectos de infraestructura."
+    },
+    {
+      titulo: "Diseño y Construcción de Espacios Comerciales",
+      descripcion: "Participé en el diseño y construcción de espacios comerciales, adaptando las estructuras para satisfacer las necesidades específicas de cada negocio."
+    },
+    {
+      titulo: "Desarrollo de Proyectos de Energía Renovable",
+      descripcion: "Colaboré en el desarrollo de proyectos de construcción de parques eólicos y solares, incorporando tecnologías sostenibles en la infraestructura."
+    },
+    {
+      titulo: "Supervisión de Proyectos de Infraestructura Vial",
+      descripcion: "Supervisé la ejecución de proyectos de construcción de carreteras, garantizando la seguridad y la calidad de la infraestructura vial."
+    },
+    {
+      titulo: "Construcción de Viviendas Sustentables",
+      descripcion: "Participé en la construcción de viviendas sustentables, implementando tecnologías verdes para reducir el impacto ambiental."
+    },
+    {
+      titulo: "Evaluación y Reparación de Estructuras",
+      descripcion: "Realicé la evaluación y reparación de estructuras afectadas por eventos sísmicos, aplicando soluciones para fortalecer la resistencia sísmica."
+    },
+    {
+      titulo: "Coordinación de Proyectos Multidisciplinarios",
+      descripcion: "Coordiné proyectos multidisciplinarios que involucraban arquitectos, ingenieros estructurales y eléctricos para lograr una ejecución integral."
+    },
+    {
+      titulo: "Diseño y Construcción de Instalaciones Industriales",
+      descripcion: "Dirigí el diseño y construcción de instalaciones industriales, cumpliendo con estándares de seguridad y eficiencia para la operación industrial."
+    },
+    {
+      titulo: "Innovación en Tecnologías de Construcción",
+      descripcion: "Introduje nuevas tecnologías de construcción, como el uso de drones para inspecciones y la implementación de sistemas de construcción modular."
+    },
+    {
+      titulo: "Gestión de Proyectos de Remodelación",
+      descripcion: "Lideré proyectos de remodelación de espacios residenciales y comerciales, mejorando la funcionalidad y estética de las estructuras existentes."
+    },
+    {
+      titulo: "Implementación de Programas de Seguridad en Obras",
+      descripcion: "Desarrollé e implementé programas de seguridad en obras, asegurando un entorno de trabajo seguro y cumplimiento de normativas."
+    },
+    {
+      titulo: "Supervisión de Obras de Infraestructura Hidráulica",
+      descripcion: "Supervisé la construcción de obras hidráulicas, incluyendo presas y sistemas de irrigación, para el manejo sostenible del agua."
+    },
+    {
+      titulo: "Construcción de Proyectos de Vivienda Social",
+      descripcion: "Participé en la construcción de proyectos de vivienda social, contribuyendo a la provisión de soluciones habitacionales accesibles para la comunidad."
+    }
+  ];
+
     const indiceAleatorio = Math.floor(Math.random() * profesionesConstruccion.length);
 
     const profesionesAleatoria = profesionesConstruccion[indiceAleatorio];
@@ -151,6 +214,10 @@ const certificacionesConstruccion = [
     const certificacionesMezcladas = shuffle(certificacionesConstruccion);
 
     const certificacionesAleatorias = certificacionesMezcladas.slice(0, 3);
+
+    const experienciasMezcladas = shuffle(experienciasConstruccion);
+
+    const experienciasAleatorias = experienciasMezcladas.slice(0, 3);
 
     const link1 = `https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`;
     const link2 = `https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`;
@@ -160,15 +227,16 @@ const certificacionesConstruccion = [
         <main>
             <div className='profile'>
                 <div className='container text-center'>
-                    <div id='presentationSection' className='border border-5 rounded-5 border-dark mt-3 mb-3 p-3'>
-                        <img className='p-2' src={fotoPerfilPersona} style={imgStyle}></img>
-                        <h1>{nombrePersona} {apellidoPersona}</h1>
-                        <h3>{formattedDate}</h3>
-                        <h4>{profesionesAleatoria}</h4>
-                        <p style={paragraphStyle}>{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.
-                        </p>
+                    <div class="card mb-3 mt-3">
+                        <div class="card-body">
+                            <img src={fotoPerfilPersona} class="mb-2 rounded-circle img-thumbnail w-25" alt="Imagen de Usuario"></img>
+                            <h1 class="text-left mt-0">{nombrePersona} {apellidoPersona}</h1>
+                            <h4 class="fw-light">{formattedDate}</h4>
+                            <h4>{profesionesAleatoria}</h4>
+                            <p class="text-start mt-4">{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.</p>
+                        </div>
                     </div>
-                    <div id='experienceSection' className='border border-5 rounded-5 border-dark mb-3'>
+                    <div id='experienceSection' className='card mb-3'>
                         <h2 className='p-2'>Experiencia</h2>
                         <div id="carouselExampleDark" class="carousel carousel-dark slide">
                             <div style={carouselIndicatorsStyle} class="carousel-indicators">
@@ -180,27 +248,27 @@ const certificacionesConstruccion = [
                             <div class="carousel-item active" data-bs-interval="10000">
                                 <div class="d-flex flex-column align-items-center">
                                         <img src={link1} class="d-block w-auto mx-auto" alt="Experiencia1" />
-                                    <div class="text-center">
-                                        <h5>First slide label</h5>
-                                        <p>Some representative placeholder content for the first slide.</p>
+                                    <div class="text-center mt-2">
+                                        <h5>{experienciasAleatorias[0].titulo}</h5>
+                                        <p>{experienciasAleatorias[0].descripcion}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
                                 <div class="d-flex flex-column align-items-center">
                                     <img src={link2} class="d-block w- mx-auto" alt="Experiencia2" />
-                                    <div class="text-center">
-                                        <h5>Second slide label</h5>
-                                        <p>Some representative placeholder content for the second slide.</p>
+                                    <div class="text-center mt-2">
+                                        <h5>{experienciasAleatorias[1].titulo}</h5>
+                                        <p>{experienciasAleatorias[1].descripcion}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="d-flex flex-column align-items-center">
                                     <img src={link3} class="d-block w-20 mx-auto" alt="Experiencia3" />
-                                    <div class="text-center">
-                                        <h5>Third slide label</h5>
-                                        <p>Some representative placeholder content for the third slide.</p>
+                                    <div class="text-center mt-2">
+                                        <h5>{experienciasAleatorias[2].titulo}</h5>
+                                        <p>{experienciasAleatorias[2].descripcion}</p>
                                     </div>
                                 </div>
                             </div>
@@ -214,21 +282,40 @@ const certificacionesConstruccion = [
                             <span class="visually-hidden">Next</span>
                         </button>
                         </div>
-                        <a href="#" className='btn btn-dark mb-3 mt-3'>Editar experiencia</a>
+                        <a href="#" className='btn btn-dark m-auto mt-2 mb-2'>Editar experiencia</a>
                     </div>
-                    <div id='certificationsSection' className='border border-5 rounded-5 border-dark mb-3'>
+                    <div id='certificationsSection' className='card mb-3'>
                         <h2 className='p-2'>Certificaciones</h2>
-                        <ul>
-                            <li style={certificationStyle}><strong>{certificacionesAleatorias[0].nombre}:</strong> {certificacionesAleatorias[0].descripcion}
-                            </li>
-                            <br></br>
-                            <li style={certificationStyle}><strong>{certificacionesAleatorias[1].nombre}:</strong> {certificacionesAleatorias[1].descripcion}
-                            </li>
-                            <br></br>
-                            <li style={certificationStyle}><strong>{certificacionesAleatorias[2].nombre}:</strong> {certificacionesAleatorias[2].descripcion}
-                            </li>
-                        </ul>
-                        <a href="#" className='btn btn-dark mb-2'>Editar certificaciones</a>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card p-4 m-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">{certificacionesAleatorias[0].nombre}</h5>
+                                    <p class="card-text">{certificacionesAleatorias[0].descripcion}</p>
+                                    <a href="#" class="btn btn-primary">Ver certificación</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card p-4 m-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">{certificacionesAleatorias[1].nombre}</h5>
+                                    <p class="card-text">{certificacionesAleatorias[1].descripcion}</p>
+                                    <a href="#" class="btn btn-primary">Ver certificación</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card p-4 m-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">{certificacionesAleatorias[2].nombre}</h5>
+                                    <p class="card-text">{certificacionesAleatorias[2].descripcion}</p>
+                                    <a href="#" class="btn btn-primary">Ver certificación</a>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        <a href="#" className='btn btn-dark m-auto mt-2 mb-2'>Editar certificaciones</a>
                     </div>
                 </div>
             </div>
