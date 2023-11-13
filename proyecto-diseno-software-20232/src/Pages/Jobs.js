@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Notification from '../Components/Job';
+import axios from 'axios';
 
 function Jobs(props) {
     const { nombreEmpresa, nombreTrabajo, provinciaEmpresa, fechaPublicacion, numeroContacto, correoContacto } = props;
@@ -38,6 +39,10 @@ function Jobs(props) {
                 console.error('Error al obtener datos de trabajos', error);
             });
     }, []);
+
+
+  const fechasArray = Object.keys(fechas)
+  const listaInvertida = [...fechasArray].reverse();
 
     return (
         <main>

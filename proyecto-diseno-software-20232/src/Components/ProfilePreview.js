@@ -45,7 +45,7 @@ function ProfilePreview(props) {
         "Ayudante de electricista",
         "Auxiliar de plomería",
         "Auxiliar de pintura",
-];
+    ];
 
     const indiceAleatorio = Math.floor(Math.random() * profesionesConstruccion.length);
 

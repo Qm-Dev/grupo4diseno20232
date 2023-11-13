@@ -20,7 +20,7 @@ function SocialPost(props) {
     const { fotoPerfilPersona } = props;
     const { fecha } = props;
     const formattedDate = formatDate(fecha);
-    
+
     const post_amount = Math.floor(Math.random() * 200);
 
     const [textoUsuario, setTextoUsuario] = useState([]);
@@ -39,11 +39,14 @@ function SocialPost(props) {
     return (
             <div class="card mt-3">
                     <div class="card-body">
-                        <div class="d-flex">
-                        <a href={`/profiles/${nombrePersona.toLowerCase()}_${apellidoPersona.toLowerCase()}`}><img src={fotoPerfilPersona} class="me-3 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img></a>
+                        <div class="d-flex mb-2">
+                        <a href={`/users/${nombrePersona.toLowerCase()}_${apellidoPersona.toLowerCase()}`}><img src={fotoPerfilPersona} class="me-2 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img></a>
                             <div class="media-body">
                                 <h5 class="mt-0">{nombrePersona} {apellidoPersona}</h5>
                                 <small class="text-muted">Fecha de publicacion: {formattedDate}</small>
+=======
+                                <h5 class="mt-0 mb-0">{nombrePersona} {apellidoPersona}</h5>
+                                <small class="text-muted">Fecha de nacimiento: {formattedDate}</small>
                             </div>
                         </div>
                         <p class="card-text">{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{oracion.slice(1)}.</p>

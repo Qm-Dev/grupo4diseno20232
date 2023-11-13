@@ -49,7 +49,7 @@ function Footer() {
     const redirectToUAI = () => {
         window.location.href = 'https://www.uai.cl';
     };
-    
+
 
     // Si se detecta hover por parte del usuario
     // En Acerca de

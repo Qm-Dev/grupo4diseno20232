@@ -21,8 +21,7 @@ function Error() {
         width: '500px',
         height: 'auto'
     }
-    
-    
+
     return (
         <main>
             <img style={imgError} src= 'https://i.kym-cdn.com/photos/images/original/000/918/810/a22.jpg'></img>
