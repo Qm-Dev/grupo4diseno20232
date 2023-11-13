@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -24,7 +25,7 @@ function Login() {
 
                                         <div className="form-outline form-white mb-4">
                                             <input type="email" id="typeEmailX" className="form-control form-control-lg" />
-                                            <label className="form-label" htmlFor="typeEmailX">Email</label>
+                                            <label className="form-label" htmlFor="typeEmailX">Correo</label>
                                         </div>
 
                                         <div className="form-outline form-white mb-4">
@@ -34,7 +35,7 @@ function Login() {
 
                                         <p className="small mb-5 pb-lg-2"><a className="text-white-50" href="#!">¿Olvidaste tu contraseña?</a></p>
 
-                                        <button className="btn btn-outline-light btn-lg px-5" type="submit">Iniciar Sesion</button>
+                                        <Link to="/feed" className="btn btn-outline-light btn-lg px-5">Iniciar Sesion</Link>
 
                                         <div className="d-flex justify-content-center text-center mt-4 pt-1">
                                             <a href="#!" className="text-white"><i className="fab fa-facebook-f fa-lg"></i></a>
@@ -44,7 +45,7 @@ function Login() {
                                     </div>
 
                                     <div>
-                                        <p className="mb-0">¿No tienes cuenta? <a href="#!" className="text-white-50 fw-bold">Registrarse</a></p>
+                                        <p className="mb-0">¿No tienes cuenta? <Link to="/register" className="text-white-50 fw-bold">Registrarse</Link></p>
                                     </div>
                                 </div>
                             </div>

@@ -36,7 +36,7 @@ function Profile() {
         <main>
             {nombreUsuario.length > 0 ? (
                             nombreUsuario.map((usuario, index) => (
-                                <ProfileInfo key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date} texto={oracion}/>
+                                <ProfileInfo key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date} texto={oracion} email={usuario.email} city={usuario.location.city} state={usuario.location.state} country={usuario.location.country}/>
                             ))
             ) : (
                 <p>Cargando tu perfil...</p>

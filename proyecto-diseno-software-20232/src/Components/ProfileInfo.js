@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Dropdown, DropdownButton } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -49,6 +50,15 @@ function ProfileInfo(props) {
     const { fecha } = props;
     const { texto } = props;
     const formattedDate = formatDate(fecha);
+    const { email } = props;
+    const { city } = props;
+    const { state } = props;
+    const { country } = props;
+    const [selectedOption, setSelectedOption] = useState('default');
+
+    const handleDropdownSelect = (option) => {
+        setSelectedOption(option);
+    };
 
     const profesionesConstruccion = [
         "Albañil",
@@ -158,11 +168,22 @@ const certificacionesConstruccion = [
                 <div className='container text-center'>
                     <div id='presentationSection' className='border border-5 rounded-5 border-dark mt-3 mb-3 p-3'>
                         <img className='p-2' src={fotoPerfilPersona} style={imgStyle}></img>
-                        <h1>{nombrePersona} {apellidoPersona}</h1>
-                        <h3>{formattedDate}</h3>
-                        <h4>{profesionesAleatoria}</h4>
+                        <h1 className="display-6 fw-bold">{nombrePersona} {apellidoPersona}</h1>
+                        <h3 className="display-10">{profesionesAleatoria}</h3>
+                        <p className="fs-6 text-muted">{city}, {state}, {country}<br></br>{email}<br></br>{formattedDate}</p>
                         <p style={paragraphStyle}>{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.
                         </p>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-outline-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-share" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                    <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                    <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                    <path d="M8.7 10.7l6.6 -3.4" />
+                                    <path d="M8.7 13.3l6.6 3.4" />
+                                </svg>Compartir Perfil</button>
+                        </div>
                     </div>
                     <div id='experienceSection' className='border border-5 rounded-5 border-dark mb-3'>
                         <h2 className='p-2'>Experiencia</h2>
@@ -224,7 +245,20 @@ const certificacionesConstruccion = [
                             <li style={certificationStyle}><strong>{certificacionesAleatorias[2].nombre}:</strong> {certificacionesAleatorias[2].descripcion}
                             </li>
                         </ul>
-                        <a href="#" className='btn btn-dark mb-2'>Editar certificaciones</a>
+                        <DropdownButton id="dropdown-basic-button" className='btn-dark mb-3 mt-3' title={'Editar Informacion'}>
+                            <Dropdown.Item onClick={() => handleDropdownSelect('option1')}>
+                            Agregar/quitar Certificaciones
+                            </Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDropdownSelect('option2')}>
+                            Agregar/quitar Licencias
+                            </Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDropdownSelect('option3')}>
+                            Agregar/quitar Lenguajes
+                            </Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDropdownSelect('option4')}>
+                            Agregar/quitar Habilidades
+                            </Dropdown.Item>
+                        </DropdownButton>
                     </div>
                 </div>
             </div>

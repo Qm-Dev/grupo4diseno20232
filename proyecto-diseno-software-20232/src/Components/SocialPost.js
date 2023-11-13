@@ -3,12 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import axios from 'axios';
 
-// Formateo de fecha
+// Formateo de fecha para posts del feed
 function formatDate(isoDate) {
+    const date = new Date(isoDate);
+    date.setFullYear(2023); // Dejamos año siempre como 2023, dado que la API tiene fechas de creacion y registro mas antiguas
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = new Date(isoDate).toLocaleDateString(undefined, options);
+    const formattedDate = date.toLocaleDateString(undefined, options);
     return formattedDate;
 }
+
 
 function SocialPost(props) {
 
@@ -40,7 +43,7 @@ function SocialPost(props) {
                         <a href={`/profiles/${nombrePersona.toLowerCase()}_${apellidoPersona.toLowerCase()}`}><img src={fotoPerfilPersona} class="me-3 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img></a>
                             <div class="media-body">
                                 <h5 class="mt-0">{nombrePersona} {apellidoPersona}</h5>
-                                <small class="text-muted">Fecha de nacimiento: {formattedDate}</small>
+                                <small class="text-muted">Fecha de publicacion: {formattedDate}</small>
                             </div>
                         </div>
                         <p class="card-text">{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{oracion.slice(1)}.</p>

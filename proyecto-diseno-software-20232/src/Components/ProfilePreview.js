@@ -63,8 +63,8 @@ function ProfilePreview(props) {
                     </div>
                     <div class="col-md-8">
                         <h3 class="mb-4">{nombrePersona} {apellidoPersona}</h3>
-                        <p><strong>Fecha de Nacimiento:</strong> {formattedDate}</p>
                         <p><strong>Profesión:</strong> {profesionesAleatoria}</p>
+                        <p><strong>Fecha de Nacimiento:</strong> {formattedDate}</p>
                     </div>
                 </div>
             </div>
