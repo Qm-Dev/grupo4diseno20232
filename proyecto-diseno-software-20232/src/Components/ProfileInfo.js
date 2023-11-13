@@ -1,4 +1,4 @@
-import React, { useState, UseEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -260,12 +260,18 @@ const experienciasConstruccion = [
                     <div class="card mb-3 mt-3 text-center">
                         <div class="card-body">
                             <img src={fotoPerfilPersona} class="mb-2 rounded-circle img-thumbnail w-25" alt="Imagen de Usuario"></img>
-                            <h1 class="text-left mt-0">{nombrePersona} {apellidoPersona}</h1>
-                            <h4 class="fs-3">{profesionesAleatoria}</h4>
-                            <h4 class="fs-5">{correo}</h4>
-                            <h4 class="fs-5">{telefono}</h4>
-                            <h4 class="fs-5">{ciudad}, {estado}, {pais}</h4>
-                            <h4 class="fs-5 fw-light">{formattedDate}</h4>
+                            <div class="text-left mt-0">
+                            <div class="d-inline-block">
+                                <h1 className="display-6 fw-bold">{nombrePersona} {apellidoPersona}</h1>
+                                <h4 className="display-8">{profesionesAleatoria}</h4>
+                            </div>
+                            <p className="fs-5 text-muted">
+                                {correo} <br />
+                                {telefono} <br />
+                                {ciudad}, {estado}, {pais} <br />
+                                <span class="fw-light">{formattedDate}</span>
+                            </p>
+                            </div>
                             <p class="text-start mt-4">{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.</p>
                             <div class="d-flex btn-group justify-content-center">
                                 <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -285,7 +291,7 @@ const experienciasConstruccion = [
                                 <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
                                 <path d="M8.7 10.7l6.6 -3.4" />
                                 <path d="M8.7 13.3l6.6 3.4" />
-                                </svg>Compartir</button>
+                                </svg>Compartir Perfil</button>
                                 <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-affiliate" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                 <path d="M5.931 6.936l1.275 4.249m5.607 5.609l4.251 1.275" />
@@ -377,7 +383,24 @@ const experienciasConstruccion = [
                                 </div>
                             </div>
                             </div>
-                        <a href="#" className='btn btn-dark m-auto mt-2 mb-2'>Editar certificaciones</a>
+                        <DropdownButton
+                            id="dropdown-basic-button"
+                            title={'Editar Informacion'}
+                            className='m-auto mt-2 mb-2'
+                            >
+                            <Dropdown.Item onClick={() => handleDropdownSelect('option1')}>
+                                Agregar/quitar Certificaciones
+                            </Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDropdownSelect('option2')}>
+                                Agregar/quitar Licencias
+                            </Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDropdownSelect('option3')}>
+                                Agregar/quitar Lenguajes
+                            </Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDropdownSelect('option4')}>
+                                Agregar/quitar Habilidades
+                            </Dropdown.Item>
+                        </DropdownButton>
                     </div>
                         <div class="mb-5">
                             {/* Crear las publicaciones del feed */}

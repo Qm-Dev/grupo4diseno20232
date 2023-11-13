@@ -44,9 +44,6 @@ function SocialPost(props) {
                             <div class="media-body">
                                 <h5 class="mt-0">{nombrePersona} {apellidoPersona}</h5>
                                 <small class="text-muted">Fecha de publicacion: {formattedDate}</small>
-=======
-                                <h5 class="mt-0 mb-0">{nombrePersona} {apellidoPersona}</h5>
-                                <small class="text-muted">Fecha de nacimiento: {formattedDate}</small>
                             </div>
                         </div>
                         <p class="card-text">{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{oracion.slice(1)}.</p>

@@ -41,9 +41,6 @@ function Jobs(props) {
     }, []);
 
 
-  const fechasArray = Object.keys(fechas)
-  const listaInvertida = [...fechasArray].reverse();
-
     return (
         <main>
             <div>
