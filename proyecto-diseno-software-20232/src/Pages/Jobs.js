@@ -122,7 +122,7 @@ function Jobs() {
                 {empresaInfo.map((empresa, index) => (
                 <div key={index} class="card mb-2">
                     <div class="card-header">
-                        <h5 class="card-title">{nombreEmpresa[index]} {elementosEmpresariales[Math.floor(Math.random() * elementosEmpresariales.length)]}</h5>
+                        <h5 class="card-title text-uppercase">{nombreEmpresa[index]} {elementosEmpresariales[Math.floor(Math.random() * elementosEmpresariales.length)]}</h5>
                         <p class="card-subtitle text-muted">Publicado el 12 de noviembre de 2023</p>
                     </div>
                     <div class="card-body">

@@ -45,7 +45,9 @@ function SocialPost(props) {
                                 <small class="text-muted">Fecha de publicacion: {formattedDate}</small>
                             </div>
                         </div>
-                        <p class="card-text">{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{oracion.slice(1)}.</p>
+                        <p class="card-text">
+                            <span class="text-uppercase">{oracion[0]}</span>{oracion.slice(1)}.
+                        </p>
                             <div className="d-flex flex-wrap btn-group justify-content-center" role="group">
                                 {/* Recomendar */}
                                 <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">

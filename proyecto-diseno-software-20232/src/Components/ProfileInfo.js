@@ -272,7 +272,9 @@ const experienciasConstruccion = [
                                 <span class="fw-light">{formattedDate}</span>
                             </p>
                             </div>
-                            <p class="text-start mt-4">{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.</p>
+                            <p class="text-start mt-4">
+                                <span class="text-uppercase">{texto[0]}</span>{texto.slice(1)}.
+                            </p>
                             <div class="d-flex btn-group justify-content-center">
                                 <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
