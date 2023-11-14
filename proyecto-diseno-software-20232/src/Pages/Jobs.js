@@ -3,6 +3,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import axios from 'axios';
 
+function obtenerElementosAleatorios(arr, cantidad) {
+    const copiaLista = [...arr];  // Copia la lista para no modificar la original
+    const elementosAleatorios = [];
+
+    for (let i = 0; i < cantidad; i++) {
+        const indiceAleatorio = Math.floor(Math.random() * copiaLista.length);
+        const elemento = copiaLista.splice(indiceAleatorio, 1)[0];
+        elementosAleatorios.push(elemento);
+    }
+
+    if (elementosAleatorios[0]) {
+        elementosAleatorios[0] = elementosAleatorios[0].charAt(0).toUpperCase() + elementosAleatorios[0].slice(1);
+    } else {
+        // Nada
+    }
+    return elementosAleatorios;
+}
+
 function Jobs() {
 
     const tipos_trabajos = [
@@ -105,6 +123,7 @@ function Jobs() {
     },[]);
 
     const [nombreEmpresa, setNombreEmpresa] = useState([]);
+
     useEffect( () => {
         axios.get(`https://random-word-api.vercel.app/api?words=${post_amount}`).then((response) => {
             setNombreEmpresa(response.data)
@@ -114,6 +133,32 @@ function Jobs() {
 
     },[]);
 
+    const apiDatesUrl = `https://api.lrs.org/random-date-generator?num_dates=${post_amount}`;
+
+    const [fechas, setFechas] = useState([]);
+
+    useEffect( () => {
+
+        axios.get(apiDatesUrl).then((response) => {
+            setFechas(response.data.data)
+        }).catch((error) => {
+            console.error('Error');
+        });
+
+    },[]);
+
+    const fechasArray = Object.keys(fechas)
+    const listaInvertida = [...fechasArray].reverse();
+
+    const [textoUsuario, setTextoUsuario] = useState([]);
+    useEffect( () => {
+        axios.get(`https://random-word-api.vercel.app/api?words=500`).then((response) => {
+            setTextoUsuario(response.data)
+        }).catch((error) => {
+            console.error('Error');
+    });
+
+},[]);
 
     return (
         <main className='bg-secondary-subtle'>
@@ -122,8 +167,8 @@ function Jobs() {
                 {empresaInfo.map((empresa, index) => (
                 <div key={index} class="card mb-2">
                     <div class="card-header">
-                        <h5 class="card-title">{nombreEmpresa[index]} {elementosEmpresariales[Math.floor(Math.random() * elementosEmpresariales.length)]}</h5>
-                        <p class="card-subtitle text-muted">Publicado el 12 de noviembre de 2023</p>
+                        <h5 class="card-title text-uppercase">{nombreEmpresa[index]} {elementosEmpresariales[Math.floor(Math.random() * elementosEmpresariales.length)]}</h5>
+                        <p class="card-subtitle text-muted">Publicado el {listaInvertida[index]}</p>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -131,8 +176,8 @@ function Jobs() {
                                 <img src={`https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`} class="rounded-circle img-thumbnail" alt="Logo de la emresa"></img>
                             </div>
                             <div class="col-md-10">
-                                <h6 class="card-subtitle mb-2 text-muted">Trabajo: {tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h6>
-                                <p class="card-text">Descripción: Estamos buscando un desarrollador web altamente motivado para unirse a nuestro equipo. Deberás tener experiencia en el desarrollo de aplicaciones web...</p>
+                                <h6 class="card-subtitle mb-2 text-muted ms-3">Trabajo: {tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h6>
+                                <p class="card-text ms-3">Descripción: {obtenerElementosAleatorios(textoUsuario, Math.floor(Math.random() * 200)).join(' ')}</p>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item"><strong>Correo de Contacto:</strong> {nombreEmpresa[index]}@jobs.com</li>
                                     <li class="list-group-item"><strong>Número de Contacto:</strong> {empresa.cell}
