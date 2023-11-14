@@ -105,6 +105,7 @@ function Jobs() {
     },[]);
 
     const [nombreEmpresa, setNombreEmpresa] = useState([]);
+
     useEffect( () => {
         axios.get(`https://random-word-api.vercel.app/api?words=${post_amount}`).then((response) => {
             setNombreEmpresa(response.data)
@@ -113,6 +114,23 @@ function Jobs() {
     });
 
     },[]);
+
+    const apiDatesUrl = `https://api.lrs.org/random-date-generator?num_dates=${post_amount}`;
+
+    const [fechas, setFechas] = useState([]);
+
+    useEffect( () => {
+
+        axios.get(apiDatesUrl).then((response) => {
+            setFechas(response.data.data)
+        }).catch((error) => {
+            console.error('Error');
+        });
+
+    },[]);
+
+    const fechasArray = Object.keys(fechas)
+    const listaInvertida = [...fechasArray].reverse();
 
 
     return (
@@ -123,7 +141,7 @@ function Jobs() {
                 <div key={index} class="card mb-2">
                     <div class="card-header">
                         <h5 class="card-title text-uppercase">{nombreEmpresa[index]} {elementosEmpresariales[Math.floor(Math.random() * elementosEmpresariales.length)]}</h5>
-                        <p class="card-subtitle text-muted">Publicado el 12 de noviembre de 2023</p>
+                        <p class="card-subtitle text-muted">Publicado el {listaInvertida[index]}</p>
                     </div>
                     <div class="card-body">
                         <div class="row">
