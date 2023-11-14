@@ -3,6 +3,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import axios from 'axios';
 
+function obtenerElementosAleatorios(arr, cantidad) {
+    const copiaLista = [...arr];  // Copia la lista para no modificar la original
+    const elementosAleatorios = [];
+
+    for (let i = 0; i < cantidad; i++) {
+        const indiceAleatorio = Math.floor(Math.random() * copiaLista.length);
+        const elemento = copiaLista.splice(indiceAleatorio, 1)[0];
+        elementosAleatorios.push(elemento);
+    }
+
+    elementosAleatorios[0]= elementosAleatorios[0].charAt(0).toUpperCase() + elementosAleatorios[0].slice(1);
+
+    return elementosAleatorios;
+}
+
 function Jobs() {
 
     const tipos_trabajos = [
@@ -132,6 +147,15 @@ function Jobs() {
     const fechasArray = Object.keys(fechas)
     const listaInvertida = [...fechasArray].reverse();
 
+    const [textoUsuario, setTextoUsuario] = useState([]);
+    useEffect( () => {
+        axios.get(`https://random-word-api.vercel.app/api?words=500`).then((response) => {
+            setTextoUsuario(response.data)
+        }).catch((error) => {
+            console.error('Error');
+    });
+
+},[]);
 
     return (
         <main className='bg-secondary-subtle'>
@@ -150,7 +174,7 @@ function Jobs() {
                             </div>
                             <div class="col-md-10">
                                 <h6 class="card-subtitle mb-2 text-muted">Trabajo: {tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h6>
-                                <p class="card-text">Descripción: Estamos buscando un desarrollador web altamente motivado para unirse a nuestro equipo. Deberás tener experiencia en el desarrollo de aplicaciones web...</p>
+                                <p class="card-text">Descripción: {obtenerElementosAleatorios(textoUsuario, Math.floor(Math.random() * 200)).join(' ')}</p>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item"><strong>Correo de Contacto:</strong> {nombreEmpresa[index]}@jobs.com</li>
                                     <li class="list-group-item"><strong>Número de Contacto:</strong> {empresa.cell}
