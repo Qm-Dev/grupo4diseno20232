@@ -48,12 +48,37 @@ function Jobs() {
             });
     }, []);
 
+    const post_amount = Math.floor(Math.random() * 11);
+    const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
+
+    const [empresaInfo, setEmpresaInfo] = useState([]);
+
+    useEffect( () => {
+
+        axios.get(apiNamesUrl).then((response) => {
+            setEmpresaInfo(response.data.results)
+        }).catch((error) => {
+            console.error('Error');
+        });
+
+    },[]);
+
+    const [nombreEmpresa, setNombreEmpresa] = useState([]);
+    useEffect( () => {
+        axios.get(`https://random-word-api.vercel.app/api?words=${post_amount}`).then((response) => {
+            setNombreEmpresa(response.data)
+        }).catch((error) => {
+            console.error('Error');
+    });
+
+    },[]);
+
 
     return (
         <main className='bg-secondary-subtle'>
                 <div className="container p-3">
                         {/* creacion de post de empleos */}
-                        {trabajos.map((trabajo, index) => (
+                        {empresaInfo.map((empresa, index) => (
                             <div key={index} class="card mb-1">
                                 <div class="card-body">
                                     <div class="row">
@@ -61,11 +86,11 @@ function Jobs() {
                                             <img src={`https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`} class="me-3 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img>
                                         </div>
                                         <div class="col-md-11">
-                                            <h5 class="mt-0">{tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]} - {trabajo.razon_social}</h5>
-                                            <p>Ubicacion: {trabajo.provincia}, {trabajo.municipio}</p>
-                                            <small class="text-muted">Numero Contacto: {trabajo.telefono}</small>
+                                            <h5 class="mt-0">{tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]} - {nombreEmpresa[index]}</h5>
+                                            <p>Ubicacion: {empresa.location.city}, {empresa.location.state}, {empresa.location.country}</p>
+                                            <small class="text-muted">Numero Contacto: {empresa.cell}</small>
                                             <br></br>
-                                            <small class="text-muted">Correo Contacto: {trabajo.email}</small>
+                                            <small class="text-muted">Correo Contacto: {nombreEmpresa[index]}@jobs.com</small>
                                         </div>
                                 </div>
                             </div>
