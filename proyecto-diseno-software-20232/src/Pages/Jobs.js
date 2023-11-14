@@ -131,7 +131,7 @@ function Jobs() {
                                 <img src={`https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`} class="rounded-circle img-thumbnail" alt="Logo de la emresa"></img>
                             </div>
                             <div class="col-md-10">
-                                <h6 class="card-subtitle mb-2 text-muted">Rubro: {tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">Trabajo: {tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h6>
                                 <p class="card-text">Descripción: Estamos buscando un desarrollador web altamente motivado para unirse a nuestro equipo. Deberás tener experiencia en el desarrollo de aplicaciones web...</p>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item"><strong>Correo de Contacto:</strong> {nombreEmpresa[index]}@jobs.com</li>
