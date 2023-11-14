@@ -6,40 +6,40 @@ import axios from 'axios';
 
 function ProfileList() {
 
-  // Utilización de la API randomuser.me
+    // Utilización de la API randomuser.me
 
-  const post_amount = Math.floor(Math.random() * 11);
-  const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
-  const apiDatesUrl = `https://api.lrs.org/random-date-generator?num_dates=${post_amount}`;
+    const post_amount = Math.floor(Math.random() * 11);
+    const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
+    const apiDatesUrl = `https://api.lrs.org/random-date-generator?num_dates=${post_amount}`;
 
 
-  // Obtención de nombres y apellidos
-  const [nombreUsuarios, setNombreUsuarios] = useState([]);
+    // Obtención de nombres y apellidos
+    const [nombreUsuarios, setNombreUsuarios] = useState([]);
 
-  useEffect( () => {
+    useEffect( () => {
 
-      axios.get(apiNamesUrl).then((response) => {
-        setNombreUsuarios(response.data.results)
-      }).catch((error) => {
-          console.error('Error');
-      });
+        axios.get(apiNamesUrl).then((response) => {
+            setNombreUsuarios(response.data.results)
+        }).catch((error) => {
+            console.error('Error');
+        });
 
-  },[]);
-  // Obtención de fechas
-  const [fechas, setFechas] = useState([]);
+    },[]);
+    // Obtención de fechas
+    const [fechas, setFechas] = useState([]);
 
-  useEffect( () => {
+    useEffect( () => {
 
-      axios.get(apiDatesUrl).then((response) => {
-        setFechas(response.data.data)
-      }).catch((error) => {
-          console.error('Error');
-      });
+        axios.get(apiDatesUrl).then((response) => {
+            setFechas(response.data.data)
+        }).catch((error) => {
+            console.error('Error');
+        });
 
-  },[]);
+    },[]);
 
-  const fechasArray = Object.keys(fechas)
-  const listaInvertida = [...fechasArray].reverse();
+    const fechasArray = Object.keys(fechas)
+    const listaInvertida = [...fechasArray].reverse();
 
     return (
         <main className='bg-secondary-subtle'>
@@ -83,12 +83,12 @@ function ProfileList() {
 
                     <div class="mb-3">
                         <label for="edadMinima" class="form-label">Edad Mínima:</label>
-                        <input type="number" class="form-control" id="edadMinima" name="edadMinima" required></input>
+                        <input type="number" class="form-control" id="edadMinima" name="edadMinima" value="20" required></input>
                     </div>
 
                     <div class="mb-3">
                         <label for="edadMaxima" class="form-label">Edad Máxima:</label>
-                        <input type="number" class="form-control" id="edadMaxima" name="edadMaxima" required></input>
+                        <input type="number" class="form-control" id="edadMaxima" name="edadMaxima" value="60" required></input>
                     </div>
 
                     <div class="mb-3">
@@ -114,7 +114,7 @@ function ProfileList() {
                     </div>
                     <div class="mb-3">
                         <label for="cantidad" class="form-label">Cantidad:</label>
-                        <input type="number" class="form-control" id="cantidad" name="cantidad" required></input>
+                        <input type="number" class="form-control" id="cantidad" name="cantidad" value="10" required></input>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
