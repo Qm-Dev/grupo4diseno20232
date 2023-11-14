@@ -1,30 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Notification from '../Components/Job';
 import axios from 'axios';
 
-function Jobs(props) {
-
-    const titleStyle = {
-        textAlign: 'center',
-        fontWeight: 'bold',
-        fontSize: '1.25rem',
-        marginTop: '1rem',
-        marginBottom: '1rem',
-    };
+function Jobs() {
 
     const tipos_trabajos = [
-        "Desarrollador de software",
-        "Diseñador gráfico",
-        "Ingeniero civil",
-        "Enfermero/a",
-        "Chef de cocina",
-        "Periodista",
+        "Albañil",
+        "Carpintero",
         "Electricista",
-        "Psicólogo/a",
-        "Arquitecto/a",
-        "Contador/a",
+        "Fontanero",
+        "Pintor",
+        "Soldador",
+        "Techador",
+        "Jardinero/Landscaper",
+        "Trabajador de demolición",
+        "Operador de maquinaria pesada",
+        "Ayudante de construcción",
+        "Operador de montacargas",
+        "Encargado de limpieza y mantenimiento",
+        "Operador de herramientas manuales",
+        "Instalador de aislamiento",
+        "Asistente de carpintería",
+        "Operador de grúa móvil",
+        "Operador de excavadora",
+        "Armador de estructuras de acero",
+        "Instalador de suelos",
+        "Operario de encofrado",
+        "Conserje",
+        "Operador de compactadora",
+        "Operador de miniexcavadora",
+        "Instalador de tuberías",
+        "Ayudante de electricista",
+        "Auxiliar de plomería",
+        "Auxiliar de pintura",
     ];
 
     const [trabajos, setTrabajos] = useState([]);
@@ -41,29 +50,28 @@ function Jobs(props) {
 
 
     return (
-        <main>
-            <div>
-                <h1 style={titleStyle}>Ofertas Disponibles</h1>
-            </div>
-            <div>
+        <main className='bg-secondary-subtle'>
                 <div className="container p-3">
-                    <div>
                         {/* creacion de post de empleos */}
                         {trabajos.map((trabajo, index) => (
-                            <div key={index} className="media mt-3">
-                                <div className="media-body mb-0">
-                                    <h3 className="mt-0">{tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]} - {trabajo.razon_social}</h3>
-                                    <p>{trabajo.actividad}</p>
-                                    <p className="text-muted">Ubicacion: {trabajo.provincia}, {trabajo.municipio}</p>
-                                    <small className="text-muted mb-2 mt-2">Numero Contacto: {trabajo.telefono}</small>
-                                    <br></br>
-                                    <small className="text-muted mb-2 mt-2">Correo Contacto: {trabajo.email}</small>
+                            <div key={index} class="card mb-1">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                            <img src={`https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`} class="me-3 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img>
+                                        </div>
+                                        <div class="col-md-11">
+                                            <h5 class="mt-0">{tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]} - {trabajo.razon_social}</h5>
+                                            <p>Ubicacion: {trabajo.provincia}, {trabajo.municipio}</p>
+                                            <small class="text-muted">Numero Contacto: {trabajo.telefono}</small>
+                                            <br></br>
+                                            <small class="text-muted">Correo Contacto: {trabajo.email}</small>
+                                        </div>
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
-            </div>
         </main>
     );
 }
