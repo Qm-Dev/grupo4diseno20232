@@ -13,8 +13,11 @@ function obtenerElementosAleatorios(arr, cantidad) {
         elementosAleatorios.push(elemento);
     }
 
-    elementosAleatorios[0]= elementosAleatorios[0].charAt(0).toUpperCase() + elementosAleatorios[0].slice(1);
-
+    if (elementosAleatorios[0]) {
+        elementosAleatorios[0] = elementosAleatorios[0].charAt(0).toUpperCase() + elementosAleatorios[0].slice(1);
+    } else {
+        // Nada
+    }
     return elementosAleatorios;
 }
 
