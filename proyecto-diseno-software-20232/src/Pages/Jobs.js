@@ -135,7 +135,9 @@ function Jobs() {
                                 <p class="card-text">Descripción: Estamos buscando un desarrollador web altamente motivado para unirse a nuestro equipo. Deberás tener experiencia en el desarrollo de aplicaciones web...</p>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item"><strong>Correo de Contacto:</strong> {nombreEmpresa[index]}@jobs.com</li>
-                                    <li class="list-group-item"><strong>Número de Contacto:</strong> {empresa.cell}</li>
+                                    <li class="list-group-item"><strong>Número de Contacto:</strong> {empresa.cell}
+                                        <button class="btn btn-primary float-end">Postular</button>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

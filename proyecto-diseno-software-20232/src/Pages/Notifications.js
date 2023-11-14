@@ -18,7 +18,7 @@ function Notifications() {
 
   useEffect( () => {
 
-      axios.get(apiNamesUrl).then((response) => {  
+      axios.get(apiNamesUrl).then((response) => {
         setNombreUsuarios(response.data.results)
       }).catch((error) => {
           console.error('Error');
@@ -30,7 +30,7 @@ function Notifications() {
 
   useEffect( () => {
 
-      axios.get(apiDatesUrl).then((response) => {  
+      axios.get(apiDatesUrl).then((response) => {
         setFechas(response.data.data)
       }).catch((error) => {
           console.error('Error');

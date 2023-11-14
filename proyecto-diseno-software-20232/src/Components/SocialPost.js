@@ -12,7 +12,6 @@ function formatDate(isoDate) {
     return formattedDate;
 }
 
-
 function SocialPost(props) {
 
     const { nombrePersona } = props;
@@ -69,7 +68,7 @@ function SocialPost(props) {
                                 <path d="M8.7 10.7l6.6 -3.4" />
                                 <path d="M8.7 13.3l6.6 3.4" />
                                 </svg>Compartir</button>
-                                
+
                                 {/* Enviar */}
                                 <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-send" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
