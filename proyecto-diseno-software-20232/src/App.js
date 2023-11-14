@@ -24,6 +24,7 @@ import FrequentlyAskedQuestions from './Pages/FrequentlyAskedQuestions';
 import Contact from './Pages/Contact';
 import Notifications from './Pages/Notifications';
 import Error from './Pages/Error';
+import ProfileList from './Pages/ProfileList';
 
 // Sitio Web
 function App() {
@@ -51,6 +52,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/profilelist" element={<ProfileList />} />
           {/* Crear páginas de perfil para otros usuarios. Por ahora solo entrega el componente Profile no acorde al usuario del Feed. */}
           <Route path="/users/:user" element={<Profile />} />
         </Route>
