@@ -1,14 +1,15 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Navbar() {
 
+    // Estilo de la Navbar
     const navbarStyle = {
         textAlign: 'center',
         fontFamily: 'Arvo'
     }
 
+    // Estilo de los items de la Navbar
     const navbarItemStyle = {
         marginLeft: '1rem',
         marginRight: '1rem'
