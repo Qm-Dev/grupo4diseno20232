@@ -5,14 +5,6 @@ import axios from 'axios';
 
 function Jobs() {
 
-    const titleStyle = {
-        textAlign: 'center',
-        fontWeight: 'bold',
-        fontSize: '1.25rem',
-        marginTop: '1rem',
-        marginBottom: '1rem',
-    };
-
     const tipos_trabajos = [
         "Albañil",
         "Carpintero",
