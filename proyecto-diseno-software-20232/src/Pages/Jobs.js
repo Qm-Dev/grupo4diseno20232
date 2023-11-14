@@ -173,8 +173,8 @@ function Jobs() {
                                 <img src={`https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`} class="rounded-circle img-thumbnail" alt="Logo de la emresa"></img>
                             </div>
                             <div class="col-md-10">
-                                <h6 class="card-subtitle mb-2 text-muted">Trabajo: {tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h6>
-                                <p class="card-text">Descripción: {obtenerElementosAleatorios(textoUsuario, Math.floor(Math.random() * 200)).join(' ')}</p>
+                                <h6 class="card-subtitle mb-2 text-muted ms-3">Trabajo: {tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h6>
+                                <p class="card-text ms-3">Descripción: {obtenerElementosAleatorios(textoUsuario, Math.floor(Math.random() * 200)).join(' ')}</p>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item"><strong>Correo de Contacto:</strong> {nombreEmpresa[index]}@jobs.com</li>
                                     <li class="list-group-item"><strong>Número de Contacto:</strong> {empresa.cell}
