@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Recomendation from '../Components/Recomendation';
 import axios from 'axios';
 
@@ -22,11 +21,21 @@ function shuffle(array) {
 
 function ProfileInfo(props) {
 
+    // Estilo de indicadores de carrusel
     const carouselIndicatorsStyle = {
-        // alejar los indicadores del carousel del contenido
         bottom: '-1.5rem',
     };
 
+    // Estilos adicionales de textos
+    const headingStyle = {
+        fontFamily: 'Lato'
+    }
+
+    const paragraphStyle = {
+        fontFamily: 'Rubik'
+    }
+
+    // Argumentos que componen el perfil
     const { nombrePersona } = props;
     const { apellidoPersona } = props;
     const { fotoPerfilPersona } = props;
@@ -48,6 +57,7 @@ function ProfileInfo(props) {
         setSelectedOption(option);
     };
 
+    // Profesiones
     const profesionesConstruccion = [
         "Albañil",
         "Carpintero",
@@ -79,7 +89,8 @@ function ProfileInfo(props) {
         "Auxiliar de pintura",
     ];
 
-const certificacionesConstruccion = [
+    // Certificaciones y descripciones
+    const certificacionesConstruccion = [
     {
         nombre: "Certificación en Gestión de Proyectos de Construcción",
         descripcion: "Certificación que valida las habilidades en la planificación y ejecución eficientes de proyectos de construcción."
@@ -142,7 +153,8 @@ const certificacionesConstruccion = [
     }
     ];
 
-const experienciasConstruccion = [
+    // Experiencias
+    const experienciasConstruccion = [
     {
         titulo: "Supervisión de Proyectos Residenciales",
         descripcion: "Dirigí la supervisión de proyectos de construcción de viviendas unifamiliares, asegurando la calidad y cumplimiento de plazos."
@@ -217,6 +229,7 @@ const experienciasConstruccion = [
 
     const experienciasAleatorias = experienciasMezcladas.slice(0, 3);
 
+    // Fotos a utilizar en experiencia
     const link1 = `https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`;
     const link2 = `https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`;
     const link3 = `https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`;
@@ -237,6 +250,7 @@ const experienciasConstruccion = [
         });
 
     },[]);
+
     // Obtención de fechas
     const [fechas, setFechas] = useState([]);
 
@@ -250,29 +264,33 @@ const experienciasConstruccion = [
 
     },[]);
 
+    // Arreglos
     const fechasArray = Object.keys(fechas)
     const listaInvertida = [...fechasArray].reverse();
 
     return (
         <main>
-            <div className='profile'>
+            <div id='profile'>
                 <div className='container'>
+                    {/* Presentación de la persona */}
                     <div class="card mb-3 mt-3 text-center">
                         <div class="card-body">
                             <img src={fotoPerfilPersona} class="mb-2 rounded-circle img-thumbnail w-25" alt="Imagen de Usuario"></img>
                             <div class="text-left mt-0">
                             <div class="d-inline-block">
-                                <h1 className="display-6 fw-bold">{nombrePersona} {apellidoPersona}</h1>
-                                <h4 className="display-8">{profesionesAleatoria}</h4>
+                                <h1 className="display-6 fw-bold" style={headingStyle}>{nombrePersona} {apellidoPersona}</h1>
+                                <h4 className="display-8" style={headingStyle}>{profesionesAleatoria}</h4>
                             </div>
-                            <p className="fs-5 text-muted">
+                            <p className="fs-5 text-muted" style={paragraphStyle}>
                                 {correo} <br />
                                 {telefono} <br />
                                 {ciudad}, {estado}, {pais} <br />
                                 <span class="fw-light">{formattedDate}</span>
                             </p>
                             </div>
-                            <p class="text-start mt-4">{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.</p>
+                            {/* Descripción de la persona */}
+                            <p class="text-start mt-4" style={paragraphStyle}>{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.</p>
+                            {/* Botones de interacción con la persona */}
                             <div class="d-flex btn-group justify-content-center">
                                 <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -304,8 +322,10 @@ const experienciasConstruccion = [
                             </div>
                         </div>
                     </div>
+                    {/* Experiencia */}
                     <div id='experienceSection' className='card mb-3 text-center'>
-                        <h2 className='p-2'>Experiencia</h2>
+                        <h2 className='p-2 fw-bold' style={headingStyle}>Experiencia</h2>
+                        {/* Visualización de las experiencias (3) */}
                         <div id="carouselExampleDark" class="carousel carousel-dark slide">
                             <div style={carouselIndicatorsStyle} class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -313,30 +333,33 @@ const experienciasConstruccion = [
                                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
                             </div>
                             <div class="carousel-inner">
+                            {/* Experiencia 1 */}
                             <div class="carousel-item active" data-bs-interval="10000">
                                 <div class="d-flex flex-column align-items-center">
                                         <img src={link1} class="d-block w-auto mx-auto" alt="Experiencia1" />
                                     <div class="text-center mt-2">
-                                        <h5>{experienciasAleatorias[0].titulo}</h5>
-                                        <p>{experienciasAleatorias[0].descripcion}</p>
+                                        <h5 style={headingStyle}>{experienciasAleatorias[0].titulo}</h5>
+                                        <p style={paragraphStyle}>{experienciasAleatorias[0].descripcion}</p>
                                     </div>
                                 </div>
                             </div>
+                            {/* Experiencia 2 */}
                             <div class="carousel-item" data-bs-interval="2000">
                                 <div class="d-flex flex-column align-items-center">
                                     <img src={link2} class="d-block w- mx-auto" alt="Experiencia2" />
                                     <div class="text-center mt-2">
-                                        <h5>{experienciasAleatorias[1].titulo}</h5>
-                                        <p>{experienciasAleatorias[1].descripcion}</p>
+                                        <h5 style={headingStyle}>{experienciasAleatorias[1].titulo}</h5>
+                                        <p style={paragraphStyle}>{experienciasAleatorias[1].descripcion}</p>
                                     </div>
                                 </div>
                             </div>
+                            {/* Experiencia 3 */}
                             <div class="carousel-item">
                                 <div class="d-flex flex-column align-items-center">
                                     <img src={link3} class="d-block w-20 mx-auto" alt="Experiencia3" />
                                     <div class="text-center mt-2">
-                                        <h5>{experienciasAleatorias[2].titulo}</h5>
-                                        <p>{experienciasAleatorias[2].descripcion}</p>
+                                        <h5 style={headingStyle}>{experienciasAleatorias[2].titulo}</h5>
+                                        <p style={paragraphStyle}>{experienciasAleatorias[2].descripcion}</p>
                                     </div>
                                 </div>
                             </div>
@@ -352,41 +375,46 @@ const experienciasConstruccion = [
                         </div>
                         <a href="#" className='btn btn-dark m-auto mt-2 mb-2'>Editar experiencia</a>
                     </div>
+                    {/* Certificaciones */}
                     <div id='certificationsSection' className='card mb-3 text-center'>
-                        <h2 className='p-2'>Certificaciones</h2>
+                        <h2 className='p-2 fw-bold' style={headingStyle}>Certificaciones</h2>
                         <div class="row">
+                            {/* Certificación 1 */}
                             <div class="col-sm-4">
-                                <div class="card p-4 m-2">
-                                <div class="card-body">
-                                    <h5 class="card-title">{certificacionesAleatorias[0].nombre}</h5>
-                                    <p class="card-text">{certificacionesAleatorias[0].descripcion}</p>
-                                    <a href="#" class="btn btn-primary">Ver certificación</a>
-                                </div>
+                                <div class="card h-100 p-4 m-2">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold" style={headingStyle}>{certificacionesAleatorias[0].nombre}</h5>
+                                        <p class="card-text" style={paragraphStyle}>{certificacionesAleatorias[0].descripcion}</p>
+                                        <a href="#" class="btn btn-primary">Ver certificación</a>
+                                    </div>
                                 </div>
                             </div>
+                            {/* Certificación 2 */}
                             <div class="col-sm-4">
-                                <div class="card p-4 m-2">
-                                <div class="card-body">
-                                    <h5 class="card-title">{certificacionesAleatorias[1].nombre}</h5>
-                                    <p class="card-text">{certificacionesAleatorias[1].descripcion}</p>
-                                    <a href="#" class="btn btn-primary">Ver certificación</a>
-                                </div>
+                                <div class="card h-100 p-4 m-2">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold" style={headingStyle}>{certificacionesAleatorias[1].nombre}</h5>
+                                        <p class="card-text" style={paragraphStyle}>{certificacionesAleatorias[1].descripcion}</p>
+                                        <a href="#" class="btn btn-primary">Ver certificación</a>
+                                    </div>
                                 </div>
                             </div>
+                            {/* Certificación 3 */}
                             <div class="col-sm-4">
-                                <div class="card p-4 m-2">
-                                <div class="card-body">
-                                    <h5 class="card-title">{certificacionesAleatorias[2].nombre}</h5>
-                                    <p class="card-text">{certificacionesAleatorias[2].descripcion}</p>
-                                    <a href="#" class="btn btn-primary">Ver certificación</a>
-                                </div>
+                                <div class="card h-100 p-4 m-2">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold" style={headingStyle}>{certificacionesAleatorias[2].nombre}</h5>
+                                        <p class="card-text" style={paragraphStyle}>{certificacionesAleatorias[2].descripcion}</p>
+                                        <a href="#" class="btn btn-primary">Ver certificación</a>
+                                    </div>
                                 </div>
                             </div>
-                            </div>
+                        </div>
+                        {/* Editar certificaciones */}
                         <DropdownButton
                             id="dropdown-basic-button"
                             title={'Editar Informacion'}
-                            className='m-auto mt-2 mb-2'
+                            className='m-auto mt-4 mb-3'
                             >
                             <Dropdown.Item onClick={() => handleDropdownSelect('option1')}>
                                 Agregar/quitar Certificaciones
@@ -402,16 +430,16 @@ const experienciasConstruccion = [
                             </Dropdown.Item>
                         </DropdownButton>
                     </div>
-                        <div class="mb-5">
-                            {/* Crear las publicaciones del feed */}
-                            {nombreUsuarios.length > 0 ? (
-                                            nombreUsuarios.map((usuario, index) => (
-                                                <Recomendation key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.medium} fechaNoti={listaInvertida[index]}/>
-                                            ))
-                            ) : (
-                                <p>Cargando notificaciones...</p>
-                            )}
-                        </div>
+                    {/* Recomendaciones */}
+                    <div class="mb-5">
+                        {nombreUsuarios.length > 0 ? (
+                                        nombreUsuarios.map((usuario, index) => (
+                                            <Recomendation key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.medium} fechaNoti={listaInvertida[index]}/>
+                                        ))
+                        ) : (
+                            <p>Cargando recomendaciones...</p>
+                        )}
+                    </div>
                 </div>
             </div>
         </main>
