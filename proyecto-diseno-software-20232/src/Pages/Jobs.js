@@ -36,17 +36,58 @@ function Jobs() {
         "Auxiliar de pintura",
     ];
 
-    const [trabajos, setTrabajos] = useState([]);
-
-    useEffect(() => {
-        axios.get('https://api.generadordni.es/profiles/company')
-            .then((response) => {
-                setTrabajos(response.data);
-            })
-            .catch((error) => {
-                console.error('Error al obtener datos de trabajos', error);
-            });
-    }, []);
+    const elementosEmpresariales = [
+        "®",
+        "SA",
+        "SRL",
+        "SL",
+        "SPA",
+        "Ltda",
+        "Corp",
+        "Inc",
+        "GmbH",
+        "LLC",
+        "PLC",
+        "Ltd",
+        "Pty Ltd",
+        "AG",
+        "Co.",
+        "BV",
+        "LLP",
+        "SA de CV",
+        "SAS",
+        "NV",
+        "Sdn Bhd",
+        "Oy",
+        "AB",
+        "KG",
+        "Kft",
+        "Sp. z o.o.",
+        "Lda",
+        "ApS",
+        "SIA",
+        "A/S",
+        "KGaA",
+        "OU",
+        "Ltd.",
+        "Co., Ltd.",
+        "Limited",
+        "Corporation",
+        "Incorporated",
+        "Company",
+        "Group",
+        "Holdings",
+        "Ventures",
+        "Industries",
+        "Enterprises",
+        "International",
+        "Global",
+        "Services",
+        "Tech",
+        "Systems",
+        "Solutions",
+        "Consulting"
+    ];
 
     const post_amount = Math.floor(Math.random() * 11);
     const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
@@ -76,27 +117,32 @@ function Jobs() {
 
     return (
         <main className='bg-secondary-subtle'>
-                <div className="container p-3">
-                        {/* creacion de post de empleos */}
-                        {empresaInfo.map((empresa, index) => (
-                            <div key={index} class="card mb-1">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-1">
-                                            <img src={`https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`} class="me-3 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img>
-                                        </div>
-                                        <div class="col-md-11">
-                                            <h5 class="mt-0">{tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]} - {nombreEmpresa[index]}</h5>
-                                            <p>Ubicacion: {empresa.location.city}, {empresa.location.state}, {empresa.location.country}</p>
-                                            <small class="text-muted">Numero Contacto: {empresa.cell}</small>
-                                            <br></br>
-                                            <small class="text-muted">Correo Contacto: {nombreEmpresa[index]}@jobs.com</small>
-                                        </div>
-                                </div>
+            <div className="container p-3">
+                {/* creacion de post de empleos */}
+                {empresaInfo.map((empresa, index) => (
+                <div key={index} class="card mb-2">
+                    <div class="card-header">
+                        <h5 class="card-title">{nombreEmpresa[index]} {elementosEmpresariales[Math.floor(Math.random() * elementosEmpresariales.length)]}</h5>
+                        <p class="card-subtitle text-muted">Publicado el 12 de noviembre de 2023</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img src={`https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`} class="rounded-circle img-thumbnail" alt="Logo de la emresa"></img>
+                            </div>
+                            <div class="col-md-10">
+                                <h6 class="card-subtitle mb-2 text-muted">Rubro: {tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h6>
+                                <p class="card-text">Descripción: Estamos buscando un desarrollador web altamente motivado para unirse a nuestro equipo. Deberás tener experiencia en el desarrollo de aplicaciones web...</p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><strong>Correo de Contacto:</strong> {nombreEmpresa[index]}@jobs.com</li>
+                                    <li class="list-group-item"><strong>Número de Contacto:</strong> {empresa.cell}</li>
+                                </ul>
                             </div>
                         </div>
-                    ))}
+                    </div>
                 </div>
+                ))}
+            </div>
         </main>
     );
 }
