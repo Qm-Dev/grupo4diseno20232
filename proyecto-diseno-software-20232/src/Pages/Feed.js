@@ -5,6 +5,7 @@ import ProfilePreview from '../Components/ProfilePreview';
 import PostBox from '../Components/PostBox';
 import SocialPost from '../Components/SocialPost';
 import axios from 'axios';
+import Carga from '../Components/Carga';
 
 function Feed() {
 
@@ -46,7 +47,7 @@ function Feed() {
                                 <ProfilePreview key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date}/>
                               ))
               ) : (
-                <p>Cargando tu perfil...</p>
+                < Carga />
               )}
             </div>
             <div className='col-md-7 rounded-5'>
@@ -67,7 +68,7 @@ function Feed() {
                                 <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.thumbnail} fecha={usuario.dob.date}/>
                               ))
               ) : (
-                <p>Cargando publicaciones...</p>
+                <Carga />
               )}
             </div>
           </div>
