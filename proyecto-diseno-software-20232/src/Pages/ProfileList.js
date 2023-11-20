@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Notification from '../Components/Notification';
 import axios from 'axios';
+import JobProfile from '../Components/JobProfile';
 
 function ProfileList() {
 
     // Utilización de la API randomuser.me
 
-    const post_amount = Math.floor(Math.random() * 11);
+    const post_amount = Math.floor(Math.random() * 11 + 5);
     const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
     const apiDatesUrl = `https://api.lrs.org/random-date-generator?num_dates=${post_amount}`;
 
@@ -43,7 +43,7 @@ function ProfileList() {
 
     return (
         <main className='bg-secondary-subtle'>
-            <div class="container mt-5">
+            <div class="container pt-3">
                 <h1 class="mb-4">Formulario de Profesiones</h1>
 
                 <form>
@@ -116,14 +116,17 @@ function ProfileList() {
                         <label for="cantidad" class="form-label">Cantidad:</label>
                         <input type="number" class="form-control" id="cantidad" name="cantidad" value="10" required></input>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <div class="row justify-content-around">
+                        <button type="submit" class="btn btn-primary col-3">Buscar</button>
+                        <button type="submit" class="btn btn-success col-3">Excel</button>
+                    </div>
                 </form>
             </div>
             <div className='container p-3'>
                 {/* Crear las publicaciones del feed */}
                 {nombreUsuarios.length > 0 ? (
                                 nombreUsuarios.map((usuario, index) => (
-                                    <Notification key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.medium} fechaNoti={listaInvertida[index]}/>
+                                    <JobProfile key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date} correo={usuario.email} ciudad={"Región de Arica y Parinacota"} telefono={usuario.cell} edad={Math.floor(Math.random() * 40 + 20)} profesion={"Albañil"}/>
                                 ))
                 ) : (
                     <p>Cargando notificaciones...</p>
