@@ -19,27 +19,33 @@ const formLabelStyle = {
 
 function Contact() {
     return (
-        <main>
-            <h1 style={textStyle} className='text-uppercase fw-bold'>Contáctanos</h1>
-            <h3 style={textStyle} className='lh-base'>¿Dudas? ¿Comentarios?<br></br>Haznos saber lo que quieras a través de este formulario. <br></br>Nuestro equipo estará feliz de responderte lo antes posible.</h3>
-            <div className='col-md-6 mx-auto border border-5 border-black p-5 rounded-5 mb-4'>
-                <form>
-                    <div className="row form-group mb-4">
-                        <label style={formLabelStyle} htmlFor="inputName">Nombre</label>
-                        <input type="name" className="form-control" id="inputName" placeholder="Nombre" />
+        <main className="bg-secondary-subtle">
+            <div class="container py-5">
+                <h1 class="text-uppercase fw-bold mb-4 text-center">Contáctanos</h1>
+                <div class="lh-base mb-4 text-center">
+                    <p class="fs-3">¿Dudas?</p>
+                    <p class="fs-3">¿Comentarios?</p>
+                    <p class="fs-4">Haznos saber lo que quieras a través de este formulario. Nuestro equipo estará feliz de responderte lo antes posible.</p>
+                </div>
+                <div class="col-md-6 mx-auto mb-4">
+                    <form>
+                    <div class="mb-4">
+                        <label class="form-label" for="inputName">Nombre:</label>
+                        <input type="name" class="form-control" id="inputName" placeholder="Nombre" />
                     </div>
-                    <div className="row form-group mb-4">
-                        <label style={formLabelStyle} htmlFor="inputEmail4">Email</label>
-                        <input type="email" className="form-control" id="inputEmail4" placeholder="Email" />
+                    <div class="mb-4">
+                        <label class="form-label" for="inputEmail4">Email:</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
                     </div>
-                    <div className="row form-group mb-4">
-                        <label style={formLabelStyle} htmlFor="inputMessage">Mensaje</label>
-                        <textarea style={noResizing} type="text" className="form-control" id="inputMessage" rows="7" placeholder="Mensaje" />
+                    <div class="mb-4">
+                        <label class="form-label" for="inputMessage">Mensaje:</label>
+                        <textarea class="form-control" id="inputMessage" rows="7" placeholder="Mensaje"></textarea>
                     </div>
-                    <div className="text-center">
-                        <button type="submit" className="row btn btn-primary">Enviar</button>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
                     </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </main>
     );

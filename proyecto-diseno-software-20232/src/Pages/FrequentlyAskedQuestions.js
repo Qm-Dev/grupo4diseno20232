@@ -24,7 +24,7 @@ function FrequentlyAskedQuestions() {
 
     return (
         <main>
-            <h1 style={titleFaq}>Frequently Asked Questions</h1>
+            <h1 class="pt-4" style={titleFaq}>Frequently Asked Questions</h1>
             <h2 style={paragraphFaq}>Pregunta 1</h2>
             <p style={paragraphFaq}>Sed fringilla dolor eros, sed congue libero faucibus a. Nullam viverra
             velit ac pellentesque hendrerit. Aenean sed mi quis mi rutrum dapibus quis ac lacus. Sed velit lectus,
