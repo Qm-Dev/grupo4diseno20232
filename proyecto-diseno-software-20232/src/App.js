@@ -17,7 +17,6 @@ import Login from './Pages/Login';
 import Profile from './Pages/Profile';
 import Feed from './Pages/Feed';
 import Jobs from './Pages/Jobs';
-import ProfileConfiguration from './Pages/ProfileConfiguration';
 import Logout from './Pages/Logout';
 import About from './Pages/About';
 import FrequentlyAskedQuestions from './Pages/FrequentlyAskedQuestions';
@@ -32,21 +31,18 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-
         {/* Páginas donde la Navbar no estará visible */}
         <Route element={<NavbarNotVisible />}>
           <Route path="/register" element={<Register />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/error" element={<Error />} />
         </Route>
-
         {/* Páginas donde la Navbar estará visible */}
         <Route element={<NavbarVisible />}>
           <Route path="/" element={<Feed />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/configuration" element={<ProfileConfiguration />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FrequentlyAskedQuestions />} />
           <Route path="/contact" element={<Contact />} />
@@ -56,7 +52,6 @@ function App() {
           {/* Crear páginas de perfil para otros usuarios. Por ahora solo entrega el componente Profile no acorde al usuario del Feed. */}
           <Route path="/users/:user" element={<Profile />} />
         </Route>
-
         {/* Redirigir todas las URL desconocidas a la página de error */}
         <Route path="*" element={<Navigate to="/error" />} />
       </Routes>

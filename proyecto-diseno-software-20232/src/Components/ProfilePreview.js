@@ -1,6 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function formatDate(isoDate) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };

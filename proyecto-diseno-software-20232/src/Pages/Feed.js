@@ -41,6 +41,7 @@ function Feed() {
       <main className='bg-secondary-subtle'>
         <div className='container p-3'>
           <div className='row'>
+            {/* Previsualización del perfil */}
             <div className='col-md-5 rounded-5'>
               {nombreUsuario.length > 0 ? (
                               nombreUsuario.map((usuario, index) => (
@@ -50,18 +51,20 @@ function Feed() {
                 < Carga />
               )}
             </div>
+            {/* Post Box */}
             <div className='col-md-7 rounded-5'>
               {nombreUsuario.length > 0 ? (
                               nombreUsuario.map((usuario, index) => (
                                 <PostBox key={index} fotoPerfilPersona={usuario.picture.large}/>
                               ))
               ) : (
-                <p></p>
+                < Carga />
               )}
             </div>
           </div>
           <div className='row'>
             <div className='col-md-5'></div>
+            {/* Otras publicaciones */}
             <div className='col-md-7 rounded-5'>
               {nombreUsuarios.length > 0 ? (
                               nombreUsuarios.map((usuario, index) => (

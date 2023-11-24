@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import ProfileInfo from '../Components/ProfileInfo';
 import axios from 'axios';
 
