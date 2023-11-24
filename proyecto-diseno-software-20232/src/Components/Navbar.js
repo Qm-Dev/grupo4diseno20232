@@ -61,7 +61,6 @@ function Navbar() {
             </svg><br></br>Mi Perfil</a>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/profile">Ver perfil</a></li>
-                <li><a class="dropdown-item" href="/configuration">Configuración</a></li>
                 <li><hr class="dropdown-divider"></hr></li>
                 <li><a class="dropdown-item" href="/logout">Cerrar Sesión</a></li>
             </ul>
