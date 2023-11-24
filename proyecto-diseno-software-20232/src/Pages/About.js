@@ -1,8 +1,24 @@
 import React from 'react';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+// Imágenes de miembros
+import Diego from './img/Diego.jpg'
+import matias from './img/matias.jpg'
+import Benja from './img/Benja.jpg'
+import lolz from './img/placeholder-img.jpg'
+
 function About() {
+
+    // eliminar antes de entrega final (15-21)
+    const [imagen, setImagen] = useState(Benja);
+    const cambiarImagen = () => {
+        setImagen(lolz)
+    }
+    const restaurarImagen = () => {
+        setImagen(Benja)
+    }
 
     // Estilo de los headings de esta página
     const headingAboutUsStyle = {
@@ -10,7 +26,7 @@ function About() {
         fontFamily: 'Lato'
     }
 
-    // Estilo de los párrafos
+    // Estilo general de los párrafos
     const paragraphAboutUsStyle = {
         textAlign: 'justify',
         paddingTop: '0.75rem',
@@ -20,26 +36,24 @@ function About() {
         fontFamily: 'Rubik'
     }
 
+    // Estilo de los párrafos: Miembros
+    const paragraphMembersStyle = {
+        paddingTop: '0.15rem',
+        fontFamily: 'Rubik'
+    }
+    
     // Estilo de las imágenes
     const imgAboutUsStyle = {
-        width: '224px',
+        width: '250px',
         height: '100%',
+        maxHeight: '250px',
         border: '3px solid black',
-        borderRadius: '100%',
-        backgroundColor: 'black'
+        borderRadius: '100%'
     }
 
     return (
         <main>
             <h1 className='text-center fw-bold' style={headingAboutUsStyle}>Acerca de nosotros</h1>
-            <div className='container'>
-                <div className='row p-1'>
-                    <img className='col-sm-3 mx-auto p-1 m-1' src="https://wiki.teamfortress.com/w/images/f/f0/Buffed_blu_pyro.jpg" style={imgAboutUsStyle} alt="Integrante 1"></img>
-                    <img className='col-sm-3 mx-auto p-1 m-1' src="https://wiki.teamfortress.com/w/images/a/a5/Buffed_blu_engineer.jpg" style={imgAboutUsStyle} alt="Integrante 2"></img>
-                    <img className='col-sm-3 mx-auto p-1 m-1' src="https://wiki.teamfortress.com/w/images/5/5e/Buffed_blu_heavy.jpg" style={imgAboutUsStyle} alt="Integrante 3"></img>
-                    <img className='col-sm-3 mx-auto p-1 m-1' src="https://wiki.teamfortress.com/w/images/0/0a/Buffed_blu_demoman.jpg" style={imgAboutUsStyle} alt="Integrante 4"></img>
-                </div>
-            </div>
             <h2 style={headingAboutUsStyle}>¿Quiénes somos?</h2>
             <p style={paragraphAboutUsStyle}>Somos estudiantes de tercer año de la Facultad de Ingeniería
              y Ciencias de la Universidad Adolfo Ibáñez. Nuestro grupo está compuesto por ingenieros civiles,
@@ -47,34 +61,68 @@ function About() {
              apogeo de la pandemia de la COVID-19 a inicios del año 2021, y desde entonces nos hemos visto
              envueltos en variados proyectos durante el pregrado, abordando desde las matemáticas y la física
              hasta proyectos relacionados al área de desarrollo web, con un principal enfoque al apartado 
-             Frontend.<br></br><br></br>Nuestro grupo se encuentra conformado por:
-             <ul>
-                <li>Diego Duhalde:</li>
-                <li>Matías Heilenkötter:</li>
-                <li>Benjamín Herrera:</li>
-                <li>Vicente Ramírez:</li>
-             </ul>
-             </p>
+             Frontend.
+            </p>
+            <div className='container-fluid text-center'>
+                <div className='row gap-5 justify-content-md-center'>
+                    <div class="card col-md-3 pt-4 border-3 border-black">
+                        <img src={Diego} style={imgAboutUsStyle} class="card-img-top mx-auto img-fluid" alt="Integrante 1"></img>
+                            <div class="card-body">
+                                <p style={paragraphMembersStyle} class="card-text fw-bold">Diego Duhalde</p>
+                                <p style={paragraphMembersStyle}>Nunc in purus sit amet eros pulvinar pharetra. Duis bibendum
+                                eleifend odio vitae pulvinar. Vestibulum luctus leo sapien. Morbi eget ultrices quam. Sed leo massa,
+                                condimentum ut consequat sit amet, ultricies ut sem. Phasellus convallis molestie hendrerit. Duis
+                                dictum justo in diam ultricies ornare. Mauris at pretium mi, ut tristique ligula. Mauris et tortor ut
+                                nisl commodo vehicula sed non purus. Nunc sit amet imperdiet tortor, vel posuere sem. Phasellus
+                                euismod tristique ultricies. Donec feugiat nunc sed congue facilisis. Praesent fringilla massa quis
+                                est blandit, sit amet scelerisque est vehicula.</p>
+                            </div>
+                    </div>
+                    <div class="card col-md-3 pt-4 border-3 border-black">
+                        <img src={matias} style={imgAboutUsStyle} class="card-img-top mx-auto img-fluid" alt="Integrante 2"></img>
+                            <div class="card-body">
+                                <p style={paragraphMembersStyle} class="card-text fw-bold">Matías Heilenkötter</p>
+                                <p style={paragraphMembersStyle}>Nunc in purus sit amet eros pulvinar pharetra. Duis bibendum
+                                eleifend odio vitae pulvinar. Vestibulum luctus leo sapien. Morbi eget ultrices quam. Sed leo massa,
+                                condimentum ut consequat sit amet, ultricies ut sem. Phasellus convallis molestie hendrerit. Duis
+                                dictum justo in diam ultricies ornare. Mauris at pretium mi, ut tristique ligula. Mauris et tortor ut
+                                nisl commodo vehicula sed non purus. Nunc sit amet imperdiet tortor, vel posuere sem. Phasellus
+                                euismod tristique ultricies. Donec feugiat nunc sed congue facilisis. Praesent fringilla massa quis
+                                est blandit, sit amet scelerisque est vehicula.</p>
+                            </div>
+                    </div>
+                    <div class="card col-md-3 pt-4 border-3 border-black">
+                        <img src={imagen} style={imgAboutUsStyle} class="card-img-top mx-auto img-fluid" alt="Integrante 3" onMouseOver={cambiarImagen} onMouseLeave={restaurarImagen}></img>
+                            <div class="card-body">
+                                <p style={paragraphMembersStyle} class="card-text fw-bold">Benjamín Herrera</p>
+                                <p style={paragraphMembersStyle}>Nunc in purus sit amet eros pulvinar pharetra. Duis bibendum
+                                eleifend odio vitae pulvinar. Vestibulum luctus leo sapien. Morbi eget ultrices quam. Sed leo massa,
+                                condimentum ut consequat sit amet, ultricies ut sem. Phasellus convallis molestie hendrerit. Duis
+                                dictum justo in diam ultricies ornare. Mauris at pretium mi, ut tristique ligula. Mauris et tortor ut
+                                nisl commodo vehicula sed non purus. Nunc sit amet imperdiet tortor, vel posuere sem. Phasellus
+                                euismod tristique ultricies. Donec feugiat nunc sed congue facilisis. Praesent fringilla massa quis
+                                est blandit, sit amet scelerisque est vehicula.</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
             <h2 style={headingAboutUsStyle}>Historia</h2>
-            <p style={paragraphAboutUsStyle}>Nunc in purus sit amet eros pulvinar pharetra. Duis bibendum
-            eleifend odio vitae pulvinar. Vestibulum luctus leo sapien. Morbi eget ultrices quam. Sed leo massa,
-            condimentum ut consequat sit amet, ultricies ut sem. Phasellus convallis molestie hendrerit. Duis
-            dictum justo in diam ultricies ornare. Mauris at pretium mi, ut tristique ligula. Mauris et tortor ut
-            nisl commodo vehicula sed non purus. Nunc sit amet imperdiet tortor, vel posuere sem. Phasellus
-            euismod tristique ultricies. Donec feugiat nunc sed congue facilisis. Praesent fringilla massa quis
-            est blandit, sit amet scelerisque est vehicula.</p>
-            <p style={paragraphAboutUsStyle}>Nulla condimentum dolor non mauris tempus, quis pulvinar lectus
-            ultrices. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu mauris imperdiet,
-            posuere felis eget, sagittis neque. Cras eget ornare leo, id placerat risus. Mauris aliquet sem quam,
-            viverra ornare justo suscipit id. Sed vehicula felis aliquet sem pretium gravida. Vivamus faucibus diam
-            ac turpis dictum posuere. Nulla sed mi sollicitudin, ullamcorper lectus id, dictum massa. Nam venenatis
-            velit eget nisi viverra, eu condimentum quam scelerisque.</p>
-            <h2 style={headingAboutUsStyle}>Objetivo y finalidad del proyecto</h2>
-            <p style={paragraphAboutUsStyle}>Sed fringilla dolor eros, sed congue libero faucibus a. Nullam viverra
-            velit ac pellentesque hendrerit. Aenean sed mi quis mi rutrum dapibus quis ac lacus. Sed velit lectus,
-            bibendum a elit vel, commodo facilisis nibh. Integer nec est nunc. Nam vel sollicitudin lectus. Mauris
-            molestie faucibus augue, blandit rhoncus sapien egestas non. Pellentesque ultrices ipsum rhoncus enim
-            dictum feugiat. Quisque tempor vel est ac placerat.</p>
+            <p style={paragraphAboutUsStyle}>Mendelevium nace a partir de una lluvia de ideas producida durante las primeras
+            clases de la asignatura de Taller de Innovación y Emprendimiento Tecnológico, donde se buscaba una idea que permitiera hacer
+            frente al objetivo de desarrollo sostenible relacionado al trabajo decente, parte de los ODS establecidos por la Organización
+            de las Naciones Unidas para el año 2030. En un principio enfocada únicamente para el
+            rubro de la construcción, la idea se fue expandiendo para abarcar todo el rubro relacionado al trabajo no
+            cualificado, de esta forma batallando algunas de las problemáticas que afectan a este sector como lo es la falta de
+            seriedad y/o garantías a la hora de realizar tratos entre las partes involucradas y las malas condiciones laborales,
+            por solo nombrar algunas.
+            <br></br><br></br>Originalmente pensado como una plataforma digital para la contratación de servicios, los integrantes fueron
+            iterando esta idea hasta llegar a lo actualmente presentado: una red social que permite conectar a diversas personas del sector
+            no cualificado, similar a sitios como LinkedIn o Seek en la actualidad.
+            <br></br><br></br>El sitio se encuentra construido bajo el marco de
+            trabajo React.js, el cual hace uso de los
+            lenguajes HTML, CSS y JavaScript. El código fuente de este se encuentra disponible en su totalidad bajo la licencia MIT, estando alojado
+            su repositorio en GitHub, accesible haciendo click <a href="https://github.com/Qm-Dev/grupo4diseno20232/tree/main/proyecto-diseno-software-20232">aquí</a>.
+            </p>
         </main>
     );
 }
