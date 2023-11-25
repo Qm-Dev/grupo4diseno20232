@@ -46,11 +46,19 @@ function Notifications() {
           <div className='row'>
             <div className='col-md-3 rounded-5'>
               {/* Izquierda notificaciones */}
-              <div class="container">
+              <div class="container mb-3">
                 <div class="card text-center">
                   <div class="card-body">
                     <p class="card-text">Gestiona tus notificaciones</p>
                     <a href="#" class="btn btn-primary"><i class="fa fa-cog" aria-hidden="true"></i> Ver configuración</a>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <p class="card-text">Obtén más beneficios con Premium</p>
+                    <a href="#" class="btn btn-success"><i class="fa fa-star" aria-hidden="true"></i> Contratar Premium</a>
                   </div>
                 </div>
               </div>
