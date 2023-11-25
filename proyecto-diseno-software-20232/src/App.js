@@ -34,6 +34,7 @@ function App() {
         {/* Páginas donde la Navbar no estará visible */}
         <Route element={<NavbarNotVisible />}>
           <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/error" element={<Error />} />
         </Route>
@@ -47,7 +48,6 @@ function App() {
           <Route path="/faq" element={<FrequentlyAskedQuestions />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/notifications" element={<Notifications />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/profilelist" element={<ProfileList />} />
           {/* Crear páginas de perfil para otros usuarios. Por ahora solo entrega el componente Profile no acorde al usuario del Feed. */}
           <Route path="/users/:user" element={<Profile />} />

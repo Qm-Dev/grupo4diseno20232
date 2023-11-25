@@ -7,8 +7,10 @@ function Register() {
 
     return (
         <main className="d-flex align-items-center justify-content-center bg-secondary-subtle">
-            <div class="container pt-4">
-                <h2 class="mb-4 text-center">Registrarse</h2>
+            <div class="container mx-auto max-width-50 pt-4 pb-4">
+                <div class="card">
+                    <h2 class="card-title text-center mt-4">Registrarse</h2>
+                    <div class="card-body">
                 {/* Formulario de registro */}
                 <form>
                     <div class="mb-3">
@@ -77,9 +79,11 @@ function Register() {
                         <label class="form-check-label" for="aceptaTerminos">Acepto los términos y condiciones de servicio.</label>
                     </div>
                     <div class="text-center pb-4">
-                        <button type="submit" class="btn btn-primary">Registrar</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-pencil-square" aria-hidden="true"></i> Registrar</button>
                     </div>
                 </form>
+            </div>
+            </div>
             </div>
         </main>
     )
