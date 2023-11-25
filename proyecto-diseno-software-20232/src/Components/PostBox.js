@@ -28,7 +28,7 @@ function PostBox(props) {
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-2 text-center">
                         <img src={fotoPerfilPersona} class="img-fluid rounded-circle img-thumbnail" alt="Imagen de perfil"></img>
                     </div>
                     <div class="col-md-10">

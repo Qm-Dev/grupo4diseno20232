@@ -53,15 +53,17 @@ function ProfilePreview(props) {
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 text-center">
                         <a href="/profile"><img src={fotoPerfilPersona} class="img-fluid rounded-circle img-thumbnail" alt="Imagen de perfil"></img></a>
                     </div>
-                    <div class="col-md-8">
-                        <h3 class="mb-4">{nombrePersona} {apellidoPersona}</h3>
+                    <div class="col-md-8 text-center p-auto m-auto">
+                        <h4>{nombrePersona} {apellidoPersona}</h4>
                     </div>
                 </div>
-                <p class="ms-3"><strong>Profesión:</strong> {profesionesAleatoria}</p>
-                <p class="ms-3"><strong>Ubicación:</strong> {ciudad}, {estado}, {pais}</p>
+                <div class="mt-3">
+                    <p class="ms-3"><strong>Profesión:</strong> {profesionesAleatoria}</p>
+                    <p class="ms-3"><strong>Ubicación:</strong> {ciudad}, {estado}, {pais}</p>
+                </div>
             </div>
         </div>
     );
