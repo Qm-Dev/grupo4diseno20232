@@ -5,7 +5,7 @@ function FrequentlyAskedQuestions() {
     return (
         <main className='bg-secondary-subtle'>
             <div class="container py-5">
-    <div class="card mx-auto">
+    <div class="card mx-auto w-75">
         <h1 class="fs-2 card-header text-uppercase fw-bold text-center bg-primary text-white"><i class="fa fa-question-circle mt-2"></i> Preguntas Frecuentes</h1>
         <div class="card-body">
             <div class="accordion" id="faqAccordion">

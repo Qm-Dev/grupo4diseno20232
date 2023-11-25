@@ -1,20 +1,18 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const cardStyle = {
-    maxWidth: '800px',
-    borderRadius: '1.5rem',
-};
 
 function Contact() {
     return (
         <main className="bg-secondary-subtle">
             <div class="container py-5">
-                <div style={cardStyle} class="card mx-auto max-width-75">
-                    <h1 class="card-title text-uppercase fw-bold mb-4 mt-4 text-center">Contáctanos</h1>
+                <div class="card mx-auto w-75">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="text-center text-uppercase"><i class="fa fa-comments mt-2"></i> Contáctanos</h1>
+                    </div>
                     <div class="card-body">
                         <div class="lh-base mb-4 text-center" >
-                            <p class="fs-6">Haznos saber lo que quieras a través de este formulario. <br></br>Nuestro equipo estará feliz de responderte lo antes posible.</p>
+                            <p class="fs-5 mt-2">Haznos saber lo que quieras a través de este formulario. <br></br>Nuestro equipo estará feliz de responderte lo antes posible.</p>
                         </div>
                         <div class="col-md-10 mx-auto mb-4">
                             <form>
@@ -31,7 +29,7 @@ function Contact() {
                                     <textarea class="form-control" id="inputMessage" rows="7" placeholder="Mensaje"></textarea>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-pencil-square" aria-hidden="true"></i> Enviar</button>
+                                    <button type="submit" class="btn btn-primary fs-5"><i class="fa fa-pencil-square" aria-hidden="true"></i> Enviar</button>
                                 </div>
                             </form>
                         </div>
