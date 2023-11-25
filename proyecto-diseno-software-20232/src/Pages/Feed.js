@@ -36,7 +36,7 @@ function Feed() {
         console.error('Error');
     });
 
-},[]);
+  },[]);
 
   // Obtención de un único usuario
   const [nombreRecomendaciones, setNombreRecomendaciones] = useState([]);
@@ -48,7 +48,7 @@ function Feed() {
         console.error('Error');
     });
 
-},[]);
+  },[]);
 
     return (
       <main className='bg-secondary-subtle'>
