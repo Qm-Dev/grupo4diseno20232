@@ -46,7 +46,14 @@ function Notifications() {
           <div className='row'>
             <div className='col-md-3 rounded-5'>
               {/* Izquierda notificaciones */}
-              <p>PONER ALGO</p>
+              <div class="container">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <p class="card-text">Gestiona tus notificaciones</p>
+                    <a href="#" class="btn btn-primary"><i class="fa fa-cog" aria-hidden="true"></i> Ver configuración</a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className='col-md-6 rounded-5'>
               {/* Crear las publicaciones del feed */}
@@ -60,7 +67,18 @@ function Notifications() {
             </div>
             <div className='col-md-3 rounded-5'>
               {/* Derecha notificaciones */}
-              <p>PONER ALGO</p>
+              <div class="container">
+                <div class="card text-center">
+                  <div class="card-header">
+                    <h5 class="card-title m-0">Anuncio</h5>
+                  </div>
+                  <div class="card-body">
+                    <i class="fa fa-bar-chart fa-5x" aria-hidden="true"></i>
+                    <p class="card-text pt-2">Actualiza tus preferencias de trabajo para ayudar a los reclutadores a encontrarte.</p>
+                    <a href="#" class="btn btn-primary"><i class="fa fa-pencil-square" aria-hidden="true"></i> Actualizar ahora</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

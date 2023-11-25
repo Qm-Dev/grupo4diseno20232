@@ -210,7 +210,7 @@ function Jobs() {
                         <div class="container">
                             <div class="card text-center">
                                 <div class="card-header">
-                                <h5 class="card-title">Publica tu empleo</h5>
+                                <h5 class="card-title m-0">Publica tu empleo</h5>
                                 </div>
                                 <div class="card-body">
                                 <p class="card-text">Publica tu empleo de manera gratuita y llega a miles de candidatos.</p>
