@@ -13,6 +13,9 @@ function ProfilePreview(props) {
     const { apellidoPersona } = props;
     const { fotoPerfilPersona } = props;
     const { fecha } = props;
+    const { ciudad } = props;
+    const { estado } = props;
+    const { pais } = props;
     const formattedDate = formatDate(fecha);
 
     const profesionesConstruccion = [
@@ -63,7 +66,7 @@ function ProfilePreview(props) {
                     <div class="col-md-8">
                         <h3 class="mb-4">{nombrePersona} {apellidoPersona}</h3>
                         <p><strong>Profesión:</strong> {profesionesAleatoria}</p>
-                        <p><strong>Fecha de Nacimiento:</strong> {formattedDate}</p>
+                        <p><strong>Ubicación:</strong> {ciudad}, {estado}, {pais}</p>
                     </div>
                 </div>
             </div>

@@ -28,7 +28,8 @@ function ProfileInfo(props) {
 
     // Estilos adicionales de textos
     const headingStyle = {
-        fontFamily: 'Lato'
+        fontFamily: 'Lato',
+        marginBottom: '1rem',
     }
 
     const paragraphStyle = {
@@ -268,6 +269,21 @@ function ProfileInfo(props) {
     const fechasArray = Object.keys(fechas)
     const listaInvertida = [...fechasArray].reverse();
 
+    const [showMoreInfo, setShowMoreInfo] = useState(false);
+
+    const handleShowMoreClick = () => {
+        setShowMoreInfo(!showMoreInfo);
+    };
+
+    // Estilo del boton "mostrar mas"
+    const buttonShowMoreStyle = {
+        marginTop: '0.5rem',
+        marginBottom: '0.5rem',
+        fontSize: '0.8rem',
+        padding: '0.25rem 0.5rem',
+    };
+
+
     return (
         <main>
             <div id='profile'>
@@ -284,18 +300,23 @@ function ProfileInfo(props) {
                                         <div class="d-inline-block">
                                             <h1 className="display-6 fw-bold" style={headingStyle}>{nombrePersona} {apellidoPersona}</h1>
                                             <h4 className="display-8" style={headingStyle}>{profesionesAleatoria}</h4>
+                                            <p className="display-8" style={headingStyle}>{ciudad}, {estado}, {pais}</p>
+                                            <button style={buttonShowMoreStyle} className="btn btn-outline-primary" onClick={handleShowMoreClick}>
+                                                {showMoreInfo ? 'Mostrar Menos' : 'Mostrar Más'}
+                                            </button>
                                         </div>
+                                        {showMoreInfo && (
                                         <p className="fs-5 text-muted" style={paragraphStyle}>
                                             {correo} <br />
                                             {telefono} <br />
-                                            {ciudad}, {estado}, {pais} <br />
                                             <span class="fw-light">{formattedDate}</span>
                                         </p>
+                                    )}
                                     </div>
                                 </div>
                                 {/* Descripción de la persona */}
                                 <div className="col-md-6">
-                                    <p class="text-start p-1" style={paragraphStyle}>{String.fromCharCode(65 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.</p>
+                                    <p class="text-start p-1" style={paragraphStyle}>{String.fromCharCode(60 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.</p>
                                 </div>
                                 {/* Botones de interacción con la persona */}
                                 <div class="d-flex btn-group justify-content-center">
@@ -438,6 +459,9 @@ function ProfileInfo(props) {
                             </DropdownButton>
                         </div>
                         {/* Recomendaciones */}
+                        <h2 style={headingStyle}>
+                            Recomendaciones
+                        </h2>
                         <div class="mb-5">
                             {nombreUsuarios.length > 0 ? (
                                             nombreUsuarios.map((usuario, index) => (

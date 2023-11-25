@@ -1,6 +1,17 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+const formStyle = {
+        maxWidth: '600px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: '5%',
+        marginBottom: '5%',
+        padding: '0.5rem',
+        borderRadius: '1.5rem',
+        fontFamily: 'Lato',
+};
+
 function Register() {
 
     // TODO: Font Styles
@@ -8,11 +19,11 @@ function Register() {
     return (
         <main className="d-flex align-items-center justify-content-center bg-secondary-subtle">
             <div class="container mx-auto max-width-50 pt-4 pb-4">
-                <div class="card">
+                <div style={formStyle} class="card">
                     <h2 class="card-title text-center mt-4">Registrarse</h2>
                     <div class="card-body">
                 {/* Formulario de registro */}
-                <form>
+                <form >
                     <div class="mb-3">
                         <label for="nombres" class="form-label">Nombres:</label>
                         <input type="text" class="form-control" id="nombres" required></input>
@@ -90,3 +101,5 @@ function Register() {
 }
 
 export default Register;
+
+

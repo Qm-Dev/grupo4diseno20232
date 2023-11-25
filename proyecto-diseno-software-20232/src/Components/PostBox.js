@@ -1,6 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+
+
 function PostBox(props) {
 
     const { fotoPerfilPersona } = props;
@@ -24,7 +27,7 @@ function PostBox(props) {
                                 <label for="archivo" class="form-label">Adjuntar archivo:</label>
                                 <input type="file" class="form-control" id="archivo"></input>
                             </div>
-                                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Publicar</button>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Publicar</button>
                         </form>
                     </div>
                 </div>

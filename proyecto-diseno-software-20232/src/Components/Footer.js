@@ -87,7 +87,7 @@ function Footer() {
             onMouseOver={() => setIsAboutHovered(true)}
             onMouseLeave={() => setIsAboutHovered(false)}>Acerca de</a> • <a href="/faq" style={linkStyleFAQ}
             onMouseOver={() => setIsFAQHovered(true)}
-            onMouseLeave={() => setIsFAQHovered(false)}>FAQ</a> • <a href="/contact" style={linkStyleContact}
+            onMouseLeave={() => setIsFAQHovered(false)}>Preguntas Frecuentes</a> • <a href="/contact" style={linkStyleContact}
             onMouseOver={() => setIsContactHovered(true)}
             onMouseLeave={() => setIsContactHovered(false)}>Contacto</a>
             </p>

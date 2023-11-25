@@ -11,6 +11,11 @@ const noResizing = {
     resize: 'none'
 }
 
+const cardStyle = {
+    maxWidth: '800px',
+    borderRadius: '1.5rem',
+};
+
 const formLabelStyle = {
     marginBottom: '0.5rem',
     fontWeight: 'bold',
@@ -21,13 +26,11 @@ function Contact() {
     return (
         <main className="bg-secondary-subtle">
             <div class="container py-5">
-                <div class="card mx-auto max-width-75">
+                <div style={cardStyle} class="card mx-auto max-width-75">
                     <h1 class="card-title text-uppercase fw-bold mb-4 mt-4 text-center">Contáctanos</h1>
                     <div class="card-body">
-                        <div class="lh-base mb-4 text-center">
-                            <p class="fs-5">¿Dudas?</p>
-                            <p class="fs-5">¿Comentarios?</p>
-                            <p class="fs-6">Haznos saber lo que quieras a través de este formulario. Nuestro equipo estará feliz de responderte lo antes posible.</p>
+                        <div class="lh-base mb-4 text-center" >
+                            <p class="fs-6">Haznos saber lo que quieras a través de este formulario. <br></br>Nuestro equipo estará feliz de responderte lo antes posible.</p>
                         </div>
                         <div class="col-md-10 mx-auto mb-4">
                             <form>

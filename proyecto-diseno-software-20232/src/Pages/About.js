@@ -22,7 +22,8 @@ function About() {
     // Estilo de los headings de esta página
     const headingAboutUsStyle = {
         padding: '1rem',
-        fontFamily: 'Lato'
+        fontFamily: 'Lato',
+        fontWeight: 'bold',
     }
 
     // Estilo general de los párrafos
@@ -30,10 +31,11 @@ function About() {
         textAlign: 'justify',
         paddingTop: '0.75rem',
         paddingBottom: '0.5rem',
-        marginLeft: '1.5rem',
-        marginRight: '1.5rem',
-        fontFamily: 'Rubik'
-    }
+        marginLeft: 'auto',   
+        marginRight: 'auto',      
+        fontFamily: 'Rubik',
+      };
+      
 
     // Estilo de los párrafos: Miembros
     const paragraphMembersStyle = {
@@ -45,14 +47,22 @@ function About() {
     const imgAboutUsStyle = {
         width: '250px',
         height: '100%',
-        maxHeight: '250px',
+        maxHeight: '225px',
         border: '3px solid black',
         borderRadius: '100%'
     }
 
+    const maxWidthStyle ={
+        maxWidth: '1000px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    };
+
     return (
         <main>
+            <div style={maxWidthStyle}>
             <h1 className='text-center fw-bold' style={headingAboutUsStyle}>Acerca de nosotros</h1>
+            <br></br>
             <h2 style={headingAboutUsStyle}>¿Quiénes somos?</h2>
             <p style={paragraphAboutUsStyle}>Somos estudiantes de tercer año de la Facultad de Ingeniería
              y Ciencias de la Universidad Adolfo Ibáñez. Nuestro grupo está compuesto por ingenieros civiles,
@@ -71,10 +81,7 @@ function About() {
                                 <p style={paragraphMembersStyle}>Nunc in purus sit amet eros pulvinar pharetra. Duis bibendum
                                 eleifend odio vitae pulvinar. Vestibulum luctus leo sapien. Morbi eget ultrices quam. Sed leo massa,
                                 condimentum ut consequat sit amet, ultricies ut sem. Phasellus convallis molestie hendrerit. Duis
-                                dictum justo in diam ultricies ornare. Mauris at pretium mi, ut tristique ligula. Mauris et tortor ut
-                                nisl commodo vehicula sed non purus. Nunc sit amet imperdiet tortor, vel posuere sem. Phasellus
-                                euismod tristique ultricies. Donec feugiat nunc sed congue facilisis. Praesent fringilla massa quis
-                                est blandit, sit amet scelerisque est vehicula.</p>
+                                dictum justo in diam ultricies ornare.</p>
                             </div>
                     </div>
                     <div class="card col-md-3 pt-4 border-3 border-black">
@@ -84,10 +91,7 @@ function About() {
                                 <p style={paragraphMembersStyle}>Nunc in purus sit amet eros pulvinar pharetra. Duis bibendum
                                 eleifend odio vitae pulvinar. Vestibulum luctus leo sapien. Morbi eget ultrices quam. Sed leo massa,
                                 condimentum ut consequat sit amet, ultricies ut sem. Phasellus convallis molestie hendrerit. Duis
-                                dictum justo in diam ultricies ornare. Mauris at pretium mi, ut tristique ligula. Mauris et tortor ut
-                                nisl commodo vehicula sed non purus. Nunc sit amet imperdiet tortor, vel posuere sem. Phasellus
-                                euismod tristique ultricies. Donec feugiat nunc sed congue facilisis. Praesent fringilla massa quis
-                                est blandit, sit amet scelerisque est vehicula.</p>
+                                dictum justo in diam ultricies ornare.</p>
                             </div>
                     </div>
                     <div class="card col-md-3 pt-4 border-3 border-black">
@@ -97,14 +101,13 @@ function About() {
                                 <p style={paragraphMembersStyle}>Nunc in purus sit amet eros pulvinar pharetra. Duis bibendum
                                 eleifend odio vitae pulvinar. Vestibulum luctus leo sapien. Morbi eget ultrices quam. Sed leo massa,
                                 condimentum ut consequat sit amet, ultricies ut sem. Phasellus convallis molestie hendrerit. Duis
-                                dictum justo in diam ultricies ornare. Mauris at pretium mi, ut tristique ligula. Mauris et tortor ut
-                                nisl commodo vehicula sed non purus. Nunc sit amet imperdiet tortor, vel posuere sem. Phasellus
-                                euismod tristique ultricies. Donec feugiat nunc sed congue facilisis. Praesent fringilla massa quis
-                                est blandit, sit amet scelerisque est vehicula.</p>
+                                dictum justo in diam ultricies ornare.</p>
                             </div>
                     </div>
                 </div>
             </div>
+            <br></br>
+            <br></br>
             <h2 style={headingAboutUsStyle}>Historia</h2>
             <p style={paragraphAboutUsStyle}>Mendelevium nace a partir de una lluvia de ideas producida durante las primeras
             clases de la asignatura de Taller de Innovación y Emprendimiento Tecnológico, donde se buscaba una idea que permitiera hacer
@@ -121,7 +124,9 @@ function About() {
             trabajo React.js, el cual hace uso de los
             lenguajes HTML, CSS y JavaScript. El código fuente de este se encuentra disponible en su totalidad bajo la licencia MIT, estando alojado
             su repositorio en GitHub, accesible haciendo click <a href="https://github.com/Qm-Dev/grupo4diseno20232/tree/main/proyecto-diseno-software-20232">aquí</a>.
+            <br></br>
             </p>
+            </div>
         </main>
     );
 }

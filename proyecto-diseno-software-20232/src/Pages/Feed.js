@@ -55,7 +55,7 @@ function Feed() {
         <div className='container p-3'>
           <div className='row'>
             {/* Previsualización del perfil */}
-            <div className='col-md-3 rounded-5'>
+            <div className='col-md-3 rounded-5' style={{ maxHeight: '310px'}}>
               <div class="card">
                   <div class="card-header bg-primary text-white">
                     <h4 class="text-center"><i class="fas fa-users mt-2"></i> Añadir a tu feed</h4>
@@ -70,7 +70,7 @@ function Feed() {
             </div>
             </div>
             {/* Post Box */}
-            <div className='col-md-6 rounded-5'>
+            <div className='col-md-6 rounded-2'>
               {nombreUsuario.length > 0 ? (
                               nombreUsuario.map((usuario, index) => (
                                 <PostBox key={index} fotoPerfilPersona={usuario.picture.large}/>
@@ -82,7 +82,7 @@ function Feed() {
             <div className='col-md-3 rounded-5'>
               {nombreUsuario.length > 0 ? (
                                 nombreUsuario.map((usuario, index) => (
-                                  <ProfilePreview key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date}/>
+                                  <ProfilePreview key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date} ciudad={usuario.location.city} estado={usuario.location.state} pais={usuario.location.country}/>
                                 ))
                 ) : (
                   < Carga />
@@ -95,7 +95,7 @@ function Feed() {
             <div className='col-md-6 rounded-5'>
               {nombreUsuarios.length > 0 ? (
                               nombreUsuarios.map((usuario, index) => (
-                                <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.thumbnail} fecha={usuario.dob.date}/>
+                                <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.thumbnail} fecha={usuario.dob.date} />
                               ))
               ) : (
                 <Carga />
