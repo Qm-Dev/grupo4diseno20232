@@ -39,15 +39,15 @@ function PostBox(props) {
                         </form>
                     </div>
                 </div>
-                <div className="btn-group d-flex flex-wrap justify-content-center mt-2" role="group">
-                    {/* Recomendar */}
-                    <button type="button" class="btn btn-outline-success" onClick={handlePublicar}><i class="fas fa-paper-plane"></i> Publicar</button>
-                    {/* Comentar */}
-                    <button type="button" class="btn btn-outline-success"><i class="fa fa-camera"></i> Multimedia</button>
-                    {/* Compartir */}
-                    <button type="button" class="btn btn-outline-success"><i class="fa fa-calendar"></i> Evento</button>
-                    {/* Enviar */}
-                    <button type="button" class="btn btn-outline-success"><i class="fa fa-pencil-square"></i> Artículo</button>
+                <div className="btn-group d-flex flex-wrap flex-column flex-md-row mt-2" role="group">
+                    {/* Publicar */}
+                    <button type="button" class="btn btn-outline-success mb-3 mb-md-0" onClick={handlePublicar}><i class="fas fa-paper-plane"></i> Publicar</button>
+                    {/* Multimedia */}
+                    <button type="button" class="btn btn-outline-success mb-3 mb-md-0"><i class="fa fa-camera"></i> Multimedia</button>
+                    {/* Evento */}
+                    <button type="button" class="btn btn-outline-success mb-3 mb-md-0"><i class="fa fa-calendar"></i> Evento</button>
+                    {/* Artículo */}
+                    <button type="button" class="btn btn-outline-success mb-3 mb-md-0"><i class="fa fa-pencil-square"></i> Artículo</button>
                 </div>
             </div>
         </div>
