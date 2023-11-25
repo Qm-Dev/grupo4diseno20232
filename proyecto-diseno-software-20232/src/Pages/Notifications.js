@@ -56,7 +56,17 @@ function Notifications() {
               </div>
             </div>
             <div className='col-md-6 rounded-5'>
-              {/* Crear las publicaciones del feed */}
+              <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-center">
+                          <button type="button" class="btn btn-outline-primary mx-2 rounded-pill active">Todo</button>
+                          <button type="button" class="btn btn-outline-primary mx-2 rounded-pill">Mis Publicaciones</button>
+                          <button type="button" class="btn btn-outline-primary mx-2 rounded-pill">Menciones</button>
+                          <button type="button" class="btn btn-outline-primary mx-2 rounded-pill">Empleo</button>
+                        </div>
+                      </div>
+                  </div>
+              {/* Crear las notificaciones */}
               {nombreUsuarios.length > 0 ? (
                               nombreUsuarios.map((usuario, index) => (
                                 <Notification key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.medium} fechaNoti={listaInvertida[index]}/>
