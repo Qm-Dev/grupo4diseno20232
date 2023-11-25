@@ -39,7 +39,7 @@ function PostBox(props) {
                         </form>
                     </div>
                 </div>
-                <div className="d-flex flex-wrap btn-group justify-content-center mt-2" role="group">
+                <div className="btn-group d-flex flex-wrap justify-content-center mt-2" role="group">
                     {/* Recomendar */}
                     <button type="button" class="btn btn-outline-success" onClick={handlePublicar}><i class="fas fa-paper-plane"></i> Publicar</button>
                     {/* Comentar */}

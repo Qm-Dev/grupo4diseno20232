@@ -1,12 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function formatDate(isoDate) {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = new Date(isoDate).toLocaleDateString(undefined, options);
-    return formattedDate;
-}
-
 function ProfileRecomendations(props) {
 
     const { nombrePersona } = props;
@@ -49,7 +43,7 @@ function ProfileRecomendations(props) {
     const profesionesAleatoria = profesionesConstruccion[indiceAleatorio];
 
     return (
-            <div class="card-body p-2">
+            <div class="card-body p-2 text-center">
                 <div class="row">
                     <div class="col-md-4">
                         <a href={`/users/${nombrePersona.toLowerCase()}_${apellidoPersona.toLowerCase()}`}><img src={fotoPerfilPersona} class="img-fluid rounded-circle img-thumbnail ms-3" alt="Imagen de perfil"></img></a>
