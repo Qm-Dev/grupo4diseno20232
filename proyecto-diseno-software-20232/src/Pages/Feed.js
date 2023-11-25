@@ -56,13 +56,18 @@ function Feed() {
           <div className='row'>
             {/* Previsualización del perfil */}
             <div className='col-md-3 rounded-5'>
-              {nombreUsuario.length > 0 ? (
-                              nombreUsuario.map((usuario, index) => (
-                                <ProfilePreview key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date}/>
-                              ))
-              ) : (
-                < Carga />
-              )}
+              <div class="card">
+                  <div class="card-header bg-primary text-white">
+                    <h4 class="text-center"><i class="fas fa-users mt-2"></i> Añadir a tu feed</h4>
+                  </div>
+                {nombreRecomendaciones.length > 0 ? (
+                                nombreRecomendaciones.map((usuario1, index) => (
+                                  <ProfileRecomendations key={index} nombrePersona={usuario1.name.first} apellidoPersona={usuario1.name.last} fotoPerfilPersona={usuario1.picture.thumbnail}/>
+                                ))
+                ) : (
+                  < Carga />
+                )}
+            </div>
             </div>
             {/* Post Box */}
             <div className='col-md-6 rounded-5'>
@@ -75,17 +80,13 @@ function Feed() {
               )}
             </div>
             <div className='col-md-3 rounded-5'>
-              <div class="card">
-                <div class="card-header bg-primary text-white">
-                  <h4 class="text-center"><i class="fas fa-users mt-2"></i> Añadir a tu feed</h4>
-                </div>
-              {nombreRecomendaciones.length > 0 ? (
-                              nombreRecomendaciones.map((usuario1, index) => (
-                                <ProfileRecomendations key={index} nombrePersona={usuario1.name.first} apellidoPersona={usuario1.name.last} fotoPerfilPersona={usuario1.picture.thumbnail}/>
-                              ))
-              ) : (
-                < Carga />
-              )}
+              {nombreUsuario.length > 0 ? (
+                                nombreUsuario.map((usuario, index) => (
+                                  <ProfilePreview key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date}/>
+                                ))
+                ) : (
+                  < Carga />
+                )}
             </div>
           </div>
           <div className='row'>
@@ -103,7 +104,6 @@ function Feed() {
             <div className='col-md-3'></div>
             {/* Otras publicaciones */}
           </div>
-        </div>
         </div>
       </main>
     );

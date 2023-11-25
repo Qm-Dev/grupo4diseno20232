@@ -165,7 +165,17 @@ function Jobs() {
                 <div className='row'>
                     <div className='col-md-3 rounded-5'>
                         {/* Izquierda Empleos */}
-                        <p>PONER ALGO</p>
+                        <div class="container">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-text pb-2"><i class="fa fa-flag"></i> Mis empleos</h6>
+                                    <h6 class="card-text pb-2"><i class="fa fa-list"></i> Preferencias</h6>
+                                    <h6 class="card-text pb-2"><i class="fa fa-check-square"></i> Evaluaciones de aptitudes</h6>
+                                    <h6 class="card-text pb-2"><i class="fa fa-video-camera"></i> Orientación </h6>
+                                    <h6 class="card-text"><i class="fa fa-cog"></i> Configuración de solicitudes</h6>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className='col-md-6 rounded-5'>
                         {/* creacion de post de empleos */}
@@ -197,7 +207,17 @@ function Jobs() {
                     </div>
                     <div className='col-md-3 rounded-5'>
                         {/* Derecha Empleos */}
-                        <p>PONER ALGO</p>
+                        <div class="container">
+                            <div class="card text-center">
+                                <div class="card-header">
+                                <h5 class="card-title">Publica tu empleo</h5>
+                                </div>
+                                <div class="card-body">
+                                <p class="card-text">Publica tu empleo de manera gratuita y llega a miles de candidatos.</p>
+                                <a href="#" class="btn btn-primary"><i class="fa fa-briefcase" aria-hidden="true"></i> Publicar un empleo gratis</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

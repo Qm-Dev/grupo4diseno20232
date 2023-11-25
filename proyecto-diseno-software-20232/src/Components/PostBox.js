@@ -7,7 +7,7 @@ function PostBox(props) {
 
     return (
         <div class="card">
-            <div class="card-header bg-success text-white">
+            <div class="card-header bg-primary text-white">
                 <h4 class="text-center"><i class="fas fa-edit mt-2"></i> Nueva Publicación</h4>
             </div>
             <div class="card-body">
