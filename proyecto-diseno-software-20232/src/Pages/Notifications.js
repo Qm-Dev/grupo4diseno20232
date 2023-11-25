@@ -43,6 +43,12 @@ function Notifications() {
     return (
       <main className='bg-secondary-subtle'>
         <div className='container p-3'>
+          <div className='row'>
+            <div className='col-md-3 rounded-5'>
+              {/* Izquierda notificaciones */}
+              <p>PONER ALGO</p>
+            </div>
+            <div className='col-md-6 rounded-5'>
               {/* Crear las publicaciones del feed */}
               {nombreUsuarios.length > 0 ? (
                               nombreUsuarios.map((usuario, index) => (
@@ -51,6 +57,12 @@ function Notifications() {
               ) : (
                 <p>Cargando notificaciones...</p>
               )}
+            </div>
+            <div className='col-md-3 rounded-5'>
+              {/* Derecha notificaciones */}
+              <p>PONER ALGO</p>
+            </div>
+          </div>
         </div>
       </main>
     );

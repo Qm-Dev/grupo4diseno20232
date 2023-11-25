@@ -162,32 +162,44 @@ function Jobs() {
     return (
         <main className='bg-secondary-subtle'>
             <div className="container p-3">
-                {/* creacion de post de empleos */}
-                {empresaInfo.map((empresa, index) => (
-                <div key={index} class="card mb-2">
-                    <div class="card-header">
-                        <h5 class="card-title text-uppercase">{nombreEmpresa[index]} {elementosEmpresariales[Math.floor(Math.random() * elementosEmpresariales.length)]}</h5>
-                        <p class="card-subtitle text-muted">Publicado el {listaInvertida[index]}</p>
+                <div className='row'>
+                    <div className='col-md-3 rounded-5'>
+                        {/* Izquierda Empleos */}
+                        <p>PONER ALGO</p>
                     </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <img src={`https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`} class="rounded-circle img-thumbnail" alt="Logo de la emresa"></img>
+                    <div className='col-md-6 rounded-5'>
+                        {/* creacion de post de empleos */}
+                        {empresaInfo.map((empresa, index) => (
+                            <div key={index} class="card mb-2">
+                                <div class="card-header">
+                                    <h5 class="card-title text-uppercase">{nombreEmpresa[index]} {elementosEmpresariales[Math.floor(Math.random() * elementosEmpresariales.length)]}</h5>
+                                    <p class="card-subtitle text-muted">Publicado el {listaInvertida[index]}</p>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img src={`https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`} class="rounded-circle img-thumbnail" alt="Logo de la emresa"></img>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <h6 class="card-subtitle mb-2 text-muted ms-3">Trabajo: {tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h6>
+                                            <p class="card-text ms-3">Descripción: {obtenerElementosAleatorios(textoUsuario, Math.floor(Math.random() * 50 + 20)).join(' ')}</p>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item"><strong>Correo de Contacto:</strong> {nombreEmpresa[index]}@jobs.com</li>
+                                                <li class="list-group-item"><strong>Número de Contacto:</strong> {empresa.cell}
+                                                    <button class="btn btn-primary float-end">Postular</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-10">
-                                <h6 class="card-subtitle mb-2 text-muted ms-3">Trabajo: {tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h6>
-                                <p class="card-text ms-3">Descripción: {obtenerElementosAleatorios(textoUsuario, Math.floor(Math.random() * 200)).join(' ')}</p>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><strong>Correo de Contacto:</strong> {nombreEmpresa[index]}@jobs.com</li>
-                                    <li class="list-group-item"><strong>Número de Contacto:</strong> {empresa.cell}
-                                        <button class="btn btn-primary float-end">Postular</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        ))}
+                    </div>
+                    <div className='col-md-3 rounded-5'>
+                        {/* Derecha Empleos */}
+                        <p>PONER ALGO</p>
                     </div>
                 </div>
-                ))}
             </div>
         </main>
     );
