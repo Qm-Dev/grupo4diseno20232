@@ -30,7 +30,7 @@ function SocialPost(props) {
             console.error('Error');
     });
 
-},[]);
+    },[]);
 
     const oracion = textoUsuario.join(' ');
 
