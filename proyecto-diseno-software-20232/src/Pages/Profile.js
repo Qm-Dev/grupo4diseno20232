@@ -17,7 +17,7 @@ function Profile() {
 
 },[]);
 
-    const post_amount = Math.floor(Math.random() * 100 + 100);
+    const post_amount = Math.floor(Math.random() * 20 + 100);
 
     const [textoUsuario, setTextoUsuario] = useState([]);
     useEffect( () => {

@@ -47,30 +47,27 @@ function About() {
                                 <img src={Diego} class="card-img-top mx-auto img-fluid rounded" alt="Integrante 1"></img>
                                 <div class="card-body">
                                     <p class="card-text fw-bold fs-5">Diego Duhalde</p>
-                                    <p>Nunc in purus sit amet eros pulvinar pharetra. Duis bibendum
-                                    eleifend odio vitae pulvinar. Vestibulum luctus leo sapien. Morbi eget ultrices quam. Sed leo massa,
-                                    condimentum ut consequat sit amet, ultricies ut sem. Phasellus convallis molestie hendrerit. Duis
-                                    dictum justo in diam ultricies ornare.</p>
+                                    <p>Un individuo con una mente inquisitiva y una fascinación innata por la ciencia y la tecnología. 
+                                        Siempre en busca de respuestas y soluciones innovadoras, disfruta de desafíos intelectuales y 
+                                        de contribuir al progreso de la sociedad a través de sus conocimientos.</p>
                                 </div>
                             </div>
                             <div class="card col-md-3 p-3">
                                 <img src={matias} class="card-img-top mx-auto img-fluid rounded" alt="Integrante 2"></img>
                                     <div class="card-body">
                                         <p class="card-text fw-bold fs-5">Matías Heilenkötter</p>
-                                        <p>Nunc in purus sit amet eros pulvinar pharetra. Duis bibendum
-                                        eleifend odio vitae pulvinar. Vestibulum luctus leo sapien. Morbi eget ultrices quam. Sed leo massa,
-                                        condimentum ut consequat sit amet, ultricies ut sem. Phasellus convallis molestie hendrerit. Duis
-                                        dictum justo in diam ultricies ornare.</p>
+                                        <p>Una alma sosegada y reflexiva, con una pasión ardiente por la filosofía y la exploración 
+                                            del significado de la vida. Su creatividad fluye a través de la escritura y la poesía, 
+                                            y se esfuerza por entender las complejidades del mundo que lo rodea.</p>
                                     </div>
                             </div>
                             <div class="card col-md-3 p-3">
                                 <img src={imagen} class="card-img-top mx-auto img-fluid rounded" alt="Integrante 3" onMouseOver={cambiarImagen} onMouseLeave={restaurarImagen}></img>
                                     <div class="card-body">
                                         <p class="card-text fw-bold fs-5">Benjamín Herrera</p>
-                                        <p>Nunc in purus sit amet eros pulvinar pharetra. Duis bibendum
-                                        eleifend odio vitae pulvinar. Vestibulum luctus leo sapien. Morbi eget ultrices quam. Sed leo massa,
-                                        condimentum ut consequat sit amet, ultricies ut sem. Phasellus convallis molestie hendrerit. Duis
-                                        dictum justo in diam ultricies ornare.</p>
+                                        <p>Una personalidad extrovertida y carismática que encuentra alegría en la conexión humana. 
+                                            Amante de las artes escénicas y defensor de la inclusión, se esfuerza por crear un ambiente 
+                                            acogedor donde cada persona se sienta valorada y comprendida.</p>
                                     </div>
                             </div>
                         </div>
