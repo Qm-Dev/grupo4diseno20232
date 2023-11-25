@@ -77,7 +77,7 @@ function Feed() {
             <div className='col-md-3 rounded-5'>
               <div class="card">
                 <div class="card-header bg-primary text-white">
-                  <h4 class="text-center"><i class="fas fa-user mt-2"></i> Añadir a tu feed</h4>
+                  <h4 class="text-center"><i class="fas fa-users mt-2"></i> Añadir a tu feed</h4>
                 </div>
               {nombreRecomendaciones.length > 0 ? (
                               nombreRecomendaciones.map((usuario1, index) => (
