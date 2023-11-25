@@ -6,7 +6,7 @@ function Contact() {
     return (
         <main className="bg-secondary-subtle">
             <div class="container py-5">
-                <div class="card mx-auto w-75">
+                <div class="card mx-auto col-md-9">
                     <div class="card-header bg-primary text-white">
                         <h1 class="text-center text-uppercase"><i class="fa fa-comments mt-2"></i> Contáctanos</h1>
                     </div>

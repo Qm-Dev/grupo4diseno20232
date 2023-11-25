@@ -165,7 +165,7 @@ function Jobs() {
                 <div className='row'>
                     <div className='col-md-3 rounded-5'>
                         {/* Izquierda Empleos */}
-                        <div class="container">
+                        <div class="container p-0">
                             <div class="card">
                                 <div class="card-body">
                                     <h6 class="card-text pb-2"><i class="fa fa-flag"></i> Mis empleos</h6>
@@ -207,7 +207,7 @@ function Jobs() {
                     </div>
                     <div className='col-md-3 rounded-5'>
                         {/* Derecha Empleos */}
-                        <div class="container">
+                        <div class="container p-0">
                             <div class="card text-center">
                                 <div class="card-header">
                                 <h5 class="card-title m-0">Publica tu empleo</h5>

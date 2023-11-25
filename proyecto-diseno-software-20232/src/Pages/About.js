@@ -30,7 +30,7 @@ function About() {
     return (
         <main className='bg-secondary-subtle'>
             <div class="container py-5">
-                <div class="card mx-auto w-75">
+                <div class="card mx-auto col-md-9">
                     <h1 class="fs-2 card-header text-uppercase fw-bold text-center bg-primary text-white"><i class="fa fa-lightbulb mt-2"></i> Acerca de nosotros</h1>
                     <h2 class="p-5 pt-4 pb-0">¿Quiénes somos?</h2>
                     <p class="p-5 py-2">Somos estudiantes de tercer año de la Facultad de Ingeniería

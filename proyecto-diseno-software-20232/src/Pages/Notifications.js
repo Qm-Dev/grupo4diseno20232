@@ -46,7 +46,7 @@ function Notifications() {
           <div className='row'>
             <div className='col-md-3 rounded-5'>
               {/* Izquierda notificaciones */}
-              <div class="container mb-3">
+              <div class="container mb-3 p-0">
                 <div class="card text-center">
                   <div class="card-body">
                     <p class="card-text">Gestiona tus notificaciones</p>
@@ -54,7 +54,7 @@ function Notifications() {
                   </div>
                 </div>
               </div>
-              <div class="container">
+              <div class="container mb-3 p-0">
                 <div class="card text-center">
                   <div class="card-body">
                     <p class="card-text">Obtén más beneficios con Premium</p>
@@ -67,10 +67,10 @@ function Notifications() {
               <div class="card mb-3">
                       <div class="card-body">
                         <div class="d-flex justify-content-center">
-                          <button type="button" class="btn btn-outline-primary mx-2 rounded-pill active">Todo</button>
-                          <button type="button" class="btn btn-outline-primary mx-2 rounded-pill">Mis Publicaciones</button>
-                          <button type="button" class="btn btn-outline-primary mx-2 rounded-pill">Menciones</button>
-                          <button type="button" class="btn btn-outline-primary mx-2 rounded-pill">Empleo</button>
+                          <button type="button" class="btn btn-outline-primary p-2 m-auto rounded-pill active">Todo</button>
+                          <button type="button" class="btn btn-outline-primary p-2 m-auto rounded-pill">Mis Publicaciones</button>
+                          <button type="button" class="btn btn-outline-primary p-2 m-auto rounded-pill">Menciones</button>
+                          <button type="button" class="btn btn-outline-primary p-2 m-auto rounded-pill">Empleo</button>
                         </div>
                       </div>
                   </div>
@@ -85,7 +85,7 @@ function Notifications() {
             </div>
             <div className='col-md-3 rounded-5'>
               {/* Derecha notificaciones */}
-              <div class="container">
+              <div class="container p-0">
                 <div class="card text-center">
                   <div class="card-header">
                     <h5 class="card-title m-0">Anuncio</h5>

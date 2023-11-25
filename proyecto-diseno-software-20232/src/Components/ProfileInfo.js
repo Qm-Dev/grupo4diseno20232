@@ -287,14 +287,14 @@ function ProfileInfo(props) {
     return (
         <main className='bg-secondary-subtle'>
             <div id='profile'>
-                <div className='container-fluid w-50'>
+                <div className='container-fluid col-md-6'>
                     <div className="row">
                         {/* Presentación de la persona */}
                         <div class="card mb-3 mt-3 text-center">
                             <div class="card-body row">
                                 {/* Foto de perfil */}
                                 <div className="col-md-4">
-                                    <img src={fotoPerfilPersona} class="mb-2 rounded-circle img-thumbnail w-50" alt="Imagen de Usuario"></img>
+                                    <img src={fotoPerfilPersona} class="mb-2 rounded-circle img-thumbnail col-md-6" alt="Imagen de Usuario"></img>
                                 {/* Información de contacto */}
                                     <div class="text-left mt-0">
                                         <div class="d-inline-block">
@@ -319,7 +319,7 @@ function ProfileInfo(props) {
                                     <p class="fs-5 text-start pt-2" style={paragraphStyle}>{String.fromCharCode(60 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.</p>
                                 </div>
                                 {/* Botones de interacción con la persona */}
-                                <div class="d-flex btn-group justify-content-center w-75 mx-auto">
+                                <div class="d-flex btn-group justify-content-center col-md-9 mx-auto">
                                     <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                     <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
@@ -376,7 +376,7 @@ function ProfileInfo(props) {
                                 {/* Experiencia 2 */}
                                 <div class="carousel-item" data-bs-interval="2000">
                                     <div class="d-flex flex-column align-items-center">
-                                        <img src={link2} class="d-block w- mx-auto" alt="Experiencia2" />
+                                        <img src={link2} class="d-block w-auto mx-auto" alt="Experiencia2" />
                                         <div class="text-center mt-2">
                                             <h5 style={headingStyle}>{experienciasAleatorias[1].titulo}</h5>
                                             <p class="w-75 mx-auto" style={paragraphStyle}>{experienciasAleatorias[1].descripcion}</p>
@@ -386,7 +386,7 @@ function ProfileInfo(props) {
                                 {/* Experiencia 3 */}
                                 <div class="carousel-item">
                                     <div class="d-flex flex-column align-items-center">
-                                        <img src={link3} class="d-block w-20 mx-auto" alt="Experiencia3" />
+                                        <img src={link3} class="d-block w-auto mx-auto" alt="Experiencia3" />
                                         <div class="text-center mt-2">
                                             <h5 style={headingStyle}>{experienciasAleatorias[2].titulo}</h5>
                                             <p class="w-75 mx-auto" style={paragraphStyle}>{experienciasAleatorias[2].descripcion}</p>
