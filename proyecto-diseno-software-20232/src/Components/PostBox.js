@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function PostBox(props) {
 
+    // Estado para almacenar el texto del textarea
+    const [mensaje, setMensaje] = useState('');
+
+    // Función para manejar cambios en el textarea
+    const handleChange = (event) => {
+        setMensaje(event.target.value);
+    };
+
+    // Función para manejar clic en el botón
+    const handlePublicar = () => {
+        console.log('Mensaje publicado:', mensaje);
+        onPublicar(mensaje);
+        setMensaje('');
+    };
+
     const { fotoPerfilPersona } = props;
+    const { onPublicar } = props;
 
     return (
         <div class="card">
@@ -18,14 +34,14 @@ function PostBox(props) {
                     <div class="col-md-10">
                         <form>
                             <div class="mb-3">
-                                <textarea class="form-control" rows="3" placeholder="Escribe tu mensaje aquí"></textarea>
+                                <textarea class="form-control" rows="3" placeholder="Escribe tu mensaje aquí" value={mensaje} onChange={handleChange}></textarea>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div className="d-flex flex-wrap btn-group justify-content-center mt-2" role="group">
                     {/* Recomendar */}
-                    <button type="button" class="btn btn-outline-success"><i class="fas fa-paper-plane"></i> Publicar</button>
+                    <button type="button" class="btn btn-outline-success" onClick={handlePublicar}><i class="fas fa-paper-plane"></i> Publicar</button>
                     {/* Comentar */}
                     <button type="button" class="btn btn-outline-success"><i class="fa fa-camera"></i> Multimedia</button>
                     {/* Compartir */}

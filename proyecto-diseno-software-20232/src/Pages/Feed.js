@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import ProfilePreview from '../Components/ProfilePreview';
 import PostBox from '../Components/PostBox';
 import SocialPost from '../Components/SocialPost';
+import NewPost from '../Components/NewPost';
 import axios from 'axios';
 import Carga from '../Components/Carga';
 import ProfileRecomendations from '../Components/ProfileRecomendations';
@@ -50,6 +51,14 @@ function Feed() {
 
   },[]);
 
+  const [mensajes, setMensajes] = useState([]);
+
+  const handlePublicar = (mensaje) => {
+    setMensajes([mensaje, ...mensajes]);
+
+    // Puedes hacer lo que quieras con el mensaje aquí, por ejemplo, mostrarlo en otro lugar del componente Feed.
+  };
+
     return (
       <main className='bg-secondary-subtle'>
         <div className='container p-3'>
@@ -73,10 +82,17 @@ function Feed() {
             <div className='col-md-6 rounded-2'>
               {nombreUsuario.length > 0 ? (
                               nombreUsuario.map((usuario, index) => (
-                                <PostBox key={index} fotoPerfilPersona={usuario.picture.large}/>
+                                <PostBox onPublicar={handlePublicar} key={index} fotoPerfilPersona={usuario.picture.large}/>
                               ))
               ) : (
                 < Carga />
+              )}
+              {mensajes.length > 0 ? (
+                              mensajes.map((mensaje, index) => (
+                                <NewPost key={index} nombrePersona={nombreUsuario[0].name.first} apellidoPersona={nombreUsuario[0].name.last} fotoPerfilPersona={nombreUsuario[0].picture.thumbnail} fecha={nombreUsuario[0].dob.date} msg={mensaje}/>
+                              ))
+              ) : (
+                null
               )}
               {nombreUsuarios.length > 0 ? (
                               nombreUsuarios.map((usuario, index) => (
