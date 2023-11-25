@@ -1,9 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-
-
 function PostBox(props) {
 
     const { fotoPerfilPersona } = props;
@@ -27,19 +24,15 @@ function PostBox(props) {
                     </div>
                 </div>
                 <div className="d-flex flex-wrap btn-group justify-content-center mt-2" role="group">
-                                {/* Recomendar */}
-                                <button type="button" class="btn btn-outline-success"><i class="fas fa-paper-plane"></i> Publicar</button>
-
-                                {/* Comentar */}
-                                <button type="button" class="btn btn-outline-success"><i class="fa fa-camera"></i> Multimedia</button>
-
-                                {/* Compartir */}
-                                <button type="button" class="btn btn-outline-success"><i class="fa fa-calendar"></i> Evento</button>
-
-                                {/* Enviar */}
-                                <button type="button" class="btn btn-outline-success"><i class="fa fa-pencil-square"></i> Artículo</button>
-
-                            </div>
+                    {/* Recomendar */}
+                    <button type="button" class="btn btn-outline-success"><i class="fas fa-paper-plane"></i> Publicar</button>
+                    {/* Comentar */}
+                    <button type="button" class="btn btn-outline-success"><i class="fa fa-camera"></i> Multimedia</button>
+                    {/* Compartir */}
+                    <button type="button" class="btn btn-outline-success"><i class="fa fa-calendar"></i> Evento</button>
+                    {/* Enviar */}
+                    <button type="button" class="btn btn-outline-success"><i class="fa fa-pencil-square"></i> Artículo</button>
+                </div>
             </div>
         </div>
     );
