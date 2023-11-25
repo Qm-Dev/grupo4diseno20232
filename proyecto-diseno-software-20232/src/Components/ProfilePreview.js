@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ProfilePreview(props) {
 
+    // Información de la persona
     const { nombrePersona } = props;
     const { apellidoPersona } = props;
     const { fotoPerfilPersona } = props;
@@ -41,12 +42,12 @@ function ProfilePreview(props) {
         "Auxiliar de pintura",
     ];
 
+    // Variables aleatorias para construcción de la persona
     const indiceAleatorio = Math.floor(Math.random() * profesionesConstruccion.length);
-
     const profesionesAleatoria = profesionesConstruccion[indiceAleatorio];
 
     return (
-        <div class="card">
+        <div class="card mt-3 mt-md-0">
             <div class="card-header bg-primary text-white">
                 <h4 class="text-center"><i class="fas fa-address-card mt-2"></i> Perfil de Usuario</h4>
             </div>

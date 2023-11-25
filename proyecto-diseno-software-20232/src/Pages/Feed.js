@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import ProfilePreview from '../Components/ProfilePreview';
 import PostBox from '../Components/PostBox';
 import SocialPost from '../Components/SocialPost';
 import NewPost from '../Components/NewPost';
-import axios from 'axios';
 import Carga from '../Components/Carga';
 import ProfileRecomendations from '../Components/ProfileRecomendations';
 
@@ -39,7 +38,7 @@ function Feed() {
 
   },[]);
 
-  // Obtención de un único usuario
+  // Recomendaciones
   const [nombreRecomendaciones, setNombreRecomendaciones] = useState([]);
   useEffect( () => {
 
@@ -51,20 +50,25 @@ function Feed() {
 
   },[]);
 
+  // Nueva publicación a partir del PostBox
   const [mensajes, setMensajes] = useState([]);
-
   const handlePublicar = (mensaje) => {
     setMensajes([mensaje, ...mensajes]);
-
-    // Puedes hacer lo que quieras con el mensaje aquí, por ejemplo, mostrarlo en otro lugar del componente Feed.
   };
+
+  // Estilos específicos
+  const previewProfilesStyle = {
+    height: '100%',
+    marginBottom: '1rem'
+  }
+
 
     return (
       <main className='bg-secondary-subtle'>
         <div className='container p-3'>
           <div className='row'>
-            {/* Previsualización del perfil */}
-            <div className='col-md-3 rounded-5' style={{ maxHeight: '310px'}}>
+            {/* Recomendaciones de otros usuarios para añadir */}
+            <div className='col-md-3 rounded-5' style={previewProfilesStyle}>
               <div class="card">
                   <div class="card-header bg-primary text-white">
                     <h4 class="text-center"><i class="fas fa-users mt-2"></i> Añadir a tu feed</h4>
@@ -76,10 +80,10 @@ function Feed() {
                 ) : (
                   < Carga />
                 )}
+              </div>
             </div>
-            </div>
-            {/* Post Box */}
             <div className='col-md-6 rounded-2'>
+              {/* Post Box */}
               {nombreUsuario.length > 0 ? (
                               nombreUsuario.map((usuario, index) => (
                                 <PostBox onPublicar={handlePublicar} key={index} fotoPerfilPersona={usuario.picture.large}/>
@@ -87,6 +91,7 @@ function Feed() {
               ) : (
                 < Carga />
               )}
+              {/* Nueva publicación */}
               {mensajes.length > 0 ? (
                               mensajes.map((mensaje, index) => (
                                 <NewPost key={index} nombrePersona={nombreUsuario[0].name.first} apellidoPersona={nombreUsuario[0].name.last} fotoPerfilPersona={nombreUsuario[0].picture.thumbnail} fecha={nombreUsuario[0].dob.date} msg={mensaje}/>
@@ -94,6 +99,7 @@ function Feed() {
               ) : (
                 null
               )}
+              {/* Nueva publicación (APIs) */}
               {nombreUsuarios.length > 0 ? (
                               nombreUsuarios.map((usuario, index) => (
                                 <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.thumbnail} fecha={usuario.dob.date} />
@@ -102,6 +108,7 @@ function Feed() {
                 <Carga />
               )}
             </div>
+            {/* Previsualización del perfil */}
             <div className='col-md-3 rounded-5'>
               {nombreUsuario.length > 0 ? (
                                 nombreUsuario.map((usuario, index) => (
@@ -117,4 +124,4 @@ function Feed() {
     );
 }
 
-export default Feed
+export default Feed;
