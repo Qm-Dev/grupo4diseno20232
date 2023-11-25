@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import ImgPost from './ImgPost';
 
 // Formateo de fecha para posts del feed
 function formatDate(isoDate) {
@@ -33,7 +34,6 @@ function SocialPost(props) {
 
     const oracion = textoUsuario.join(' ');
 
-
     return (
             <div class="card mt-3">
                     <div class="card-body">
@@ -47,6 +47,7 @@ function SocialPost(props) {
                         <p class="card-text">
                             <span class="text-uppercase">{oracion[0]}</span>{oracion.slice(1)}.
                         </p>
+                        <ImgPost />
                             <div className="d-flex flex-wrap btn-group justify-content-center" role="group">
                                 {/* Recomendar */}
                                 <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
