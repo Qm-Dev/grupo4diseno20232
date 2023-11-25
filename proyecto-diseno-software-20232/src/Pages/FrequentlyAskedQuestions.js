@@ -2,9 +2,14 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function FrequentlyAskedQuestions() {
+
+    const contentStyle = {
+        marginTop: '80px', // Ajusta esto según la altura de tu barra de navegación
+    };
+    
     return (
-        <main className='bg-secondary-subtle'>
-            <div class="container py-5">
+        <main className='bg-secondary-subtle min-vh-100'>
+            <div class="container py-5" style={contentStyle}>
     <div class="card mx-auto col-md-9">
         <h1 class="fs-2 card-header text-uppercase fw-bold text-center bg-primary text-white"><i class="fa fa-question-circle mt-2"></i> Preguntas Frecuentes</h1>
         <div class="card-body">

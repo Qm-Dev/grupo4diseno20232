@@ -283,10 +283,15 @@ function ProfileInfo(props) {
         padding: '0.25rem 0.5rem',
     };
 
+    const contentStyle = {
+        marginTop: '80px', // Ajusta esto según la altura de tu barra de navegación
+    };
+    
+
 
     return (
-        <main className='bg-secondary-subtle'>
-            <div id='profile'>
+        <main className='bg-secondary-subtle min-vh-100'>
+            <div id='profile' style={contentStyle}>
                 <div className='container-fluid col-md-6'>
                     <div className="row">
                         {/* Presentación de la persona */}

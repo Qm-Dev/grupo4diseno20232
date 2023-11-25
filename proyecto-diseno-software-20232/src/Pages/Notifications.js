@@ -40,9 +40,14 @@ function Notifications() {
   const fechasArray = Object.keys(fechas)
   const listaInvertida = [...fechasArray].reverse();
 
+  const contentStyle = {
+    marginTop: '80px', // Ajusta esto según la altura de tu barra de navegación
+  };
+
+
     return (
-      <main className='bg-secondary-subtle'>
-        <div className='container p-3'>
+      <main className='bg-secondary-subtle min-vh-100'>
+        <div className='container p-3' style={contentStyle}>
           <div className='row'>
             <div className='col-md-3 rounded-5'>
               {/* Izquierda notificaciones */}

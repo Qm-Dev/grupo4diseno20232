@@ -12,7 +12,7 @@ const cardStyle = {
 function Login() {
 
     return (
-        <main>
+        <main className='bg-secondary-subtle min-vh-100'>
             <section className="vh-100 gradient-custom bg-body-secondary">
                 <div className="container py-5 h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">

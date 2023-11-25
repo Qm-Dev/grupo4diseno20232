@@ -12,7 +12,7 @@ function Logout() {
     }
 
     return (
-        <div className='logoutPage' style={logoutPageStyle}>
+        <div className='logoutPage bg-secondary-subtle min-vh-100' style={logoutPageStyle}>
             <h1 style={headingStyle}>Has cerrado sesión.</h1>
         </div>
     );

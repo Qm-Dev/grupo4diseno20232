@@ -3,9 +3,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function Contact() {
+
+    const contentStyle = {
+        marginTop: '80px', // Ajusta esto según la altura de tu barra de navegación
+    };
+    
     return (
-        <main className="bg-secondary-subtle">
-            <div class="container py-5">
+        <main className="bg-secondary-subtle min-vh-100">
+            <div class="container py-5" style={contentStyle}>
                 <div class="card mx-auto col-md-9">
                     <div class="card-header bg-primary text-white">
                         <h1 class="text-center text-uppercase"><i class="fa fa-comments mt-2"></i> Contáctanos</h1>

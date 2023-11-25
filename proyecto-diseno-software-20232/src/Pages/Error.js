@@ -22,7 +22,7 @@ function Error() {
     }
 
     return (
-        <main>
+        <main className='bg-secondary-subtle min-vh-100'>
             <img style={imgError} src= 'https://i.kym-cdn.com/photos/images/original/000/918/810/a22.jpg'></img>
             <h2 className="text-center">¡Lo sentimos! Esta página no existe.</h2>
             <div class="container">

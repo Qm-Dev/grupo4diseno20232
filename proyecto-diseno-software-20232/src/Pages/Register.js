@@ -17,7 +17,7 @@ function Register() {
     // TODO: Font Styles
 
     return (
-        <main className="d-flex align-items-center justify-content-center bg-secondary-subtle">
+        <main className="d-flex align-items-center justify-content-center bg-secondary-subtle min-vh-100">
             <div class="container mx-auto max-width-50 pt-4 pb-4">
                 <div style={formStyle} class="card">
                     <h2 class="card-title text-center mt-4">Registrarse</h2>
@@ -89,7 +89,7 @@ function Register() {
                         <input type="checkbox" class="form-check-input" id="aceptaTerminos" required></input>
                         <label class="form-check-label" for="aceptaTerminos">Acepto los términos y condiciones de servicio.</label>
                     </div>
-                    <div class="text-center pb-4">
+                    <div class="text-center pb-3">
                     <button type="submit" class="btn btn-primary"><i class="fa fa-pencil-square" aria-hidden="true"></i> Registrar</button>
                     </div>
                 </form>
