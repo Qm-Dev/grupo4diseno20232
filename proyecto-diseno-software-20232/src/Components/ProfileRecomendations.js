@@ -7,13 +7,11 @@ function formatDate(isoDate) {
     return formattedDate;
 }
 
-function ProfilePreview(props) {
+function ProfileRecomendations(props) {
 
     const { nombrePersona } = props;
     const { apellidoPersona } = props;
     const { fotoPerfilPersona } = props;
-    const { fecha } = props;
-    const formattedDate = formatDate(fecha);
 
     const profesionesConstruccion = [
         "Albañil",
@@ -51,24 +49,18 @@ function ProfilePreview(props) {
     const profesionesAleatoria = profesionesConstruccion[indiceAleatorio];
 
     return (
-        <div class="card">
-            <div class="card-header bg-primary text-white">
-                <h4 class="text-center"><i class="fas fa-address-card mt-2"></i> Perfil de Usuario</h4>
-            </div>
-            <div class="card-body">
+            <div class="card-body p-2">
                 <div class="row">
                     <div class="col-md-4">
                         <a href="/profile"><img src={fotoPerfilPersona} class="img-fluid rounded-circle img-thumbnail" alt="Imagen de perfil"></img></a>
                     </div>
                     <div class="col-md-8">
-                        <h3 class="mb-4">{nombrePersona} {apellidoPersona}</h3>
+                        <h3 class="fs-5">{nombrePersona} {apellidoPersona}</h3>
                         <p><strong>Profesión:</strong> {profesionesAleatoria}</p>
-                        <p><strong>Fecha de Nacimiento:</strong> {formattedDate}</p>
                     </div>
                 </div>
             </div>
-        </div>
     );
 }
 
-export default ProfilePreview;
+export default ProfileRecomendations;
