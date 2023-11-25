@@ -33,7 +33,7 @@ function Recomendation(props) {
     const recomendacionAleatoria = recomendacionesLaborales[indiceAleatorio];
 
     return (
-            <div class="card mb-3">
+            <div class="card m-3">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-1">
@@ -42,7 +42,7 @@ function Recomendation(props) {
                         <div class="col-md-11">
                             <h5 class="mt-0 text-left">{nombrePersona} {apellidoPersona}</h5>
                             <p>{recomendacionAleatoria}</p>
-                            <small class="text-muted">Fecha de notificación: {fechaNoti}</small>
+                            <small class="text-muted">Fecha de recomendación: {fechaNoti}</small>
                         </div>
                     </div>
                 </div>

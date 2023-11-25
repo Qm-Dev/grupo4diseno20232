@@ -78,6 +78,13 @@ function Feed() {
               ) : (
                 < Carga />
               )}
+              {nombreUsuarios.length > 0 ? (
+                              nombreUsuarios.map((usuario, index) => (
+                                <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.thumbnail} fecha={usuario.dob.date} />
+                              ))
+              ) : (
+                <Carga />
+              )}
             </div>
             <div className='col-md-3 rounded-5'>
               {nombreUsuario.length > 0 ? (
@@ -88,21 +95,6 @@ function Feed() {
                   < Carga />
                 )}
             </div>
-          </div>
-          <div className='row'>
-            <div className='col-md-3'></div>
-            {/* Otras publicaciones */}
-            <div className='col-md-6 rounded-5'>
-              {nombreUsuarios.length > 0 ? (
-                              nombreUsuarios.map((usuario, index) => (
-                                <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.thumbnail} fecha={usuario.dob.date} />
-                              ))
-              ) : (
-                <Carga />
-              )}
-            </div>
-            <div className='col-md-3'></div>
-            {/* Otras publicaciones */}
           </div>
         </div>
       </main>

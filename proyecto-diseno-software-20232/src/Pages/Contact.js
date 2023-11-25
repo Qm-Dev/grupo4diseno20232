@@ -1,26 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const textStyle = {
-    textAlign: 'center',
-    margin: '2rem auto',
-    fontFamily: 'Inter',
-};
-
-const noResizing = {
-    resize: 'none'
-}
-
 const cardStyle = {
     maxWidth: '800px',
     borderRadius: '1.5rem',
 };
-
-const formLabelStyle = {
-    marginBottom: '0.5rem',
-    fontWeight: 'bold',
-    fontFamily: 'Arvo'
-}
 
 function Contact() {
     return (

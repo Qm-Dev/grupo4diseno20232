@@ -1,22 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function formatDate(isoDate) {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = new Date(isoDate).toLocaleDateString(undefined, options);
-    return formattedDate;
-}
-
 function ProfilePreview(props) {
 
     const { nombrePersona } = props;
     const { apellidoPersona } = props;
     const { fotoPerfilPersona } = props;
-    const { fecha } = props;
     const { ciudad } = props;
     const { estado } = props;
     const { pais } = props;
-    const formattedDate = formatDate(fecha);
 
     const profesionesConstruccion = [
         "Albañil",
@@ -65,10 +57,10 @@ function ProfilePreview(props) {
                     </div>
                     <div class="col-md-8">
                         <h3 class="mb-4">{nombrePersona} {apellidoPersona}</h3>
-                        <p><strong>Profesión:</strong> {profesionesAleatoria}</p>
-                        <p><strong>Ubicación:</strong> {ciudad}, {estado}, {pais}</p>
                     </div>
                 </div>
+                <p class="ms-3"><strong>Profesión:</strong> {profesionesAleatoria}</p>
+                <p class="ms-3"><strong>Ubicación:</strong> {ciudad}, {estado}, {pais}</p>
             </div>
         </div>
     );

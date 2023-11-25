@@ -23,14 +23,23 @@ function PostBox(props) {
                             <div class="mb-3">
                                 <textarea class="form-control" rows="3" placeholder="Escribe tu mensaje aquí"></textarea>
                             </div>
-                            <div class="mb-3">
-                                <label for="archivo" class="form-label">Adjuntar archivo:</label>
-                                <input type="file" class="form-control" id="archivo"></input>
-                            </div>
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Publicar</button>
                         </form>
                     </div>
                 </div>
+                <div className="d-flex flex-wrap btn-group justify-content-center mt-2" role="group">
+                                {/* Recomendar */}
+                                <button type="button" class="btn btn-outline-success"><i class="fas fa-paper-plane"></i> Publicar</button>
+
+                                {/* Comentar */}
+                                <button type="button" class="btn btn-outline-success"><i class="fa fa-camera"></i> Multimedia</button>
+
+                                {/* Compartir */}
+                                <button type="button" class="btn btn-outline-success"><i class="fa fa-calendar"></i> Evento</button>
+
+                                {/* Enviar */}
+                                <button type="button" class="btn btn-outline-success"><i class="fa fa-pencil-square"></i> Artículo</button>
+
+                            </div>
             </div>
         </div>
     );

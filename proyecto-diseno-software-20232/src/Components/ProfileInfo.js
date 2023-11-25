@@ -285,7 +285,7 @@ function ProfileInfo(props) {
 
 
     return (
-        <main>
+        <main className='bg-secondary-subtle'>
             <div id='profile'>
                 <div className='container-fluid w-75'>
                     <div className="row">
@@ -293,7 +293,7 @@ function ProfileInfo(props) {
                         <div class="card mb-3 mt-3 text-center">
                             <div class="card-body row">
                                 {/* Foto de perfil */}
-                                <div className="col-md-6">
+                                <div className="col-md-4">
                                     <img src={fotoPerfilPersona} class="mb-2 rounded-circle img-thumbnail w-25" alt="Imagen de Usuario"></img>
                                 {/* Información de contacto */}
                                     <div class="text-left mt-0">
@@ -301,7 +301,7 @@ function ProfileInfo(props) {
                                             <h1 className="display-6 fw-bold" style={headingStyle}>{nombrePersona} {apellidoPersona}</h1>
                                             <h4 className="display-8" style={headingStyle}>{profesionesAleatoria}</h4>
                                             <p className="display-8" style={headingStyle}>{ciudad}, {estado}, {pais}</p>
-                                            <button style={buttonShowMoreStyle} className="btn btn-outline-primary" onClick={handleShowMoreClick}>
+                                            <button style={buttonShowMoreStyle} className="btn btn-outline-success mt-0" onClick={handleShowMoreClick}>
                                                 {showMoreInfo ? 'Mostrar Menos' : 'Mostrar Más'}
                                             </button>
                                         </div>
@@ -315,11 +315,11 @@ function ProfileInfo(props) {
                                     </div>
                                 </div>
                                 {/* Descripción de la persona */}
-                                <div className="col-md-6">
-                                    <p class="text-start p-1" style={paragraphStyle}>{String.fromCharCode(60 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.</p>
+                                <div className="col-md-8">
+                                    <p class="fs-5 text-start pt-2" style={paragraphStyle}>{String.fromCharCode(60 + Math.floor(Math.random() * 26)).toLocaleUpperCase()}{texto.slice(1)}.</p>
                                 </div>
                                 {/* Botones de interacción con la persona */}
-                                <div class="d-flex btn-group justify-content-center">
+                                <div class="d-flex btn-group justify-content-center w-50 mx-auto">
                                     <button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="26" height="26" viewBox="0 0 32 26" stroke-width="1.5" stroke="#0D6EFE" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                     <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
@@ -351,10 +351,12 @@ function ProfileInfo(props) {
                             </div>
                         </div>
                         {/* Experiencia */}
-                        <div id='experienceSection' className='card mb-3 text-center'>
-                            <h2 className='p-2 fw-bold' style={headingStyle}>Experiencia</h2>
+                        <div id='experienceSection' className='card mb-3 p-0 text-center'>
+                            <div class="card-header bg-primary text-white">
+                                <h4 class="text-center"><i class="fa fa-flag mt-2"></i> Experiencia</h4>
+                            </div>
                             {/* Visualización de las experiencias (3) */}
-                            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                            <div id="carouselExampleDark" class="carousel carousel-dark slide pt-4">
                                 <div style={carouselIndicatorsStyle} class="carousel-indicators">
                                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -404,9 +406,11 @@ function ProfileInfo(props) {
                             <a href="#" className='btn btn-dark m-auto mt-2 mb-2'>Editar experiencia</a>
                         </div>
                         {/* Certificaciones */}
-                        <div id='certificationsSection' className='card mb-3 text-center'>
-                            <h2 className='p-2 fw-bold' style={headingStyle}>Certificaciones</h2>
-                            <div class="row">
+                        <div id='certificationsSection' className='card text-center p-0 mb-3'>
+                            <div class="card-header bg-primary text-white">
+                                <h4 class="text-center"><i class="fa fa-certificate mt-2"></i> Recomendaciones</h4>
+                            </div>
+                            <div class="row p-2">
                                 {/* Certificación 1 */}
                                 <div class="col-sm-4">
                                     <div class="card h-100 p-4 m-2">
@@ -459,10 +463,10 @@ function ProfileInfo(props) {
                             </DropdownButton>
                         </div>
                         {/* Recomendaciones */}
-                        <h2 style={headingStyle}>
-                            Recomendaciones
-                        </h2>
-                        <div class="mb-5">
+                        <div className='card p-0 mb-3'>
+                        <div class="card-header bg-primary text-white">
+                        <h4 class="text-center"><i class="fas fa-users mt-2"></i> Recomendaciones</h4>
+                        </div>
                             {nombreUsuarios.length > 0 ? (
                                             nombreUsuarios.map((usuario, index) => (
                                                 <Recomendation key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.medium} fechaNoti={listaInvertida[index]}/>
