@@ -20,7 +20,7 @@ function SocialPost(props) {
     const { fecha } = props;
     const formattedDate = formatDate(fecha);
 
-    const post_amount = Math.floor(Math.random() * 200);
+    const post_amount = Math.floor(Math.random() * 30 + 30);
 
     const [textoUsuario, setTextoUsuario] = useState([]);
     useEffect( () => {
