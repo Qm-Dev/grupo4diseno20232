@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -9,7 +8,7 @@ const cardStyle = {
     backgroundColor: '#1a1a1a',
 };
 
-function Login() {
+function Register() {
 
     return (
         <main className='bg-secondary-subtle min-vh-100'>
@@ -72,4 +71,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Register;
