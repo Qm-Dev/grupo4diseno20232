@@ -19,22 +19,9 @@ function About() {
         setImagen(Benja)
     }
 
-    // Estilo de las imágenes
-    const imgAboutUsStyle = {
-        width: '250px',
-        height: '100%',
-        maxHeight: '225px',
-        borderRadius: '100%'
-    }
-
-    const contentStyle = {
-        marginTop: '80px', // Ajusta esto según la altura de tu barra de navegación
-    };
-    
-
     return (
         <main className='bg-secondary-subtle min-vh-100'>
-            <div class="container py-5" style={contentStyle}>
+            <div id="change" class="container py-5">
                 <div class="card mx-auto col-md-9">
                     <h1 class="fs-2 card-header text-uppercase fw-bold text-center bg-primary text-white"><i class="fa fa-lightbulb mt-2"></i> Acerca de nosotros</h1>
                     <h2 class="p-5 pt-4 pb-0">¿Quiénes somos?</h2>
