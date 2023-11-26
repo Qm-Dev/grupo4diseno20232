@@ -403,7 +403,7 @@ function ProfileInfo(props) {
                         {/* Certificaciones */}
                         <div id='certificationsSection' className='card text-center p-0 mb-3'>
                             <div class="card-header bg-primary text-white">
-                                <h4 class="text-center"><i class="fa fa-certificate mt-2"></i> Recomendaciones</h4>
+                                <h4 class="text-center"><i class="fa fa-certificate mt-2"></i> Certificaciones</h4>
                             </div>
                             <div class="row p-2">
                                 {/* Certificación 1 */}
