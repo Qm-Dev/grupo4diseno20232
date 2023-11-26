@@ -1,23 +1,12 @@
 import React from 'react';
-import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Imágenes de miembros
 import Diego from './img/Diego.jpg'
 import matias from './img/matias.png'
 import Benja from './img/Benja.jpg'
-import lolz from './img/placeholder-img.jpg'
 
 function About() {
-
-    // eliminar antes de entrega final (15-21)
-    const [imagen, setImagen] = useState(Benja);
-    const cambiarImagen = () => {
-        setImagen(lolz)
-    }
-    const restaurarImagen = () => {
-        setImagen(Benja)
-    }
 
     return (
         <main className='bg-secondary-subtle min-vh-100'>
@@ -54,7 +43,7 @@ function About() {
                                     </div>
                             </div>
                             <div class="card col-md-3 p-3">
-                                <img src={imagen} class="card-img-top mx-auto img-fluid rounded" alt="Integrante 3" onMouseOver={cambiarImagen} onMouseLeave={restaurarImagen}></img>
+                                <img src={Benja} class="card-img-top mx-auto img-fluid rounded" alt="Integrante 3"></img>
                                     <div class="card-body">
                                         <p class="card-text fw-bold fs-5">Benjamín Herrera</p>
                                         <p>Una personalidad extrovertida y carismática que encuentra alegría en la conexión humana. 
@@ -79,7 +68,7 @@ function About() {
                     <br></br><br></br>El sitio se encuentra construido bajo el marco de
                     trabajo React.js, el cual hace uso de los
                     lenguajes HTML, CSS y JavaScript. El código fuente de este se encuentra disponible en su totalidad bajo la licencia MIT, estando alojado
-                    su repositorio en GitHub, accesible haciendo click <a href="https://github.com/Qm-Dev/grupo4diseno20232/tree/main/proyecto-diseno-software-20232">aquí</a>.
+                    su repositorio en GitHub, accesible haciendo click <a href="https://github.com/Qm-Dev/grupo4diseno20232/tree/main/proyecto-diseno-software-20232" target="_blank">aquí</a>.
                     <br></br>
                     </p>
                 </div>

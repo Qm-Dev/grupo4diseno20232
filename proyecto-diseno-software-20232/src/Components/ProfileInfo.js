@@ -48,10 +48,6 @@ function ProfileInfo(props) {
     const { telefono } = props;
     const { texto } = props;
     const formattedDate = formatDate(fecha);
-    const { email } = props;
-    const { city } = props;
-    const { state } = props;
-    const { country } = props;
     const [selectedOption, setSelectedOption] = useState('default');
 
     const handleDropdownSelect = (option) => {

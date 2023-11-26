@@ -4,13 +4,6 @@ import { Link } from 'react-router-dom';
 
 function Error() {
 
-    // Estilo del texto
-    const textError = {
-        textAlign: 'center',
-        padding: '0.75rem 1.5rem',
-        marginBottom: '2rem'
-    }
-
     // Estilo de la imagen
     const imgError = {
         display: 'block',
@@ -26,7 +19,7 @@ function Error() {
             <br></br>
             <br></br>
             <br></br>
-                <img style={imgError} src= 'https://i.kym-cdn.com/photos/images/original/000/918/810/a22.jpg'></img>
+                <img style={imgError} src='https://i.kym-cdn.com/photos/images/original/000/918/810/a22.jpg'></img>
                 <br></br>
             <h2 className="text-center">¡Lo sentimos! Esta página no existe.</h2>
             <div class="container">
