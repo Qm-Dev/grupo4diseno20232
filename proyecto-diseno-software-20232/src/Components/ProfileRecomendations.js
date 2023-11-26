@@ -39,7 +39,6 @@ function ProfileRecomendations(props) {
     ];
 
     const indiceAleatorio = Math.floor(Math.random() * profesionesConstruccion.length);
-
     const profesionesAleatoria = profesionesConstruccion[indiceAleatorio];
 
     return (

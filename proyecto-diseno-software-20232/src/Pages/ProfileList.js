@@ -37,14 +37,12 @@ function ProfileList() {
 
     },[]);
 
-    const fechasArray = Object.keys(fechas)
-    const listaInvertida = [...fechasArray].reverse();
+    const fechasArray = Object.keys(fechas);
 
     return (
         <main className='bg-secondary-subtle'>
             <div class="container pt-3">
                 <h1 class="mb-4">Formulario de Profesiones</h1>
-
                 <form>
                     <div class="mb-3">
                         <label for="profesion" class="form-label">Selecciona tu profesión:</label>
@@ -79,17 +77,14 @@ function ProfileList() {
                             <option value="Auxiliar de pintura">Auxiliar de pintura</option>
                         </select>
                     </div>
-
                     <div class="mb-3">
                         <label for="edadMinima" class="form-label">Edad Mínima:</label>
                         <input type="number" class="form-control" id="edadMinima" name="edadMinima" value="20" required></input>
                     </div>
-
                     <div class="mb-3">
                         <label for="edadMaxima" class="form-label">Edad Máxima:</label>
                         <input type="number" class="form-control" id="edadMaxima" name="edadMaxima" value="60" required></input>
                     </div>
-
                     <div class="mb-3">
                         <label for="region" class="form-label">Selecciona tu región:</label>
                         <select id="region" name="region" class="form-select">

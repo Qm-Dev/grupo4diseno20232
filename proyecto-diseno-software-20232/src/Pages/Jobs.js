@@ -210,11 +210,11 @@ function Jobs() {
                         <div class="container p-0">
                             <div class="card text-center">
                                 <div class="card-header">
-                                <h5 class="card-title m-0">Publica tu empleo</h5>
+                                    <h5 class="card-title m-0">Publica tu empleo</h5>
                                 </div>
                                 <div class="card-body">
-                                <p class="card-text">Publica tu empleo de manera gratuita y llega a miles de candidatos.</p>
-                                <a href="#" class="btn btn-primary"><i class="fa fa-briefcase" aria-hidden="true"></i> Publicar un empleo gratis</a>
+                                    <p class="card-text">Publica tu empleo de manera gratuita y llega a miles de candidatos.</p>
+                                    <a href="#" class="btn btn-primary"><i class="fa fa-briefcase" aria-hidden="true"></i> Publicar un empleo gratis</a>
                                 </div>
                             </div>
                         </div>
