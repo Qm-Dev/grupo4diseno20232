@@ -129,8 +129,7 @@ function FrequentlyAskedQuestions() {
                                     Ve a la sección de configuración de tu cuenta y busca la opción para cambiar la contraseña. Sigue las instrucciones proporcionadas para actualizar tu contraseña.
                                 </div>
                             </div>
-                        </div>
-                        
+                        </div> 
                     </div>
                 </div>
             </div>
