@@ -57,9 +57,9 @@ function Register() {
                                             <label className="form-label" htmlFor="text">Profesión</label>
                                             <input type="text" id="" className="form-control" />
                                         </div>
-                                    <div class="text-center p-3">
-                                    <button type="submit" class="fs-5 btn btn-secondary"><i class="fa fa-pencil-square" aria-hidden="true"></i> Registrar</button>
-                                    </div>
+                                        <div class="text-center p-3">
+                                            <button type="submit" class="fs-5 btn btn-secondary"><i class="fa fa-pencil-square" aria-hidden="true"></i> Registrar</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
