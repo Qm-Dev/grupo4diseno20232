@@ -10,8 +10,7 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
-}
+  }}
 
 .App-header {
   background-color: #282c34;
@@ -41,8 +40,24 @@
   margin-top: 80px;
 }
 
-@media (max-width: 767px) {
+#divlogo {
+  display: flex;
+  align-items: center;
+  margin-right: -144px;
+  margin-left: 100px;
+}
+
+@media (max-width: 1000px) {
   #change {
     margin-top: 50px;
   }
+  #linkedlogo {
+    margin-bottom: 10px;
+    margin-left: -14px
+  }
+  #divlogo {
+    justify-content: center;
+    margin: auto;
+  }
 }
+

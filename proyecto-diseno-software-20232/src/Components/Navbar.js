@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import linkedinLogo from '../Pages/img/linkedin-app-white-icon.svg';
 
 function Navbar() {
 
@@ -22,6 +23,9 @@ function Navbar() {
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div id="divlogo">
+            <img id="linkedlogo" src={linkedinLogo} alt="LinkedIn Logo" style={{ width: '44px'}}/>
+            </div>
         {/* Items de la Navbar */}
         <ul class="navbar-nav mx-auto mb-1 mb-lg-0">
             {/* Inicio */}
