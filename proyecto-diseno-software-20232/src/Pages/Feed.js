@@ -67,7 +67,7 @@ function Feed() {
         <div id="change" className='container p-3'>
           <div className='row'>
             {/* Recomendaciones de otros usuarios para añadir */}
-            <div className='col-md-3 rounded-5' style={previewProfilesStyle}>
+            <div className='col-md-3 order-first order-md-1 rounded-5' style={previewProfilesStyle}>
               <div class="card">
                   <div class="card-header bg-primary text-white">
                     <h4 class="text-center"><i class="fas fa-users mt-2"></i> Añadir a tu feed</h4>
@@ -81,7 +81,8 @@ function Feed() {
                 )}
               </div>
             </div>
-            <div className='col-md-6 rounded-2'>
+            {/* Feed */}
+            <div className='col-md-6 order-last order-md-2 rounded-2'>
               {/* Post Box */}
               {nombreUsuario.length > 0 ? (
                               nombreUsuario.map((usuario, index) => (
@@ -108,7 +109,7 @@ function Feed() {
               )}
             </div>
             {/* Previsualización del perfil */}
-            <div className='col-md-3 rounded-5'>
+            <div className='col-md-3 order-md-3 rounded-5'>
               {nombreUsuario.length > 0 ? (
                                 nombreUsuario.map((usuario, index) => (
                                   <ProfilePreview key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date} ciudad={usuario.location.city} estado={usuario.location.state} pais={usuario.location.country}/>
