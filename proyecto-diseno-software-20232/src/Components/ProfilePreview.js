@@ -47,7 +47,7 @@ function ProfilePreview(props) {
     const profesionesAleatoria = profesionesConstruccion[indiceAleatorio];
 
     return (
-        <div class="card mt-3 mt-md-0">
+        <div class="card mt-3 mt-md-0 mb-4">
             <div class="card-header bg-primary text-white">
                 <h4 class="text-center"><i class="fas fa-address-card mt-2"></i> Perfil de Usuario</h4>
             </div>

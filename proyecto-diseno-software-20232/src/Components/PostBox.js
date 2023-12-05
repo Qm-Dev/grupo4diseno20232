@@ -28,13 +28,15 @@ function PostBox(props) {
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-2 text-center">
+                    {/* Previsualización foto de perfil */}
+                    <div class="col-md-2 text-center mb-4">
                         <img src={fotoPerfilPersona} class="img-fluid rounded-circle img-thumbnail" alt="Imagen de perfil"></img>
                     </div>
+                    {/* Post Box */}
                     <div class="col-md-10">
                         <form>
                             <div class="mb-3">
-                                <textarea class="form-control" rows="3" placeholder="Escribe tu mensaje aquí" value={mensaje} onChange={handleChange}></textarea>
+                                <textarea class="form-control" rows="3" placeholder="Escribe tu mensaje aquí" value={mensaje} onChange={handleChange} style={{resize: 'none'}}></textarea>
                             </div>
                         </form>
                     </div>

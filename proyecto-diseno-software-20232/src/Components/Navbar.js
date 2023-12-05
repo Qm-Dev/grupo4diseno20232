@@ -23,6 +23,7 @@ function Navbar() {
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                {/* Logo del sitio */}
                 <div id="divlogo">
                     <img id="linkedlogo" src={linkedinLogo} alt="LinkedIn Logo" style={{ width: '44px'}}/>
                 </div>
