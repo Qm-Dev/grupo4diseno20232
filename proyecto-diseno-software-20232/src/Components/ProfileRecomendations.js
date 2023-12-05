@@ -42,17 +42,17 @@ function ProfileRecomendations(props) {
     const profesionesAleatoria = profesionesConstruccion[indiceAleatorio];
 
     return (
-            <div class="card-body p-2 text-center">
-                <div class="row">
-                    <div class="col-md-4">
-                        <a href={`/users/${nombrePersona.toLowerCase()}_${apellidoPersona.toLowerCase()}`}><img src={fotoPerfilPersona} class="img-fluid rounded-circle img-thumbnail ms-3" alt="Imagen de perfil"></img></a>
-                    </div>
-                    <div class="col-md-8">
-                        <h3 class="fs-5">{nombrePersona} {apellidoPersona}</h3>
-                        <p><strong>Profesión:</strong> {profesionesAleatoria}</p>
-                    </div>
+        <div class="card-body p-2 text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href={`/users/${nombrePersona.toLowerCase()}_${apellidoPersona.toLowerCase()}`}><img src={fotoPerfilPersona} class="img-fluid rounded-circle img-thumbnail ms-3" alt="Imagen de perfil"></img></a>
+                </div>
+                <div class="col-md-8">
+                    <h3 class="fs-5">{nombrePersona} {apellidoPersona}</h3>
+                    <p><strong>Profesión:</strong> {profesionesAleatoria}</p>
                 </div>
             </div>
+        </div>
     );
 }
 
