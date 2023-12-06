@@ -17,6 +17,7 @@ code {
   stroke: white;
 }
 
+/* Feed: Componentes fijos cuando scrolleas */
 .sticky-md-top {
   top: 96px;
 }
