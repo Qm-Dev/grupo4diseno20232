@@ -40,6 +40,15 @@ function Notifications() {
   const fechasArray = Object.keys(fechas)
   const listaInvertida = [...fechasArray].reverse();
 
+  const textStyle1 = {
+    fontFamily: 'Nunito Sans'
+  }
+
+  const textStyle2 = {
+    fontFamily: 'Yantramanav',
+    fontWeight: 'bold'
+  }
+
     return (
       <main className='bg-secondary-subtle min-vh-100'>
         <div id="change" className='container p-3'>
@@ -49,31 +58,31 @@ function Notifications() {
               <div class="container mb-3 p-0">
                 <div class="card text-center">
                   <div class="card-body">
-                    <p class="card-text">Gestiona tus notificaciones</p>
-                    <a href="#" class="btn btn-primary"><i class="fa fa-cog" aria-hidden="true"></i> Ver configuración</a>
+                    <p class="card-text" style={textStyle1}>Gestiona tus notificaciones</p>
+                    <a href="#" class="btn btn-primary" style={textStyle2}><i class="fa fa-cog" aria-hidden="true"></i> Ver configuración</a>
                   </div>
                 </div>
               </div>
               <div class="container mb-3 p-0">
                 <div class="card text-center">
                   <div class="card-body">
-                    <p class="card-text">Obtén más beneficios con Premium</p>
-                    <a href="#" class="btn btn-success"><i class="fa fa-star" aria-hidden="true"></i> Contratar Premium</a>
+                    <p class="card-text" style={textStyle1}>Obtén más beneficios con Premium</p>
+                    <a href="#" class="btn btn-success" style={textStyle2}><i class="fa fa-star" aria-hidden="true"></i> Contratar Premium</a>
                   </div>
                 </div>
               </div>
             </div>
             <div className='col-md-6 rounded-5'>
               <div class="card mb-3">
-                      <div class="card-body">
-                        <div class="d-flex justify-content-center">
-                          <button type="button" class="btn btn-outline-primary p-2 m-auto rounded-pill active">Todo</button>
-                          <button type="button" class="btn btn-outline-primary p-2 m-auto rounded-pill">Mis Publicaciones</button>
-                          <button type="button" class="btn btn-outline-primary p-2 m-auto rounded-pill">Menciones</button>
-                          <button type="button" class="btn btn-outline-primary p-2 m-auto rounded-pill">Empleo</button>
-                        </div>
-                      </div>
+                <div class="card-body">
+                  <div class="btn-group d-flex flex-column flex-lg-row justify-content-center gap-2">
+                    <button type="button" class="btn btn-outline-primary rounded-pill active">Todo</button>
+                    <button type="button" class="btn btn-outline-primary rounded-pill">Mis Publicaciones</button>
+                    <button type="button" class="btn btn-outline-primary rounded-pill">Menciones</button>
+                    <button type="button" class="btn btn-outline-primary rounded-pill">Empleo</button>
                   </div>
+                </div>
+              </div>
               {/* Crear las notificaciones */}
               {nombreUsuarios.length > 0 ? (
                               nombreUsuarios.map((usuario, index) => (
@@ -88,11 +97,11 @@ function Notifications() {
               <div class="container p-0">
                 <div class="card text-center">
                   <div class="card-header">
-                    <h5 class="card-title m-0">Anuncio</h5>
+                    <h5 class="card-title m-0" style={textStyle1}>Anuncio</h5>
                   </div>
                   <div class="card-body">
                     <i class="fa fa-bar-chart fa-5x" aria-hidden="true"></i>
-                    <p class="card-text pt-2">Actualiza tus preferencias de trabajo para ayudar a los reclutadores a encontrarte.</p>
+                    <p class="card-text pt-2" style={textStyle1}>Actualiza tus preferencias de trabajo para ayudar a los reclutadores a encontrarte.</p>
                     <a href="#" class="btn btn-primary"><i class="fa fa-pencil-square" aria-hidden="true"></i> Actualizar ahora</a>
                   </div>
                 </div>
