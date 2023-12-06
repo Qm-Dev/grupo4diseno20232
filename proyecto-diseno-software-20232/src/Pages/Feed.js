@@ -68,7 +68,7 @@ function Feed() {
           <div className='row'>
             {/* Recomendaciones de otros usuarios para añadir */}
             <div className='col-md-3 order-first order-md-1 rounded-5' style={previewProfilesStyle}>
-              <div class="card position-md-fixed">
+              <div class="card">
                   <div class="card-header bg-primary text-white">
                     <h4 class="text-center"><i class="fas fa-users mt-2"></i> Añadir a tu feed</h4>
                   </div>
