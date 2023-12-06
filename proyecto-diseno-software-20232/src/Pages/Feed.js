@@ -145,7 +145,7 @@ function Feed() {
               </div>
               <div class="card mt-3">
                   <div class="card-header bg-primary text-white">
-                    <h4 class="text-center"><i class="fa fa-sort-amount-desc mt-2"></i> Tendencias</h4>
+                    <h4 class="text-center"><i class="fa fa-sort-amount-asc mt-2"></i> Tendencias</h4>
                   </div>
                   {tendenciasConPost.length > 0 ? (
                                     tendenciasConPost.map((tendencia, index) => (
