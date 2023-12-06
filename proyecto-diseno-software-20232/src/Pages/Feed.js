@@ -100,6 +100,31 @@ function Feed() {
 
   tendenciasConPost.sort((a, b) => b.cantidadDePost - a.cantidadDePost);
 
+
+  const [mostrarAlertaShare, setMostrarAlertaShare] = useState(false);
+
+  const handleShareButtonClick = () => {
+    // Mostrar la alerta
+    setMostrarAlertaShare(true);
+
+    // Ocultar la alerta después de 3 segundos
+    setTimeout(() => {
+      setMostrarAlertaShare(false);
+    }, 3000);
+  };
+
+  const [mostrarAlertaLike, setMostrarAlertaLike] = useState(false);
+
+  const handleLikeButtonClick = () => {
+    // Mostrar la animación
+    setMostrarAlertaLike(true);
+
+    // Ocultar la animación después de 3 segundos
+    setTimeout(() => {
+      setMostrarAlertaLike(false);
+    }, 3000);
+  };
+
     return (
       <main className='bg-secondary-subtle min-vh-100'>
         <div id="change" className='container p-3'>
@@ -144,7 +169,7 @@ function Feed() {
               {/* Nueva publicación */}
               {mensajes.length > 0 ? (
                               mensajes.map((mensaje, index) => (
-                                <NewPost key={index} nombrePersona={nombreUsuario[0].name.first} apellidoPersona={nombreUsuario[0].name.last} fotoPerfilPersona={nombreUsuario[0].picture.thumbnail} fecha={nombreUsuario[0].dob.date} msg={mensaje}/>
+                                <NewPost onShareButtonClick={handleShareButtonClick} onLikeButtonClick={handleLikeButtonClick} key={index} nombrePersona={nombreUsuario[0].name.first} apellidoPersona={nombreUsuario[0].name.last} fotoPerfilPersona={nombreUsuario[0].picture.thumbnail} fecha={nombreUsuario[0].dob.date} msg={mensaje}/>
                               ))
               ) : (
                 null
@@ -152,7 +177,7 @@ function Feed() {
               {/* Nueva publicación (APIs) */}
               {nombreUsuarios.length > 0 ? (
                               nombreUsuarios.map((usuario, index) => (
-                                <SocialPost key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.thumbnail} fecha={usuario.dob.date} />
+                                <SocialPost onShareButtonClick={handleShareButtonClick} onLikeButtonClick={handleLikeButtonClick} key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.thumbnail} fecha={usuario.dob.date} />
                               ))
               ) : (
                 <Carga />
@@ -160,6 +185,16 @@ function Feed() {
             </div>
             {/* Previsualización del perfil */}
             <div className='col-md-3 order-md-3 rounded-5'>
+            {mostrarAlertaLike && (
+                <div className="alert alert-danger text-center" role="alert">
+                Haz recomendado la publicacion!
+                </div>
+            )}
+            {mostrarAlertaShare && (
+                <div className="alert alert-success text-center" role="alert">
+                Haz compartido la publicacion!
+                </div>
+            )}
               {nombreUsuario.length > 0 ? (
                                 nombreUsuario.map((usuario, index) => (
                                   <ProfilePreview key={index} nombrePersona={usuario.name.first} apellidoPersona={usuario.name.last} fotoPerfilPersona={usuario.picture.large} fecha={usuario.dob.date} ciudad={usuario.location.city} estado={usuario.location.state} pais={usuario.location.country}/>
