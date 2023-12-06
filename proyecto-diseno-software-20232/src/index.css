@@ -26,3 +26,23 @@ code {
     top: 0;
   }
 }
+
+.alert-danger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 70px;
+  padding: 10px;
+  margin-left: calc((100vw - 280px));
+}
+
+.alert-success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 70px;
+  padding: 10px;
+  margin-left: calc((100vw - 280px));
+}

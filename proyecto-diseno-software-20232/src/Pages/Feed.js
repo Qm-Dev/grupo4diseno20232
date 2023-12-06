@@ -186,13 +186,13 @@ function Feed() {
             {/* Previsualización del perfil */}
             <div className='col-md-3 order-md-3 rounded-5'>
             {mostrarAlertaLike && (
-                <div className="alert alert-danger text-center" role="alert">
-                Haz recomendado la publicacion!
-                </div>
+                <div className="alert alert-danger text-center fixed-top mt-2 mb-2 mr-2" role="alert">
+                  !Has recomendado la publicacion!
+              </div>
             )}
             {mostrarAlertaShare && (
-                <div className="alert alert-success text-center" role="alert">
-                Haz compartido la publicacion!
+                <div className="alert alert-success text-center fixed-top mt-2 mb-2 mr-2" role="alert">
+                  !Has compartido la publicacion!
                 </div>
             )}
               {nombreUsuario.length > 0 ? (
