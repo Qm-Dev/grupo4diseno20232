@@ -7,6 +7,7 @@ import SocialPost from '../Components/SocialPost';
 import NewPost from '../Components/NewPost';
 import Carga from '../Components/Carga';
 import ProfileRecomendations from '../Components/ProfileRecomendations';
+import Trends from '../Components/Trends';
 
 function Feed() {
 
@@ -62,11 +63,48 @@ function Feed() {
     marginBottom: '1rem'
   }
 
+    // Lista de tendencias base
+  const listaDeTendencias = [
+    "Sostenibilidad",
+    "Eficiencia energética",
+    "Diseño modular",
+    "Innovación tecnológica",
+    "Construcción verde",
+    "Digitalización",
+    "Smart Homes",
+    "Seguridad laboral",
+    "Materiales reciclados",
+    "Arquitectura moderna",
+    "Eficiencia hídrica",
+    "Construcción prefabricada",
+    "Urbanismo sostenible",
+    "Tecnología BIM",
+    "Renovación urbana"
+  ];
+  
+
+  // Seleccionar las tendencias de forma aleatoria
+  const tendenciasAleatorias = [];
+  while (tendenciasAleatorias.length < 4) {
+    const tendencia = listaDeTendencias[Math.floor(Math.random() * listaDeTendencias.length)];
+    if (!tendenciasAleatorias.includes(tendencia)) {
+      tendenciasAleatorias.push(tendencia);
+    }
+  }
+
+  // Generar y ordenar las cantidades aleatorias de post
+  const tendenciasConPost = tendenciasAleatorias.map(tendencia => {
+    const cantidadDePost = Math.floor(Math.random() * (10000 - 1000 + 1)) + 1000;
+    return { tendencia, cantidadDePost };
+  });
+
+  tendenciasConPost.sort((a, b) => b.cantidadDePost - a.cantidadDePost);
+
     return (
       <main className='bg-secondary-subtle min-vh-100'>
         <div id="change" className='container p-3'>
           <div className='row'>
-            {/* Recomendaciones de otros usuarios para añadir */}
+            {/* Recomendaciones de otros usuarios para añadir y Tendencias de la red social*/}
             <div className='col-md-3 order-first order-md-1 rounded-5 sticky-md-top' style={previewProfilesStyle}>
               <div class="card">
                   <div class="card-header bg-primary text-white">
@@ -78,6 +116,18 @@ function Feed() {
                                 ))
                 ) : (
                   < Carga />
+                )}
+              </div>
+              <div class="card mt-3">
+                  <div class="card-header bg-primary text-white">
+                    <h4 class="text-center"><i class="fa fa-sort-amount-desc mt-2"></i> Tendencias</h4>
+                  </div>
+                  {tendenciasConPost.length > 0 ? (
+                                    tendenciasConPost.map((tendencia, index) => (
+                    <Trends key={index} nombre={tendencia.tendencia} cant={tendencia.cantidadDePost}/>
+                        ))
+                    ) : (
+                      < Carga />
                 )}
               </div>
             </div>
