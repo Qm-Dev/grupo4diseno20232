@@ -24,13 +24,13 @@ function Navbar() {
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 {/* Logo del sitio */}
-                <div id="divlogo" class="mb-4 mb-md-0">
+                <div id="divlogo" class="mb-4 mb-md-1">
                     <img id="linkedlogo" src={linkedinLogo} alt="LinkedIn Logo" style={{ width: '44px'}}/>
                 </div>
                 {/* Items de la Navbar */}
-                <ul class="navbar-nav mx-auto mb-0 mb-lg-0">
+                <ul class="navbar-nav mx-auto">
                     {/* Inicio */}
-                    <li class="nav-item mb-4 mb-md-0" style={navbarItemStyle}>
+                    <li class="nav-item mb-4 mb-lg-0" style={navbarItemStyle}>
                         <a className="nav-link text-light fw-semibold p-0" aria-current="page" href="/feed">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -40,7 +40,7 @@ function Navbar() {
                         </svg><br></br>Inicio</a>
                     </li>
                     {/* Empleos */}
-                    <li class="nav-item mb-4 mb-md-0" style={navbarItemStyle}>
+                    <li class="nav-item mb-4 mb-lg-0" style={navbarItemStyle}>
                         <a class="nav-link text-light fw-semibold p-0" href="/jobs"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-briefcase-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z" />
@@ -48,7 +48,7 @@ function Navbar() {
                         </svg><br></br>Empleos</a>
                     </li>
                     {/* Notificaciones */}
-                    <li class="nav-item mb-4 mb-md-0" style={navbarItemStyle}>
+                    <li class="nav-item mb-4 mb-lg-0" style={navbarItemStyle}>
                         <a class="nav-link text-light fw-semibold p-0" href="/notifications"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
