@@ -17,11 +17,10 @@ code {
   stroke: white;
 }
 
-/* Feed: Componentes fijos cuando scrolleas */
+/* Componentes fijos cuando scrolleas */
 .sticky-md-top {
   top: 96px;
 }
-
 @media (max-width: 767.98px) {
   .sticky-md-top {
     top: 0;

@@ -32,21 +32,26 @@ function Notification(props) {
     const indiceAleatorio = Math.floor(Math.random() * tipos_notificaciones.length);
     const notificacionAleatoria = tipos_notificaciones[indiceAleatorio];
 
+    // Estilo
+    const notificationStyle = {
+        fontFamily: 'Lato'
+    }
+
     return (
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <img src={fotoPerfilPersona} class="me-3 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img>
-                            </div>
-                            <div class="col-md-10">
-                                <h5 class="mt-0">{nombrePersona} {apellidoPersona}</h5>
-                                <p>{nombrePersona} {notificacionAleatoria}</p>
-                                <small class="text-muted">Fecha de notificación: {fechaNoti}</small>
-                            </div>
-                        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src={fotoPerfilPersona} class="me-3 rounded-circle img-thumbnail" alt="Imagen de Usuario"></img>
+                    </div>
+                    <div class="col-md-10" style={notificationStyle}>
+                        <h5 class="mt-0 fw-bold">{nombrePersona} {apellidoPersona}</h5>
+                        <p>{nombrePersona} {notificacionAleatoria}</p>
+                        <small class="text-muted">Fecha de notificación: {fechaNoti}</small>
                     </div>
                 </div>
+            </div>
+        </div>
     );
 }
 

@@ -106,6 +106,7 @@ function Jobs() {
         "Consulting"
     ];
 
+    // Obtención información de API randomuser, randomword y randomdategen
     const post_amount = Math.floor(Math.random() * 11);
     const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
 
@@ -177,7 +178,7 @@ function Jobs() {
                 <div className='row'>
                     <div className='col-md-3 rounded-5 mb-2'>
                         {/* Izquierda Empleos */}
-                        <div class="container p-0">
+                        <div class="container p-0 sticky-md-top">
                             <div class="card">
                                 <div class="card-body">
                                     <h6 class="card-text pb-2"><i class="fa fa-flag"></i> Mis empleos</h6>
@@ -190,7 +191,7 @@ function Jobs() {
                         </div>
                     </div>
                     <div className='col-md-6 rounded-5'>
-                        {/* creacion de post de empleos */}
+                        {/* Creación posts/ofertas de empleos */}
                         {empresaInfo.map((empresa, index) => (
                             <div key={index} class="card mb-2">
                                 <div class="card-header">
@@ -220,11 +221,11 @@ function Jobs() {
                     <div className='col-md-3 rounded-5'>
                         {/* Derecha Empleos */}
                         {mostrarAlertaPostulacion && (
-                <div className="alert alert-success text-center" role="alert">
-                Ha postulado al empleo!
-                </div>
-            )}
-                        <div class="container p-0">
+                        <div className="alert alert-success text-center" role="alert">
+                            ¡Has postulado al empleo!
+                        </div>
+                        )}
+                        <div class="container p-0 sticky-md-top">
                             <div class="card text-center">
                                 <div class="card-header">
                                     <h5 class="card-title m-0">Publica tu empleo</h5>
