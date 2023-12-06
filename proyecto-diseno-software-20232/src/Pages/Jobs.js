@@ -159,6 +159,18 @@ function Jobs() {
 
 },[]);
 
+    const [mostrarAlertaPostulacion, setMostrarAlertaPostulacion] = useState(false);
+
+    useEffect(() => {
+        if (mostrarAlertaPostulacion) {
+        const timeoutId = setTimeout(() => {
+            setMostrarAlertaPostulacion(false);
+        }, 3000);
+
+        return () => clearTimeout(timeoutId);
+        }
+    }, [mostrarAlertaPostulacion]);
+
     return (
         <main className='bg-secondary-subtle min-vh-100'>
             <div id="change" className="container p-3">
@@ -196,7 +208,7 @@ function Jobs() {
                                             <ul class="list-group list-group-flush">
                                                 <li class="list-group-item"><strong>Correo de Contacto:</strong> {nombreEmpresa[index]}@jobs.com</li>
                                                 <li class="list-group-item"><strong>Número de Contacto:</strong> {empresa.cell}
-                                                    <button class="btn btn-primary float-end">Postular</button>
+                                                    <button id="btnPostular" class="btn btn-primary float-end" onClick={() => setMostrarAlertaPostulacion(true)}>Postular</button>
                                                 </li>
                                             </ul>
                                         </div>
@@ -207,6 +219,11 @@ function Jobs() {
                     </div>
                     <div className='col-md-3 rounded-5'>
                         {/* Derecha Empleos */}
+                        {mostrarAlertaPostulacion && (
+                <div className="alert alert-success text-center" role="alert">
+                Ha postulado al empleo!
+                </div>
+            )}
                         <div class="container p-0">
                             <div class="card text-center">
                                 <div class="card-header">
