@@ -54,7 +54,7 @@ function ProfilePreview(props) {
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-4 text-center">
-                        <a href="/profile"><img src={fotoPerfilPersona} class="img-fluid rounded-circle img-thumbnail" alt="Imagen de perfil"></img></a>
+                        <a href="/profile"><img src={fotoPerfilPersona} class="img-fluid rounded-circle img-thumbnail ms-2" alt="Imagen de perfil"></img></a>
                     </div>
                     <div class="col-md-8 text-center p-auto m-auto">
                         <h4>{nombrePersona} {apellidoPersona}</h4>
