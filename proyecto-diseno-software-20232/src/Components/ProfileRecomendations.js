@@ -47,9 +47,9 @@ function ProfileRecomendations(props) {
                 <div class="col-md-4">
                     <a href={`/users/${nombrePersona.toLowerCase()}_${apellidoPersona.toLowerCase()}`}><img src={fotoPerfilPersona} class="img-fluid rounded-circle img-thumbnail ms-3" alt="Imagen de perfil"></img></a>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 p-1">
                     <h3 class="fs-5">{nombrePersona} {apellidoPersona}</h3>
-                    <p><strong>Profesión:</strong> {profesionesAleatoria}</p>
+                    <p class="mb-1"><strong>Profesión:</strong> {profesionesAleatoria}</p>
                 </div>
             </div>
         </div>

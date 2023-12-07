@@ -107,7 +107,7 @@ function Jobs() {
     ];
 
     // Obtención información de API randomuser, randomword y randomdategen
-    const post_amount = Math.floor(Math.random() * 11);
+    const post_amount = Math.floor(Math.random() * 11 + 5);
     const apiNamesUrl = `https://randomuser.me/api/?results=${post_amount}&nat=us`;
 
     const [empresaInfo, setEmpresaInfo] = useState([]);

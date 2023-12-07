@@ -10,7 +10,7 @@ function Trends(props) {
     return (
         <div class="card-body p-2 text-center">
             <h3 class="fs-5">{nombre}</h3>
-            <p class="fw-light"><strong>Cantidad posts:</strong> {cant}</p>
+            <p class="fw-light mb-0"><strong>Cantidad posts:</strong> {cant}</p>
         </div>
     );
 }
