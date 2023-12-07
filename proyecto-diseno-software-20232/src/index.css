@@ -35,6 +35,7 @@ code {
   height: 70px;
   padding: 10px;
   margin-left: calc((100vw - 280px));
+  margin-top: 8px;
 }
 
 .alert-success {
@@ -45,4 +46,30 @@ code {
   height: 70px;
   padding: 10px;
   margin-left: calc((100vw - 280px));
+  margin-top: 8px;
+}
+
+@media (max-width: 1000px) {
+  .alert-danger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 70px;
+    padding: 10px;
+    margin-left: calc((100vw - 250px)/2);
+    margin-top: 70px;
+  }
+  
+  .alert-success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 70px;
+    padding: 10px;
+    margin-left: calc((100vw - 250px)/2);
+    margin-top: 70px;
+  }
+
 }

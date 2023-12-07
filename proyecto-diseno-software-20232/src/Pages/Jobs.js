@@ -222,7 +222,7 @@ function Jobs() {
                         {/* Derecha Empleos */}
                         {mostrarAlertaPostulacion && (
                         <div className="alert alert-success text-center fixed-top mt-2 mb-2 mr-2" role="alert">
-                            !Has postulado al empleo!
+                            ¡Has postulado al empleo!
                         </div>
                         )}
                         <div class="container p-0 sticky-md-top">
