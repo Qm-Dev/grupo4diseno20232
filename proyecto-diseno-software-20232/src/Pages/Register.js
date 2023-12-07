@@ -20,7 +20,7 @@ function Register() {
                                 <div className="card-body px-5 py-2 text-center">
                                     {/* Formulario de inicio de sesión */}
                                     <div className="mb-md-5 mt-md-4 pb-0">
-                                        <h2 className="fw-bold mb-2 text-uppercase">Registrarse</h2>
+                                        <h2 className="fw-bold mb-4 text-uppercase">Registrarse</h2>
                                         <div className="form-outline form-white mb-2">
                                             <label className="form-label" htmlFor="text">Nombres</label>
                                             <input type="text" id="" className="form-control" />
@@ -53,12 +53,12 @@ function Register() {
                                             <label className="form-label" htmlFor="text">Región</label>
                                             <input type="text" id="" className="form-control" />
                                         </div>
-                                        <div className="form-outline form-white mb-2">
+                                        <div className="form-outline form-white mb-4">
                                             <label className="form-label" htmlFor="text">Profesión</label>
                                             <input type="text" id="" className="form-control" />
                                         </div>
                                         <div class="text-center p-3">
-                                            <button type="submit" class="fs-5 btn btn-secondary"><i class="fa fa-pencil-square" aria-hidden="true"></i> Registrar</button>
+                                            <button type="submit" className="btn btn-outline-light btn-lg px-5"> Registrar</button>
                                         </div>
                                     </div>
                                 </div>
