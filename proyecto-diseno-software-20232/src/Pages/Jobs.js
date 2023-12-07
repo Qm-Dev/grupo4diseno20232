@@ -200,8 +200,8 @@ function Jobs() {
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-md-2">
-                                            <img src={`https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`} class="rounded-circle img-thumbnail" alt="Logo de la emresa"></img>
+                                        <div id="contenedorImagen" class="col-md-2">
+                                            <img id="fotoPerfil" src={`https://picsum.photos/id/${Math.floor(Math.random() * 1084) + 1}/400`} class="rounded-circle img-thumbnail" alt="Logo de la emresa"></img>
                                         </div>
                                         <div class="col-md-10">
                                             <h6 class="card-subtitle mb-2 text-muted ms-3">Trabajo: {tipos_trabajos[Math.floor(Math.random() * tipos_trabajos.length)]}</h6>
